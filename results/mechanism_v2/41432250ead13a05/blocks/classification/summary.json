@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED_BLOCK",
+  "traces": 48,
+  "conditions": 16,
+  "source_units": 15,
+  "classified": 48,
+  "unresolved_first_stage": 0,
+  "first_stage_counts": {
+    "L00.attention_out": 4,
+    "L00.mlp_down": 36,
+    "L00.scores": 8
+  },
+  "reduction_mode_comparison_pairs": 864,
+  "recorded_shape_error_metrics_changed": 0,
+  "original_failed_conditions_directly_sampled": 8,
+  "original_failed_conditions_not_directly_sampled": 445,
+  "diagnostic_manifest_sha256": "11b199dbdbccc512edfc5cd305bc86bb80faa1f215ab7c5688fe2f87b725f6a4",
+  "mechanism_manifest_sha256": "0ccbb9b174ccec4de067c1f0c44965c7b798fd81b3fe50bf6d787eed41fbd7c1",
+  "scope": "First exact nonzero stage at prespecified steps 0,3,7 in 16 outcome-stratified BF16 conditions. Does not exhaustively attribute final-logit error, classify all historical failures, identify the internal GEMM algorithm, or prove bitwise equality across reduction modes. FP32 first-stage norm/projection differences are bounded separately by passing final fidelity.",
+  "publication": "PENDING"
+}

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "metrics.csv": {
+      "sha256": "ab877ca0be146c3163abb03159fef479ae6a08dc1ee4a689bdf7994903064300",
+      "bytes": 5271
+    },
+    "report.md": {
+      "sha256": "1d126cfbcd2ceec9bae2e5c58cfc34b840cd2a4222042465a87ed46070e05d79",
+      "bytes": 1118
+    },
+    "summary.json": {
+      "sha256": "13d6b8e06faf550a4fa73832e1388a4df29931a14b17cb70ba5655b9a39ccef6",
+      "bytes": 1068
+    }
+  },
+  "sealed": "2026-10-18T15:30:04.070798+00:00"
+}

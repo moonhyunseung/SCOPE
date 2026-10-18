@@ -1,0 +1,25 @@
+{
+  "files": {
+    "details.json": {
+      "sha256": "d1e46ccc04e9a001161143c37aead5f0685ace6036211fad8848e1eaec456a24",
+      "bytes": 3347335
+    },
+    "summary.json": {
+      "sha256": "146cfc896745ef5b9f95367720a235ef65ded25666c981350f9971b569589ca8",
+      "bytes": 9427
+    },
+    "metrics.csv": {
+      "sha256": "63100684569cf3cc2dafac412ab69f75b84dd4e9a0a28a1f12a4e53b208f0a5e",
+      "bytes": 224766
+    },
+    "report.md": {
+      "sha256": "cae3173e364a2b9e22816c3d7129c48c1fcccfc736f6f8b7700cdde149545f3a",
+      "bytes": 9621
+    },
+    "config.json": {
+      "sha256": "9e23b6ce8ae5eac379a0e31ba2bfc9d5371be2216d9ee9bdb60507981de19da9",
+      "bytes": 486
+    }
+  },
+  "sealed": "2026-10-18T15:22:22.270849+00:00"
+}
