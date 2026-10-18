@@ -1,0 +1,49 @@
+{
+  "run_id": "7141e594975ea70c",
+  "created": "2026-10-18T06:01:08.977340+00:00",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config": {
+    "protocol_version": "scope-h200-pilot-v2",
+    "seed": 20261018,
+    "cpu_threads": 4,
+    "max_allocated_hbm_gib": 96,
+    "reserve_hbm_gib": 12,
+    "minimum_free_hbm_gib": 32,
+    "reserve_disk_gib": 24,
+    "campaign_timeout_seconds": 10800,
+    "job_timeout_seconds": 1800,
+    "performance_repeats": 3,
+    "warmup": 10,
+    "timed_iterations": 40,
+    "decode_steps": 3,
+    "native_reference_relative_l2": 0.025,
+    "trajectory_relative_l2": 0.025,
+    "lengths": [
+      512,
+      2048
+    ],
+    "categories": [
+      "prose",
+      "code"
+    ],
+    "models": [
+      {
+        "id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "id": "EleutherAI/pythia-1b",
+        "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      },
+      {
+        "id": "facebook/opt-1.3b",
+        "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62"
+      }
+    ],
+    "inputs": {
+      "prose": "A research system records measurements and preserves evidence. The observatory studies how memory, computation, and numerical precision affect attention. Every experiment has a fixed input and a reproducible protocol. ",
+      "code": "def stable_sum(values):\n    total = 0.0\n    for value in values:\n        total += value\n    return total\n\nclass Cache:\n    def append(self, key, value):\n        self.keys.append(key)\n        self.values.append(value)\n"
+    }
+  }
+}

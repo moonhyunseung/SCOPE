@@ -1,0 +1,523 @@
+{
+  "id": "P2",
+  "status": "PASS",
+  "detail": "worker exit 0",
+  "started": "2026-10-18T06:06:03.541353+00:00",
+  "ended": "2026-10-18T06:06:05.529839+00:00",
+  "result": {
+    "status": "PASS",
+    "metrics": [
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.0.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.6528622508049011,
+        "P_scale_correlation": -0.04321720451116562,
+        "P_V_correlation": 0.002323410240933299,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.14.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.6759325861930847,
+        "P_scale_correlation": -0.08140333741903305,
+        "P_V_correlation": -0.0025598325300961733,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.27.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.5043426752090454,
+        "P_scale_correlation": -0.07330544292926788,
+        "P_V_correlation": 0.011319936253130436,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.0.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.6821410655975342,
+        "P_scale_correlation": 0.012236512266099453,
+        "P_V_correlation": -0.004631245043128729,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.14.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.6770622730255127,
+        "P_scale_correlation": -0.0762261226773262,
+        "P_V_correlation": 0.00135886634234339,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.27.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.5061485767364502,
+        "P_scale_correlation": -0.20950844883918762,
+        "P_V_correlation": -0.003484617220237851,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.0.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.7344416379928589,
+        "P_scale_correlation": 0.01044541411101818,
+        "P_V_correlation": 0.013403499498963356,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.14.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.6867644190788269,
+        "P_scale_correlation": -0.051888443529605865,
+        "P_V_correlation": 0.01207832619547844,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-04fb19d9f6c5",
+        "layer": "model.layers.27.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.48244521021842957,
+        "P_scale_correlation": -0.10118798166513443,
+        "P_V_correlation": -0.0037418215069919825,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-054e41c1ed2f",
+        "status": "UNSUPPORTED"
+      },
+      {
+        "capture": "P1-070661f191b0",
+        "status": "UNSUPPORTED"
+      },
+      {
+        "capture": "P1-0ceed09e14be",
+        "status": "FAIL"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.0.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.6168521642684937,
+        "P_scale_correlation": -0.0030327490530908108,
+        "P_V_correlation": -0.013843012973666191,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.14.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.6953034400939941,
+        "P_scale_correlation": -0.013805908150970936,
+        "P_V_correlation": -0.004536141641438007,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.27.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.43681570887565613,
+        "P_scale_correlation": -0.023265961557626724,
+        "P_V_correlation": 0.009811298921704292,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.0.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.6880697011947632,
+        "P_scale_correlation": 0.020575804635882378,
+        "P_V_correlation": -0.003834640374407172,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.14.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.6679941415786743,
+        "P_scale_correlation": -0.034457821398973465,
+        "P_V_correlation": 0.0061730798333883286,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.27.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.39910468459129333,
+        "P_scale_correlation": -0.10755351930856705,
+        "P_V_correlation": -0.00972678605467081,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.0.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.6095906496047974,
+        "P_scale_correlation": -0.014403318054974079,
+        "P_V_correlation": -0.00021405384177342057,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.14.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.6695507764816284,
+        "P_scale_correlation": -0.018470682203769684,
+        "P_V_correlation": 0.008327009156346321,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "layer": "model.layers.27.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.39590057730674744,
+        "P_scale_correlation": -0.11003614962100983,
+        "P_V_correlation": -0.022045331075787544,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1cf7a0b00dc7",
+        "status": "UNSUPPORTED"
+      },
+      {
+        "capture": "P1-28125cf1db34",
+        "status": "UNSUPPORTED"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.0.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.717357873916626,
+        "P_scale_correlation": 0.03392584249377251,
+        "P_V_correlation": -0.0017224123002961278,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.14.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.6816627383232117,
+        "P_scale_correlation": -0.05187591537833214,
+        "P_V_correlation": 0.0064617423340678215,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.27.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.40189990401268005,
+        "P_scale_correlation": -0.0697077140212059,
+        "P_V_correlation": 0.019300812855362892,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.0.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.6446494460105896,
+        "P_scale_correlation": -0.025732802227139473,
+        "P_V_correlation": -0.025614088401198387,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.14.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.6910578608512878,
+        "P_scale_correlation": -0.029214048758149147,
+        "P_V_correlation": 0.012857607565820217,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.27.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.3619318902492523,
+        "P_scale_correlation": -0.10885998606681824,
+        "P_V_correlation": -0.009489082731306553,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.0.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.72130286693573,
+        "P_scale_correlation": 0.004887085873633623,
+        "P_V_correlation": 0.006950800307095051,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.14.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.6948857307434082,
+        "P_scale_correlation": -0.07487401366233826,
+        "P_V_correlation": -0.001244545099325478,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-728b54fc0999",
+        "layer": "model.layers.27.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.3815184235572815,
+        "P_scale_correlation": -0.09876503050327301,
+        "P_V_correlation": 0.0034062680788338184,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-95b5035f9fde",
+        "status": "FAIL"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.0.attention",
+        "step": 0,
+        "cancellation_ratio": 0.2959315776824951,
+        "P_scale_correlation": -0.06271775811910629,
+        "P_V_correlation": 0.004788881633430719,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.8.attention",
+        "step": 0,
+        "cancellation_ratio": 0.5476617217063904,
+        "P_scale_correlation": -0.07643173635005951,
+        "P_V_correlation": -0.003125074552372098,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.15.attention",
+        "step": 0,
+        "cancellation_ratio": 0.4712284505367279,
+        "P_scale_correlation": -0.13402651250362396,
+        "P_V_correlation": -0.00112625933252275,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.0.attention",
+        "step": 1,
+        "cancellation_ratio": 0.2801714837551117,
+        "P_scale_correlation": -0.0780683308839798,
+        "P_V_correlation": 0.005992896389216185,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.8.attention",
+        "step": 1,
+        "cancellation_ratio": 0.5862453579902649,
+        "P_scale_correlation": -0.05747884884476662,
+        "P_V_correlation": -0.004487358499318361,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.15.attention",
+        "step": 1,
+        "cancellation_ratio": 0.5189810991287231,
+        "P_scale_correlation": -0.09089427441358566,
+        "P_V_correlation": 0.00979130994528532,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.0.attention",
+        "step": 2,
+        "cancellation_ratio": 0.33303672075271606,
+        "P_scale_correlation": -0.034853436052799225,
+        "P_V_correlation": 0.0032326369546353817,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.8.attention",
+        "step": 2,
+        "cancellation_ratio": 0.6106297373771667,
+        "P_scale_correlation": -0.08421895653009415,
+        "P_V_correlation": 0.002534977626055479,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-9e912262597e",
+        "layer": "gpt_neox.layers.15.attention",
+        "step": 2,
+        "cancellation_ratio": 0.5767272710800171,
+        "P_scale_correlation": -0.12781637907028198,
+        "P_V_correlation": -0.004248990677297115,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.0.attention",
+        "step": 0,
+        "cancellation_ratio": 0.31907618045806885,
+        "P_scale_correlation": -0.04064752534031868,
+        "P_V_correlation": 0.005194106139242649,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.8.attention",
+        "step": 0,
+        "cancellation_ratio": 0.5504544973373413,
+        "P_scale_correlation": -0.12523411214351654,
+        "P_V_correlation": -0.0032965007703751326,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.15.attention",
+        "step": 0,
+        "cancellation_ratio": 0.4906543791294098,
+        "P_scale_correlation": -0.1733592301607132,
+        "P_V_correlation": 0.0023471908643841743,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.0.attention",
+        "step": 1,
+        "cancellation_ratio": 0.3414454460144043,
+        "P_scale_correlation": -0.018161412328481674,
+        "P_V_correlation": 0.01928800530731678,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.8.attention",
+        "step": 1,
+        "cancellation_ratio": 0.49306538701057434,
+        "P_scale_correlation": -0.14356327056884766,
+        "P_V_correlation": -0.003113937797024846,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.15.attention",
+        "step": 1,
+        "cancellation_ratio": 0.5141116380691528,
+        "P_scale_correlation": -0.1705411821603775,
+        "P_V_correlation": 0.006153733003884554,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.0.attention",
+        "step": 2,
+        "cancellation_ratio": 0.4346298575401306,
+        "P_scale_correlation": -0.010226928628981113,
+        "P_V_correlation": 0.00658838264644146,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.8.attention",
+        "step": 2,
+        "cancellation_ratio": 0.4913370609283447,
+        "P_scale_correlation": -0.1254957616329193,
+        "P_V_correlation": -0.002374031348153949,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bc18bc673b85",
+        "layer": "gpt_neox.layers.15.attention",
+        "step": 2,
+        "cancellation_ratio": 0.5020586848258972,
+        "P_scale_correlation": -0.16625696420669556,
+        "P_V_correlation": -0.001216899836435914,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.0.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.7310649156570435,
+        "P_scale_correlation": -0.00023525224241893739,
+        "P_V_correlation": -0.00969203095883131,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.14.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.6536749601364136,
+        "P_scale_correlation": 0.02927233837544918,
+        "P_V_correlation": 0.005091518629342318,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.27.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.5218931436538696,
+        "P_scale_correlation": -0.009055553935468197,
+        "P_V_correlation": 0.0022243596613407135,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.0.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.7072579264640808,
+        "P_scale_correlation": 0.016346991062164307,
+        "P_V_correlation": 0.010963408276438713,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.14.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.6886746883392334,
+        "P_scale_correlation": 0.018918674439191818,
+        "P_V_correlation": -0.005618359427899122,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.27.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.4988390803337097,
+        "P_scale_correlation": -0.020162252709269524,
+        "P_V_correlation": 0.0037710026372224092,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.0.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.7397395372390747,
+        "P_scale_correlation": -0.00916131678968668,
+        "P_V_correlation": -0.007873227819800377,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.14.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.7497217059135437,
+        "P_scale_correlation": 0.011499887332320213,
+        "P_V_correlation": -0.010989943519234657,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-c1cc3e592af8",
+        "layer": "model.layers.27.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.4667956233024597,
+        "P_scale_correlation": -0.021775100380182266,
+        "P_V_correlation": -0.0040795826353132725,
+        "status": "PASS"
+      }
+    ],
+    "interpretation": "Conditional and joint sampled statistics from actual captures; correlations do not prove universal invariants. Samples are deterministic and repetitive public text limits population coverage."
+  }
+}

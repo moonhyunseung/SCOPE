@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "processed_conditions": 1152,
+  "planned_conditions": 1152,
+  "counts": {
+    "DATA_COLLECTED": 1152
+  },
+  "updated": "2026-10-18T12:44:30.635135+00:00"
+}

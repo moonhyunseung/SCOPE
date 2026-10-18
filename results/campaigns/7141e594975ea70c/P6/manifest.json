@@ -1,0 +1,62 @@
+{
+  "protocol_version": "scope-h200-pilot-v2",
+  "experiment_id": "P6",
+  "run_id": "7141e594975ea70c",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "7141e594975ea70c64ec7215314da43425aa91583b7457ca27b23405ce667062",
+  "started": "2026-10-18T06:06:16.249851+00:00",
+  "ended": "2026-10-18T06:06:19.142523+00:00",
+  "status": "PASS",
+  "seed": 20261018,
+  "planned_condition": {
+    "allow_failed_deps": true,
+    "block": "P6",
+    "deps": [
+      "P4-04fb19d9f6c5",
+      "P4-728b54fc0999",
+      "P4-149a05ffeab0",
+      "P4-c1cc3e592af8",
+      "P4-9e912262597e",
+      "P4-bc18bc673b85",
+      "P4-1cf7a0b00dc7",
+      "P4-054e41c1ed2f",
+      "P4-0ceed09e14be",
+      "P4-95b5035f9fde",
+      "P4-070661f191b0",
+      "P4-28125cf1db34"
+    ],
+    "id": "P6",
+    "params": {}
+  },
+  "outputs": {
+    "metrics.csv": {
+      "sha256": "83745cfdd2d61924c8d25b44196674247d9e257bb55db40df65921b2f05906d4",
+      "bytes": 10809,
+      "published": true
+    },
+    "output.json": {
+      "sha256": "7313b278cbb7b9f3c3595e15e6ccfd84d2a5ee429192cf5abfe6f728f6a48900",
+      "bytes": 31914,
+      "published": false
+    },
+    "report.md": {
+      "sha256": "2780ca974844468ea033adca896e0967d4348b42133799441df2ce0e6b4b34ff",
+      "bytes": 382,
+      "published": true
+    },
+    "stdout.log": {
+      "sha256": "9d80959f24675dd709aae1dccd59b216e2ed12d9e552755b7873729b1fea7b1a",
+      "bytes": 6,
+      "published": false
+    },
+    "summary.json": {
+      "sha256": "3bea50d818db9b3d9f497762c9c669def5a28ab3c1bb58b612a70eb0d5310a60",
+      "bytes": 34003,
+      "published": true
+    }
+  },
+  "provenance": {},
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

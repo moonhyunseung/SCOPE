@@ -1,0 +1,3 @@
+architecture,cache_tensor_storage_bytes,category,context,full_model_decode_median_ms,head_step_observations,id,max_fp32_diagnostic_relative_l2,max_native_relative_l2,median_fp32_diagnostic_relative_l2,median_quantized_head_relative_l2,model
+"[{""hq"": 40, ""hkv"": 8, ""kind"": ""GQA""}]",102236160,code,512,25.037504196166992,360,P1-1aa300813eba,0.0706334263086319,0.0,0.004751889035105705,0.13164237886667252,Qwen/Qwen2.5-14B-Instruct
+"[{""hq"": 40, ""hkv"": 8, ""kind"": ""GQA""}]",404226048,prose,2048,24.762815475463867,360,P1-b4492dcfad67,0.0760820284485817,0.0,0.004485569661483169,0.12719210982322693,Qwen/Qwen2.5-14B-Instruct

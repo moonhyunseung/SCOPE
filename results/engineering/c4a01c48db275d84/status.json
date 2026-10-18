@@ -1,0 +1,31 @@
+{
+  "date_kst": "2026-10-18",
+  "snapshot_utc": "2026-10-18T10:22:19.085550+00:00",
+  "status": "COMPLETE",
+  "run_id": "c4a01c48db275d84",
+  "frozen_code_sha": "cfcb19995a935e6a8025e45ee67c78c4c41e4423",
+  "conditions_planned": 36,
+  "last_observed_processed": 36,
+  "last_observed_data_collected": 32,
+  "last_observed_unsupported": 4,
+  "last_observed_runtime_failures": 0,
+  "derived_snapshot": {
+    "utc": "2026-10-18T10:17:47.252622+00:00",
+    "processed_conditions": 16,
+    "data_collected": 12,
+    "dense_fidelity_pass": 5,
+    "dense_fidelity_fail": 7,
+    "unsupported": 4,
+    "trajectory_rows": 192,
+    "state_rows": 108,
+    "quantization_rows": 612,
+    "unsupported_quantization_rows": 36,
+    "artifact_integrity": "PENDING_FINAL_AUDIT"
+  },
+  "tests_passed": 26,
+  "smoke_artifact_integrity": "PASS",
+  "publication": "SANITIZED_PUBLIC_SUMMARY",
+  "final_artifact_integrity": "PASS",
+  "final_archive_sha256": "2b39ac19406db6275d9c35d2788718c5ad2be11f60762dfa9f2a15b835a2c23d",
+  "note": "Completion verified on server. DATA_COLLECTED is not a fidelity PASS. The derived_snapshot field preserves an earlier dated progress snapshot. Machine-specific paths, process IDs and session identifiers omitted from the public summary."
+}

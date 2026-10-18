@@ -1,0 +1,165 @@
+{
+  "id": "P4-149a05ffeab0",
+  "status": "PASS",
+  "detail": "worker exit 0",
+  "started": "2026-10-18T06:02:42.549925+00:00",
+  "ended": "2026-10-18T06:02:46.094264+00:00",
+  "result": {
+    "status": "PASS",
+    "metrics": [
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "dense_sdpa",
+        "status": "FAIL",
+        "failure_reason": "same-representation executor differs from native BF16 eager contract; timing prohibited",
+        "execution_relative_l2": 0.24408367276191711
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "packed_restore_sdpa",
+        "status": "FAIL",
+        "failure_reason": "same-representation executor differs from native BF16 eager contract; timing prohibited",
+        "execution_relative_l2": 0.41708889603614807
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "dense_eager",
+        "repeat": 0,
+        "median_ms": 0.1541920006275177,
+        "mean_ms": 0.15714400112628937,
+        "p95_ms": 0.17209599912166595,
+        "iterations": 40,
+        "initial_packing_ms": 0.0,
+        "storage_allocation_bytes": 2098176,
+        "baseline_allocated_bytes": 40520192,
+        "peak_allocated_bytes": 53356544,
+        "transient_peak_delta_bytes": 12836352,
+        "execution_relative_l2": 0.0,
+        "representation_relative_l2": 0.0,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "packed_restore_eager",
+        "repeat": 0,
+        "median_ms": 0.4180320054292679,
+        "mean_ms": 0.42184479981660844,
+        "p95_ms": 0.4375680088996887,
+        "iterations": 40,
+        "initial_packing_ms": 185.40162658691406,
+        "storage_allocation_bytes": 655680,
+        "baseline_allocated_bytes": 40520192,
+        "peak_allocated_bytes": 55454720,
+        "transient_peak_delta_bytes": 14934528,
+        "execution_relative_l2": 0.0,
+        "representation_relative_l2": 0.6561432480812073,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "packed_restore_eager",
+        "repeat": 1,
+        "median_ms": 0.41944000124931335,
+        "mean_ms": 0.42019519954919815,
+        "p95_ms": 0.4296639859676361,
+        "iterations": 40,
+        "initial_packing_ms": 185.40162658691406,
+        "storage_allocation_bytes": 655680,
+        "baseline_allocated_bytes": 40520192,
+        "peak_allocated_bytes": 55454720,
+        "transient_peak_delta_bytes": 14934528,
+        "execution_relative_l2": 0.0,
+        "representation_relative_l2": 0.6561432480812073,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "dense_eager",
+        "repeat": 1,
+        "median_ms": 0.15159999579191208,
+        "mean_ms": 0.1540311999619007,
+        "p95_ms": 0.16284799575805664,
+        "iterations": 40,
+        "initial_packing_ms": 0.0,
+        "storage_allocation_bytes": 2098176,
+        "baseline_allocated_bytes": 40520192,
+        "peak_allocated_bytes": 53356544,
+        "transient_peak_delta_bytes": 12836352,
+        "execution_relative_l2": 0.0,
+        "representation_relative_l2": 0.0,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "dense_eager",
+        "repeat": 2,
+        "median_ms": 0.1520479992032051,
+        "mean_ms": 0.15434799939393998,
+        "p95_ms": 0.16652800142765045,
+        "iterations": 40,
+        "initial_packing_ms": 0.0,
+        "storage_allocation_bytes": 2098176,
+        "baseline_allocated_bytes": 40520192,
+        "peak_allocated_bytes": 53356544,
+        "transient_peak_delta_bytes": 12836352,
+        "execution_relative_l2": 0.0,
+        "representation_relative_l2": 0.0,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-149a05ffeab0",
+        "variant": "packed_restore_eager",
+        "repeat": 2,
+        "median_ms": 0.41575999557971954,
+        "mean_ms": 0.41953360065817835,
+        "p95_ms": 0.43699198961257935,
+        "iterations": 40,
+        "initial_packing_ms": 185.40162658691406,
+        "storage_allocation_bytes": 655680,
+        "baseline_allocated_bytes": 40520192,
+        "peak_allocated_bytes": 55454720,
+        "transient_peak_delta_bytes": 14934528,
+        "execution_relative_l2": 0.0,
+        "representation_relative_l2": 0.6561432480812073,
+        "status": "PASS"
+      }
+    ],
+    "failed_variants": [
+      "dense_sdpa",
+      "packed_restore_sdpa"
+    ],
+    "provenance": {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "layer": "model.layers.0.self_attn",
+      "shape_q": [
+        1,
+        12,
+        1,
+        128
+      ],
+      "shape_k": [
+        1,
+        2,
+        2049,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "gpu": "NVIDIA H200",
+      "software": {
+        "torch": "2.14.1",
+        "triton": "3.8.0",
+        "transformers": "5.19.0",
+        "numpy": "2.5.4",
+        "pytest": "9.0.2",
+        "huggingface_hub": "2.2.0",
+        "flash_attn": null,
+        "vllm": null
+      },
+      "clocks": "1980 MHz, 3201 MHz, 36, 115.05 W",
+      "scope": "single-layer decode replay; includes unpack, dequantize, GQA materialization and attention; excludes one-time packing (separately recorded), full model and sampling",
+      "reference": "same BF16 eager contract as model; representation loss separate from executor error"
+    },
+    "interpretation": "Completed operator screening block; PASS at block level means results finalized, not every variant passed. Failed variants are retained and never timed. CUDA event latency, tensor storage and allocator peaks are measurements. Resident-KV capacity/full-model compressed-cache frontier is NOT measured. Native full-model dense baselines are in P1."
+  }
+}

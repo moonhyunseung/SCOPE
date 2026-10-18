@@ -1,0 +1,33 @@
+protocol_version: scope-h200-size-extension-v2
+seed: 20261018
+cpu_threads: 4
+max_allocated_hbm_gib: 96
+reserve_hbm_gib: 12
+minimum_free_hbm_gib: 32
+reserve_disk_gib: 24
+campaign_timeout_seconds: 10800
+job_timeout_seconds: 2400
+performance_repeats: 3
+warmup: 10
+timed_iterations: 40
+decode_steps: 3
+native_reference_relative_l2: 0.025
+trajectory_relative_l2: 0.025
+lengths:
+- 512
+- 2048
+categories:
+- prose
+- code
+models:
+- id: Qwen/Qwen2.5-7B-Instruct
+  revision: a09a35458c702b33eeacc393d103063234e8bc28
+- id: Qwen/Qwen2.5-14B-Instruct
+  revision: cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8
+inputs:
+  prose: 'A research system records measurements and preserves evidence. The observatory
+    studies how memory, computation, and numerical precision affect attention. Every
+    experiment has a fixed input and a reproducible protocol. '
+  code: "def stable_sum(values):\n    total = 0.0\n    for value in values:\n    \
+    \    total += value\n    return total\n\nclass Cache:\n    def append(self, key,\
+    \ value):\n        self.keys.append(key)\n        self.values.append(value)\n"

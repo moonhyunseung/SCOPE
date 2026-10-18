@@ -1,0 +1,454 @@
+{
+  "run_id": "479dde6421f18d68",
+  "code_sha": "ba0b4bbdea12be44aa7b6686c766e6173da0e85a",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "planned_execution_blocks": 29,
+  "planned_model_conditions": 8,
+  "execution_status_counts": {
+    "PASS": 11,
+    "FAIL": 6,
+    "SKIPPED_WITH_REASON": 12
+  },
+  "publication_status_counts": {
+    "PENDING": 29
+  },
+  "real_model_conditions_passed": 2,
+  "operator_variant_pass_count": 8,
+  "operator_variant_fail_count": 0,
+  "capture_rows": [
+    {
+      "id": "P1-1aa300813eba",
+      "model": "Qwen/Qwen2.5-14B-Instruct",
+      "architecture": "[{\"hq\": 40, \"hkv\": 8, \"kind\": \"GQA\"}]",
+      "context": 512,
+      "category": "code",
+      "head_step_observations": 360,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.004751889035105705,
+      "max_fp32_diagnostic_relative_l2": 0.0706334263086319,
+      "median_quantized_head_relative_l2": 0.13164237886667252,
+      "full_model_decode_median_ms": 25.037504196166992,
+      "cache_tensor_storage_bytes": 102236160
+    },
+    {
+      "id": "P1-b4492dcfad67",
+      "model": "Qwen/Qwen2.5-14B-Instruct",
+      "architecture": "[{\"hq\": 40, \"hkv\": 8, \"kind\": \"GQA\"}]",
+      "context": 2048,
+      "category": "prose",
+      "head_step_observations": 360,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.004485569661483169,
+      "max_fp32_diagnostic_relative_l2": 0.0760820284485817,
+      "median_quantized_head_relative_l2": 0.12719210982322693,
+      "full_model_decode_median_ms": 24.762815475463867,
+      "cache_tensor_storage_bytes": 404226048
+    }
+  ],
+  "operator_rows": [
+    {
+      "id": "P4-1aa300813eba",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.1520640030503273,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 2101248,
+      "transient_peak_delta_bytes": 10712576,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-1aa300813eba",
+      "variant": "dense_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.07294400036334991,
+      "execution_relative_l2": 0.014675711281597614,
+      "storage_allocation_bytes": 2101248,
+      "transient_peak_delta_bytes": 10600960,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-1aa300813eba",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.42401599884033203,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 656640,
+      "transient_peak_delta_bytes": 12813824,
+      "representation_relative_l2": 0.1738877147436142
+    },
+    {
+      "id": "P4-1aa300813eba",
+      "variant": "packed_restore_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.3340959995985031,
+      "execution_relative_l2": 0.015421618707478046,
+      "storage_allocation_bytes": 656640,
+      "transient_peak_delta_bytes": 12702208,
+      "representation_relative_l2": 0.1738877147436142
+    },
+    {
+      "id": "P4-b4492dcfad67",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.16830399632453918,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 8392704,
+      "transient_peak_delta_bytes": 42784256,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-b4492dcfad67",
+      "variant": "dense_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.08224000036716461,
+      "execution_relative_l2": 0.01067292969673872,
+      "storage_allocation_bytes": 8392704,
+      "transient_peak_delta_bytes": 42058240,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-b4492dcfad67",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.45473599433898926,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 2622720,
+      "transient_peak_delta_bytes": 51176960,
+      "representation_relative_l2": 0.1695852279663086
+    },
+    {
+      "id": "P4-b4492dcfad67",
+      "variant": "packed_restore_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.36369599401950836,
+      "execution_relative_l2": 0.009078708477318287,
+      "storage_allocation_bytes": 2622720,
+      "transient_peak_delta_bytes": 50450944,
+      "representation_relative_l2": 0.1695852279663086
+    }
+  ],
+  "failed_or_unsupported": [
+    {
+      "id": "P1-bcec4e71bbf4",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-bcec4e71bbf4",
+        "params": {
+          "category": "prose",
+          "length": 512,
+          "model": {
+            "id": "Qwen/Qwen2.5-7B-Instruct",
+            "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-bcec4e71bbf4",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-bcec4e71bbf4"
+        ],
+        "id": "P3-bcec4e71bbf4",
+        "params": {
+          "capture": "P1-bcec4e71bbf4"
+        }
+      }
+    },
+    {
+      "id": "P4-bcec4e71bbf4",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-bcec4e71bbf4",
+          "P3-bcec4e71bbf4"
+        ],
+        "id": "P4-bcec4e71bbf4",
+        "params": {
+          "capture": "P1-bcec4e71bbf4"
+        }
+      }
+    },
+    {
+      "id": "P1-08fc30fe2f17",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-08fc30fe2f17",
+        "params": {
+          "category": "code",
+          "length": 512,
+          "model": {
+            "id": "Qwen/Qwen2.5-7B-Instruct",
+            "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-08fc30fe2f17",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-08fc30fe2f17"
+        ],
+        "id": "P3-08fc30fe2f17",
+        "params": {
+          "capture": "P1-08fc30fe2f17"
+        }
+      }
+    },
+    {
+      "id": "P4-08fc30fe2f17",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-08fc30fe2f17",
+          "P3-08fc30fe2f17"
+        ],
+        "id": "P4-08fc30fe2f17",
+        "params": {
+          "capture": "P1-08fc30fe2f17"
+        }
+      }
+    },
+    {
+      "id": "P1-14f5bd74883d",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-14f5bd74883d",
+        "params": {
+          "category": "prose",
+          "length": 2048,
+          "model": {
+            "id": "Qwen/Qwen2.5-7B-Instruct",
+            "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-14f5bd74883d",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-14f5bd74883d"
+        ],
+        "id": "P3-14f5bd74883d",
+        "params": {
+          "capture": "P1-14f5bd74883d"
+        }
+      }
+    },
+    {
+      "id": "P4-14f5bd74883d",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-14f5bd74883d",
+          "P3-14f5bd74883d"
+        ],
+        "id": "P4-14f5bd74883d",
+        "params": {
+          "capture": "P1-14f5bd74883d"
+        }
+      }
+    },
+    {
+      "id": "P1-5a1dbfe01d66",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-5a1dbfe01d66",
+        "params": {
+          "category": "code",
+          "length": 2048,
+          "model": {
+            "id": "Qwen/Qwen2.5-7B-Instruct",
+            "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-5a1dbfe01d66",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-5a1dbfe01d66"
+        ],
+        "id": "P3-5a1dbfe01d66",
+        "params": {
+          "capture": "P1-5a1dbfe01d66"
+        }
+      }
+    },
+    {
+      "id": "P4-5a1dbfe01d66",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-5a1dbfe01d66",
+          "P3-5a1dbfe01d66"
+        ],
+        "id": "P4-5a1dbfe01d66",
+        "params": {
+          "capture": "P1-5a1dbfe01d66"
+        }
+      }
+    },
+    {
+      "id": "P1-e533c04e120d",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-e533c04e120d",
+        "params": {
+          "category": "prose",
+          "length": 512,
+          "model": {
+            "id": "Qwen/Qwen2.5-14B-Instruct",
+            "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-e533c04e120d",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-e533c04e120d"
+        ],
+        "id": "P3-e533c04e120d",
+        "params": {
+          "capture": "P1-e533c04e120d"
+        }
+      }
+    },
+    {
+      "id": "P4-e533c04e120d",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-e533c04e120d",
+          "P3-e533c04e120d"
+        ],
+        "id": "P4-e533c04e120d",
+        "params": {
+          "capture": "P1-e533c04e120d"
+        }
+      }
+    },
+    {
+      "id": "P1-3426a23a4913",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-3426a23a4913",
+        "params": {
+          "category": "code",
+          "length": 2048,
+          "model": {
+            "id": "Qwen/Qwen2.5-14B-Instruct",
+            "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-3426a23a4913",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-3426a23a4913"
+        ],
+        "id": "P3-3426a23a4913",
+        "params": {
+          "capture": "P1-3426a23a4913"
+        }
+      }
+    },
+    {
+      "id": "P4-3426a23a4913",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-3426a23a4913",
+          "P3-3426a23a4913"
+        ],
+        "id": "P4-3426a23a4913",
+        "params": {
+          "capture": "P1-3426a23a4913"
+        }
+      }
+    }
+  ],
+  "raw_tensor_location": "/home/inugpu/workspace/scope_h200_20261018_9EfrwM/SCOPE_v2/results/campaigns/479dde6421f18d68",
+  "limitations": [
+    "No full-model compressed-cache integration or end-model quality evaluation",
+    "No measured maximum resident-KV/decode frontier",
+    "No real MQA, hybrid/MLA, custom Triton, FlashAttention or vLLM execution",
+    "Fixed repeated public prose/code population; no confirmatory held-out replication",
+    "P7 is artifact integrity only; block PASS does not mean every screened variant passed"
+  ]
+}

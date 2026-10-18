@@ -1,0 +1,11 @@
+{
+  "id": "P1-054e41c1ed2f",
+  "status": "UNSUPPORTED",
+  "detail": "requested context plus decode exceeds model position limit",
+  "started": "2026-10-18T06:04:29.415991+00:00",
+  "ended": "2026-10-18T06:04:34.152844+00:00",
+  "result": {
+    "status": "UNSUPPORTED",
+    "detail": "requested context plus decode exceeds model position limit"
+  }
+}

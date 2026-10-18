@@ -1,0 +1,144 @@
+{
+  "protocol_version": "scope-h200-pilot-v2",
+  "experiment_id": "P4-bc18bc673b85",
+  "run_id": "7141e594975ea70c",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "7141e594975ea70c64ec7215314da43425aa91583b7457ca27b23405ce667062",
+  "started": "2026-10-18T06:04:04.724587+00:00",
+  "ended": "2026-10-18T06:04:07.423668+00:00",
+  "status": "PASS",
+  "seed": 20261018,
+  "planned_condition": {
+    "block": "P4",
+    "deps": [
+      "P1-bc18bc673b85",
+      "P3-bc18bc673b85"
+    ],
+    "id": "P4-bc18bc673b85",
+    "params": {
+      "capture": "P1-bc18bc673b85"
+    }
+  },
+  "outputs": {
+    "dense_eager-repeat0.json": {
+      "sha256": "226dc537057fcee56b2ca59746c536f6301e5a7f1a0460dace67775ce46bcf94",
+      "bytes": 921,
+      "published": false
+    },
+    "dense_eager-repeat1.json": {
+      "sha256": "57aa33a680fa15f5c1d1626e61945f05410ee75a78841430e0e60c5109598387",
+      "bytes": 918,
+      "published": false
+    },
+    "dense_eager-repeat2.json": {
+      "sha256": "3629d81dd8861b6c3dc105d953d5e4cd5eafdf16e82cda79b40d35aadea7483a",
+      "bytes": 920,
+      "published": false
+    },
+    "dense_sdpa-repeat0.json": {
+      "sha256": "60661cbd7455d4dcbfca94175df8a3e4fd782867848c6c2acbfa70a37f6a793b",
+      "bytes": 927,
+      "published": false
+    },
+    "dense_sdpa-repeat1.json": {
+      "sha256": "d203673969206ff403bab4f7627697b7003863565fff2be7edcf1890181a453b",
+      "bytes": 922,
+      "published": false
+    },
+    "dense_sdpa-repeat2.json": {
+      "sha256": "608497ca5d56908c08fcbb6e69d2b1180df0a02b776e23a49f60f651c2411b81",
+      "bytes": 922,
+      "published": false
+    },
+    "metrics.csv": {
+      "sha256": "26fa430644025608dcbf007885bf89ac296e15d4ca1288facb37ef63169eb6ac",
+      "bytes": 2302,
+      "published": true
+    },
+    "output.json": {
+      "sha256": "681b1ec787bf44eb882a6d6f92ccecc9e52f0e00bf0e10ef9618699a45d0d95a",
+      "bytes": 8207,
+      "published": false
+    },
+    "packed_restore_eager-repeat0.json": {
+      "sha256": "41026aab086c8c8af07bc5048c10dbc93a5c5705bc849d62285381959c1b67ec",
+      "bytes": 911,
+      "published": false
+    },
+    "packed_restore_eager-repeat1.json": {
+      "sha256": "7ebc0cfc3128e8c6406116cb7102112be8b844c2e48547fe5c94803be10298dc",
+      "bytes": 914,
+      "published": false
+    },
+    "packed_restore_eager-repeat2.json": {
+      "sha256": "c2b4e78de713839c5202c755aef4bc953c0d2996c716fe51f1003a2c65a3b12d",
+      "bytes": 906,
+      "published": false
+    },
+    "packed_restore_sdpa-repeat0.json": {
+      "sha256": "f1950c97a066f01efc177207256c1831079e19db2872ea74043bb6cd353dc3cc",
+      "bytes": 909,
+      "published": false
+    },
+    "packed_restore_sdpa-repeat1.json": {
+      "sha256": "086f133c56d27e1bf06292c9f469edc139e6a2138554eaef1c474e622e6bc3b3",
+      "bytes": 899,
+      "published": false
+    },
+    "packed_restore_sdpa-repeat2.json": {
+      "sha256": "011318cee06c0d942aacf7a58f36098cf7d22f6aa717a9316eba7db0c1e5ee5a",
+      "bytes": 911,
+      "published": false
+    },
+    "report.md": {
+      "sha256": "6d6cc55da0f7f466490a86d1b5f440bf57bc8f778dceed3801ff8f7a89390b24",
+      "bytes": 518,
+      "published": true
+    },
+    "stdout.log": {
+      "sha256": "9d80959f24675dd709aae1dccd59b216e2ed12d9e552755b7873729b1fea7b1a",
+      "bytes": 6,
+      "published": false
+    },
+    "summary.json": {
+      "sha256": "70eab55f513453828fd1fd369cd25a12e394c009397e93c22dba7043e4f5a70b",
+      "bytes": 8879,
+      "published": true
+    }
+  },
+  "provenance": {
+    "model": "EleutherAI/pythia-1b",
+    "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+    "layer": "gpt_neox.layers.0.attention",
+    "shape_q": [
+      1,
+      8,
+      1,
+      256
+    ],
+    "shape_k": [
+      1,
+      8,
+      513,
+      256
+    ],
+    "dtype": "torch.bfloat16",
+    "gpu": "NVIDIA H200",
+    "software": {
+      "torch": "2.14.1",
+      "triton": "3.8.0",
+      "transformers": "5.19.0",
+      "numpy": "2.5.4",
+      "pytest": "9.0.2",
+      "huggingface_hub": "2.2.0",
+      "flash_attn": null,
+      "vllm": null
+    },
+    "clocks": "1980 MHz, 3201 MHz, 36, 101.46 W",
+    "scope": "single-layer decode replay; includes unpack, dequantize, GQA materialization and attention; excludes one-time packing (separately recorded), full model and sampling",
+    "reference": "same BF16 eager contract as model; representation loss separate from executor error"
+  },
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

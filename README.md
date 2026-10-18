@@ -6,6 +6,8 @@
 
 SCOPE is an **upstream research framework** for OFD. It is not an INT4-only project, an OFD benchmark archive, or a claim that any particular GPU kernel is faster.
 
+**Latest completed collection (2026-10-18):** 512 natural source units, 1,024 BF16 conditions and a paired 128-condition FP32 audit on H200. All 1,152 conditions were collected and artifact/control checks passed. The separate dense cached/full fidelity threshold failed in 453 BF16 conditions; every FP32 audit condition passed. See [the measured results and limits](docs/POPULATION_RESULTS_20261018.md), [document-level data](results/population/46f7c2fa18e3d9c7/analysis/document_metrics.csv), and [ECDF](results/population/46f7c2fa18e3d9c7/analysis/relative_l2_ecdf.png).
+
 ## Research question
 
 Given a defined autoregressive state-transition contract, which transformations of inputs, intermediate states, and persistent representations allow **equivalent model behavior** at lower measured cost on a particular GPU?
@@ -17,7 +19,7 @@ The research order is:
 3. **P2 — Transformation search:** generate testable candidates from observed patterns; permit packed-direct, tile-local unpacking, or temporary dense materialization rather than forbidding any one path.
 4. **P3 — Hardware lowering:** evaluate H200-specific data movement, operand preparation, MMA, reduction, numerics, latency, and peak HBM. Establish a resident-KV/decode frontier.
 
-**P0 smoke tests use synthetic tensors** to validate instrumentation. Synthetic results do not establish any empirical claim about a real model's attention distribution. Real-model capture is a separate, unimplemented integration milestone.
+**P0 smoke tests use synthetic tensors** to validate instrumentation. Synthetic results do not establish any empirical claim about a real model's attention distribution. Real-model pilot capture, controlled ablations, and independent-source numerical collection now have separate runners and evidence; the full resident-KV/decode frontier remains open.
 
 ## Core contracts
 
@@ -32,7 +34,7 @@ See [research contract](docs/RESEARCH_CONTRACT.md), [observation schema](docs/OB
 
 ## Minimal reproducible smoke test
 
-Requires Python 3.10+ and PyTorch.
+The synthetic reference requires Python 3.10+ and PyTorch. The complete research/test environment was exercised on Linux with Python 3.12 and Transformers 5.19.0; tiny-model tests run on CPU without downloading checkpoints.
 
 ```bash
 python -m pip install -e ".[test]"
@@ -59,8 +61,15 @@ docs/
 scope/
   reference.py           Decoded-quantized attention + illustrative INT4 quantizer
   observations.py        Bounded-memory tensor and joint-stat summaries
+  runner.py              Bounded H200 pilot, gates and artifact verification
+  engineering.py         Exploratory real-model numerical collection
+  ablation.py            Controlled cache-fork and K/V factorial ablations
+  population_inputs.py   Pinned public-source sampling and frozen windows
+  population.py          Sequential resumable independent-source collection
+  population_stats.py    Document-block bootstrap and distributions
 scripts/
   p0_smoke.py            Synthetic reference/instrumentation sanity run
+  verify_population_artifacts.py  CPU verification of published results
 tests/
   test_reference.py      Semantics and shape tests
 ```
@@ -71,4 +80,6 @@ tests/
 
 ## Status
 
-**Bootstrap / P0 instrumentation scaffold.** No real-model distributions, H200 speedups, production serving results, or new mathematical equivalence theorems are claimed by this initialization.
+**Completed bounded numerical experiments; systems frontier not established.** The latest population study uses one pinned Qwen2.5-1.5B-Instruct checkpoint and one natural window from each of 256 WikiText article titles and 256 conservative Python project-name families. Repeated steps, dtypes and context lengths do not increase independent sample count. It retains dense KV and native prefill, so it does not establish a packed-resident implementation, end-to-end speedup, maximum resident capacity, general model-quality gain or new equivalence theorem.
+
+To verify the published data without a GPU, run `python scripts/verify_population_artifacts.py`. For the frozen sampling, execution contract, dependencies and rerun procedure, see [population results and reproduction](docs/POPULATION_RESULTS_20261018.md). The historical pilot evidence is retained alongside the new results.

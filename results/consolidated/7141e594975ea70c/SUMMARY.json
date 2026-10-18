@@ -1,0 +1,663 @@
+{
+  "run_id": "7141e594975ea70c",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "planned_execution_blocks": 41,
+  "planned_model_conditions": 12,
+  "execution_status_counts": {
+    "PASS": 23,
+    "UNSUPPORTED": 4,
+    "SKIPPED_WITH_REASON": 12,
+    "FAIL": 2
+  },
+  "publication_status_counts": {
+    "PENDING": 41
+  },
+  "real_model_conditions_passed": 6,
+  "operator_variant_pass_count": 16,
+  "operator_variant_fail_count": 8,
+  "capture_rows": [
+    {
+      "id": "P1-04fb19d9f6c5",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]",
+      "context": 512,
+      "category": "prose",
+      "head_step_observations": 108,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.0029464997351169586,
+      "max_fp32_diagnostic_relative_l2": 0.5073409676551819,
+      "median_quantized_head_relative_l2": 0.16470132023096085,
+      "full_model_decode_median_ms": 13.26915168762207,
+      "cache_tensor_storage_bytes": 14909440
+    },
+    {
+      "id": "P1-728b54fc0999",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]",
+      "context": 512,
+      "category": "code",
+      "head_step_observations": 108,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.0029298834269866347,
+      "max_fp32_diagnostic_relative_l2": 0.36267197132110596,
+      "median_quantized_head_relative_l2": 0.1310773715376854,
+      "full_model_decode_median_ms": 13.27668809890747,
+      "cache_tensor_storage_bytes": 14909440
+    },
+    {
+      "id": "P1-149a05ffeab0",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]",
+      "context": 2048,
+      "category": "prose",
+      "head_step_observations": 108,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.0035465549444779754,
+      "max_fp32_diagnostic_relative_l2": 0.7662075757980347,
+      "median_quantized_head_relative_l2": 0.12950793653726578,
+      "full_model_decode_median_ms": 14.129008293151855,
+      "cache_tensor_storage_bytes": 58949632
+    },
+    {
+      "id": "P1-c1cc3e592af8",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]",
+      "context": 2048,
+      "category": "code",
+      "head_step_observations": 108,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.0025230887113139033,
+      "max_fp32_diagnostic_relative_l2": 1.7945417165756226,
+      "median_quantized_head_relative_l2": 0.11868015304207802,
+      "full_model_decode_median_ms": 13.64359998703003,
+      "cache_tensor_storage_bytes": 58949632
+    },
+    {
+      "id": "P1-9e912262597e",
+      "model": "EleutherAI/pythia-1b",
+      "architecture": "[{\"hq\": 8, \"hkv\": 8, \"kind\": \"MHA\"}]",
+      "context": 512,
+      "category": "prose",
+      "head_step_observations": 72,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.0024964724434539676,
+      "max_fp32_diagnostic_relative_l2": 0.01154348999261856,
+      "median_quantized_head_relative_l2": 0.10201158002018929,
+      "full_model_decode_median_ms": 6.293295860290527,
+      "cache_tensor_storage_bytes": 68157440
+    },
+    {
+      "id": "P1-bc18bc673b85",
+      "model": "EleutherAI/pythia-1b",
+      "architecture": "[{\"hq\": 8, \"hkv\": 8, \"kind\": \"MHA\"}]",
+      "context": 512,
+      "category": "code",
+      "head_step_observations": 72,
+      "max_native_relative_l2": 0.0,
+      "median_fp32_diagnostic_relative_l2": 0.0030728118726983666,
+      "max_fp32_diagnostic_relative_l2": 0.011098885908722878,
+      "median_quantized_head_relative_l2": 0.12875324487686157,
+      "full_model_decode_median_ms": 5.474560022354126,
+      "cache_tensor_storage_bytes": 68157440
+    }
+  ],
+  "operator_rows": [
+    {
+      "id": "P4-04fb19d9f6c5",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.15596800297498703,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 525312,
+      "transient_peak_delta_bytes": 3214848,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-04fb19d9f6c5",
+      "variant": "dense_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.15058167278766632
+    },
+    {
+      "id": "P4-04fb19d9f6c5",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.4312000125646591,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 164160,
+      "transient_peak_delta_bytes": 3740160,
+      "representation_relative_l2": 0.4510209262371063
+    },
+    {
+      "id": "P4-04fb19d9f6c5",
+      "variant": "packed_restore_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.10364307463169098
+    },
+    {
+      "id": "P4-728b54fc0999",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.08635200187563896,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 525312,
+      "transient_peak_delta_bytes": 3214848,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-728b54fc0999",
+      "variant": "dense_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.06331068277359009
+    },
+    {
+      "id": "P4-728b54fc0999",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.24295999854803085,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 164160,
+      "transient_peak_delta_bytes": 3740160,
+      "representation_relative_l2": 0.5700255036354065
+    },
+    {
+      "id": "P4-728b54fc0999",
+      "variant": "packed_restore_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.12221828103065491
+    },
+    {
+      "id": "P4-149a05ffeab0",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.1520479992032051,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 2098176,
+      "transient_peak_delta_bytes": 12836352,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-149a05ffeab0",
+      "variant": "dense_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.24408367276191711
+    },
+    {
+      "id": "P4-149a05ffeab0",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.4180320054292679,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 655680,
+      "transient_peak_delta_bytes": 14934528,
+      "representation_relative_l2": 0.6561432480812073
+    },
+    {
+      "id": "P4-149a05ffeab0",
+      "variant": "packed_restore_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.41708889603614807
+    },
+    {
+      "id": "P4-c1cc3e592af8",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.08638400211930275,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 2098176,
+      "transient_peak_delta_bytes": 12836352,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-c1cc3e592af8",
+      "variant": "dense_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.30264851450920105
+    },
+    {
+      "id": "P4-c1cc3e592af8",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.2433920055627823,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 655680,
+      "transient_peak_delta_bytes": 14934528,
+      "representation_relative_l2": 0.6288362741470337
+    },
+    {
+      "id": "P4-c1cc3e592af8",
+      "variant": "packed_restore_sdpa",
+      "status": "FAIL",
+      "timing_windows": 0,
+      "median_ms": null,
+      "execution_relative_l2": 0.3860793709754944
+    },
+    {
+      "id": "P4-9e912262597e",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.1507199928164482,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 4202496,
+      "transient_peak_delta_bytes": 5254656,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-9e912262597e",
+      "variant": "dense_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.07105599716305733,
+      "execution_relative_l2": 0.004058741498738527,
+      "storage_allocation_bytes": 4202496,
+      "transient_peak_delta_bytes": 5250560,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-9e912262597e",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.4140480011701584,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 1313280,
+      "transient_peak_delta_bytes": 13617152,
+      "representation_relative_l2": 0.12518852949142456
+    },
+    {
+      "id": "P4-9e912262597e",
+      "variant": "packed_restore_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.3237440139055252,
+      "execution_relative_l2": 0.0038491974119096994,
+      "storage_allocation_bytes": 1313280,
+      "transient_peak_delta_bytes": 13617152,
+      "representation_relative_l2": 0.12518852949142456
+    },
+    {
+      "id": "P4-bc18bc673b85",
+      "variant": "dense_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.08649599924683571,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 4202496,
+      "transient_peak_delta_bytes": 5254656,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-bc18bc673b85",
+      "variant": "dense_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.04116800054907799,
+      "execution_relative_l2": 0.005074657499790192,
+      "storage_allocation_bytes": 4202496,
+      "transient_peak_delta_bytes": 5250560,
+      "representation_relative_l2": 0.0
+    },
+    {
+      "id": "P4-bc18bc673b85",
+      "variant": "packed_restore_eager",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.23774400353431702,
+      "execution_relative_l2": 0.0,
+      "storage_allocation_bytes": 1313280,
+      "transient_peak_delta_bytes": 13617152,
+      "representation_relative_l2": 0.1531670242547989
+    },
+    {
+      "id": "P4-bc18bc673b85",
+      "variant": "packed_restore_sdpa",
+      "status": "PASS",
+      "timing_windows": 3,
+      "median_ms": 0.18768000602722168,
+      "execution_relative_l2": 0.0035648783668875694,
+      "storage_allocation_bytes": 1313280,
+      "transient_peak_delta_bytes": 13617152,
+      "representation_relative_l2": 0.1531670242547989
+    }
+  ],
+  "failed_or_unsupported": [
+    {
+      "id": "P1-1cf7a0b00dc7",
+      "status": "UNSUPPORTED",
+      "reason": "requested context plus decode exceeds model position limit",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-1cf7a0b00dc7",
+        "params": {
+          "category": "prose",
+          "length": 2048,
+          "model": {
+            "id": "EleutherAI/pythia-1b",
+            "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-1cf7a0b00dc7",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-1cf7a0b00dc7"
+        ],
+        "id": "P3-1cf7a0b00dc7",
+        "params": {
+          "capture": "P1-1cf7a0b00dc7"
+        }
+      }
+    },
+    {
+      "id": "P4-1cf7a0b00dc7",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-1cf7a0b00dc7",
+          "P3-1cf7a0b00dc7"
+        ],
+        "id": "P4-1cf7a0b00dc7",
+        "params": {
+          "capture": "P1-1cf7a0b00dc7"
+        }
+      }
+    },
+    {
+      "id": "P1-054e41c1ed2f",
+      "status": "UNSUPPORTED",
+      "reason": "requested context plus decode exceeds model position limit",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-054e41c1ed2f",
+        "params": {
+          "category": "code",
+          "length": 2048,
+          "model": {
+            "id": "EleutherAI/pythia-1b",
+            "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-054e41c1ed2f",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-054e41c1ed2f"
+        ],
+        "id": "P3-054e41c1ed2f",
+        "params": {
+          "capture": "P1-054e41c1ed2f"
+        }
+      }
+    },
+    {
+      "id": "P4-054e41c1ed2f",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-054e41c1ed2f",
+          "P3-054e41c1ed2f"
+        ],
+        "id": "P4-054e41c1ed2f",
+        "params": {
+          "capture": "P1-054e41c1ed2f"
+        }
+      }
+    },
+    {
+      "id": "P1-0ceed09e14be",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-0ceed09e14be",
+        "params": {
+          "category": "prose",
+          "length": 512,
+          "model": {
+            "id": "facebook/opt-1.3b",
+            "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-0ceed09e14be",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-0ceed09e14be"
+        ],
+        "id": "P3-0ceed09e14be",
+        "params": {
+          "capture": "P1-0ceed09e14be"
+        }
+      }
+    },
+    {
+      "id": "P4-0ceed09e14be",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-0ceed09e14be",
+          "P3-0ceed09e14be"
+        ],
+        "id": "P4-0ceed09e14be",
+        "params": {
+          "capture": "P1-0ceed09e14be"
+        }
+      }
+    },
+    {
+      "id": "P1-95b5035f9fde",
+      "status": "FAIL",
+      "reason": "cached/full logits trajectory mismatch",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-95b5035f9fde",
+        "params": {
+          "category": "code",
+          "length": 512,
+          "model": {
+            "id": "facebook/opt-1.3b",
+            "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-95b5035f9fde",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-95b5035f9fde"
+        ],
+        "id": "P3-95b5035f9fde",
+        "params": {
+          "capture": "P1-95b5035f9fde"
+        }
+      }
+    },
+    {
+      "id": "P4-95b5035f9fde",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-95b5035f9fde",
+          "P3-95b5035f9fde"
+        ],
+        "id": "P4-95b5035f9fde",
+        "params": {
+          "capture": "P1-95b5035f9fde"
+        }
+      }
+    },
+    {
+      "id": "P1-070661f191b0",
+      "status": "UNSUPPORTED",
+      "reason": "requested context plus decode exceeds model position limit",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-070661f191b0",
+        "params": {
+          "category": "prose",
+          "length": 2048,
+          "model": {
+            "id": "facebook/opt-1.3b",
+            "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-070661f191b0",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-070661f191b0"
+        ],
+        "id": "P3-070661f191b0",
+        "params": {
+          "capture": "P1-070661f191b0"
+        }
+      }
+    },
+    {
+      "id": "P4-070661f191b0",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-070661f191b0",
+          "P3-070661f191b0"
+        ],
+        "id": "P4-070661f191b0",
+        "params": {
+          "capture": "P1-070661f191b0"
+        }
+      }
+    },
+    {
+      "id": "P1-28125cf1db34",
+      "status": "UNSUPPORTED",
+      "reason": "requested context plus decode exceeds model position limit",
+      "planned_condition": {
+        "block": "P1",
+        "deps": [
+          "P0"
+        ],
+        "id": "P1-28125cf1db34",
+        "params": {
+          "category": "code",
+          "length": 2048,
+          "model": {
+            "id": "facebook/opt-1.3b",
+            "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-28125cf1db34",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P3",
+        "deps": [
+          "P1-28125cf1db34"
+        ],
+        "id": "P3-28125cf1db34",
+        "params": {
+          "capture": "P1-28125cf1db34"
+        }
+      }
+    },
+    {
+      "id": "P4-28125cf1db34",
+      "status": "SKIPPED_WITH_REASON",
+      "reason": "predecessor did not pass",
+      "planned_condition": {
+        "block": "P4",
+        "deps": [
+          "P1-28125cf1db34",
+          "P3-28125cf1db34"
+        ],
+        "id": "P4-28125cf1db34",
+        "params": {
+          "capture": "P1-28125cf1db34"
+        }
+      }
+    }
+  ],
+  "raw_tensor_location": "/home/inugpu/workspace/scope_h200_20261018_9EfrwM/SCOPE_v2/results/campaigns/7141e594975ea70c",
+  "limitations": [
+    "No full-model compressed-cache integration or end-model quality evaluation",
+    "No measured maximum resident-KV/decode frontier",
+    "No real MQA, hybrid/MLA, custom Triton, FlashAttention or vLLM execution",
+    "Fixed repeated public prose/code population; no confirmatory held-out replication",
+    "P7 is artifact integrity only; block PASS does not mean every screened variant passed"
+  ]
+}

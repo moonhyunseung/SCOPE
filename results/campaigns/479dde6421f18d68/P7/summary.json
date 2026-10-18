@@ -1,0 +1,153 @@
+{
+  "id": "P7",
+  "status": "PASS",
+  "detail": "worker exit 0",
+  "started": "2026-10-18T06:17:20.316519+00:00",
+  "ended": "2026-10-18T06:17:23.096934+00:00",
+  "result": {
+    "status": "PASS",
+    "metrics": [
+      {
+        "id": "P0",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-08fc30fe2f17",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-14f5bd74883d",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-1aa300813eba",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-3426a23a4913",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-5a1dbfe01d66",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-b4492dcfad67",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-bcec4e71bbf4",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-e533c04e120d",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P2",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-08fc30fe2f17",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-14f5bd74883d",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-1aa300813eba",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-3426a23a4913",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-5a1dbfe01d66",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-b4492dcfad67",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-bcec4e71bbf4",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-e533c04e120d",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-08fc30fe2f17",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-14f5bd74883d",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-1aa300813eba",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-3426a23a4913",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-5a1dbfe01d66",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-b4492dcfad67",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-bcec4e71bbf4",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-e533c04e120d",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P5",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P6",
+        "status": "PASS",
+        "integrity": "PASS"
+      }
+    ],
+    "interpretation": "Existing artifact hashes verified; condition failures retained. This is an integrity audit, not independent GPU replication or OSDI-class completeness."
+  }
+}

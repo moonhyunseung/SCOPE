@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-18T12:53:39.957392+00:00",
+  "conditions": 1152,
+  "source_units": {
+    "bfloat16": 512,
+    "float32": 64
+  },
+  "dtype_conditions": {
+    "bfloat16": 1024,
+    "float32": 128
+  },
+  "dense_cached_full_fidelity": [
+    {
+      "dtype": "bfloat16",
+      "status": "PASS",
+      "count": 571
+    },
+    {
+      "dtype": "bfloat16",
+      "status": "FAIL",
+      "count": 453
+    },
+    {
+      "dtype": "float32",
+      "status": "PASS",
+      "count": 128
+    }
+  ],
+  "noop_exact_comparisons": 36864,
+  "packing_exact_comparisons": 18432,
+  "history_firststep_exact_comparisons": 6912,
+  "cross_dtype_input_identity_pairs": 128,
+  "document_metric_rows": 13824,
+  "source_hash": "c072fa01688f90f2d516725d60b01c3d11ac7e380472823a21fe0164db066947",
+  "archive_sha256": "c0cfb3ddd7e3a955d3c5d49fe404a8814571ec3ee0a6eeec26a6f31a1d155ac5",
+  "scope": "Successful data collection is separate from dense cached/full fidelity acceptance. Source units, not steps or variants, define sample size."
+}

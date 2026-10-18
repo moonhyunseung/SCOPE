@@ -1,0 +1,109 @@
+{
+  "protocol_version": "scope-h200-pilot-v2",
+  "experiment_id": "P1-bc18bc673b85",
+  "run_id": "7141e594975ea70c",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "7141e594975ea70c64ec7215314da43425aa91583b7457ca27b23405ce667062",
+  "started": "2026-10-18T06:03:45.407889+00:00",
+  "ended": "2026-10-18T06:03:53.670619+00:00",
+  "status": "PASS",
+  "seed": 20261018,
+  "planned_condition": {
+    "block": "P1",
+    "deps": [
+      "P0"
+    ],
+    "id": "P1-bc18bc673b85",
+    "params": {
+      "category": "code",
+      "length": 512,
+      "model": {
+        "id": "EleutherAI/pythia-1b",
+        "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      }
+    }
+  },
+  "outputs": {
+    "metrics.csv": {
+      "sha256": "88b7e622a7e369553f31d4569dc87b904d1c195a663280838d1c0414431cb46d",
+      "bytes": 18142,
+      "published": true
+    },
+    "output.json": {
+      "sha256": "1a7e05717c4446473ae49c7f1648134ba998e187e47819cc0c9ef13547bfdf1a",
+      "bytes": 54824,
+      "published": false
+    },
+    "report.md": {
+      "sha256": "84c2210923fa44e133911ed0f4bf071226f317272ae9fe12879a41d79dfa620a",
+      "bytes": 531,
+      "published": true
+    },
+    "sample.pt": {
+      "sha256": "cff3dc18a87057350b5cba03fe537a1c74bc23f2acc6ba16f2cc3b4a747f4f3b",
+      "bytes": 4210003,
+      "published": false
+    },
+    "state_statistics.json": {
+      "sha256": "d97d00a28e6e4a753876844732718ce16f4958ff5845a230aae81ccd09ff027b",
+      "bytes": 102777,
+      "published": false
+    },
+    "stdout.log": {
+      "sha256": "7b7fd12319af3035cc9a479622b4e89d4bce4316e2556035e37fdbe168951e91",
+      "bytes": 305,
+      "published": false
+    },
+    "summary.json": {
+      "sha256": "4931b10b82d1066c634962e4891595eae84086913e3d12d412f55d1d77783724",
+      "bytes": 58262,
+      "published": true
+    }
+  },
+  "provenance": {
+    "model_id": "EleutherAI/pythia-1b",
+    "model_revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+    "model_type": "gpt_neox",
+    "config_sha256": "7a1f3baee7f618811909f7991402420e6df67254bc71e9f6eaa560f9816e783f",
+    "native_function_source_sha256": "1dea167a292caa53f57775c91423d4103aa97cc794090d1a73251d52fdf55cbf",
+    "architecture_observed": [
+      {
+        "hq": 8,
+        "hkv": 8,
+        "kind": "MHA"
+      }
+    ],
+    "backend": "transformers eager BF16; FP32 diagnostic replay",
+    "input_dataset_id": "scope-public-repeated-code-v1",
+    "input_token_sha256": "2c96fd8db88f09c00ee31f78e7e85e94f27a5c70508eac2f7a605f6ea40081bf",
+    "seed": 20261018,
+    "dtype": "bfloat16",
+    "native_contract": "BF16 matmul and scale, mask addition in native dtype, FP32 softmax cast to BF16, BF16 PV",
+    "batch": 1,
+    "context": 512,
+    "cache_append_steps": 3,
+    "cached_full_logits_checks": [
+      {
+        "max_abs": 0.125,
+        "relative_l2": 0.005456130485981703
+      }
+    ],
+    "software": {
+      "torch": "2.14.1",
+      "triton": "3.8.0",
+      "transformers": "5.19.0",
+      "numpy": "2.5.4",
+      "pytest": "9.0.2",
+      "huggingface_hub": "2.2.0",
+      "flash_attn": null,
+      "vllm": null
+    },
+    "gpu": "NVIDIA H200",
+    "native_values": "Q,K,V, returned eager BF16 probability P and attention output Y",
+    "reconstructed_values": "FP32 diagnostic Z/P/Y/W; same-dtype Z/P/Y replay; illustrative quantizer codes/scales. FP32 difference is precision sensitivity, not executor error",
+    "trace_overhead": "not measured; no trace-mode latency reported"
+  },
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

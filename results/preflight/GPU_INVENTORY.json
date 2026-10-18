@@ -1,0 +1,14 @@
+{
+  "gpu_rows": [
+    [
+      "0",
+      "NVIDIA H200",
+      "143771",
+      "143156",
+      "0",
+      "580.126.09"
+    ]
+  ],
+  "process_inventory": "",
+  "captured_before_workload": true
+}

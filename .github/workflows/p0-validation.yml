@@ -12,10 +12,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
       - name: Install package and tests
         run: python -m pip install -e ".[test]"
       - name: Validate reference implementation
         run: python -m pytest -q
+      - name: Verify published independent-source artifacts
+        run: python scripts/verify_population_artifacts.py
       - name: Run synthetic P0 smoke
         run: python scripts/p0_smoke.py --device cpu --length 128 --output results/p0-ci.json

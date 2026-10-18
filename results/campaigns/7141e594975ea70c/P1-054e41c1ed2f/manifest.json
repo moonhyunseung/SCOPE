@@ -1,0 +1,57 @@
+{
+  "protocol_version": "scope-h200-pilot-v2",
+  "experiment_id": "P1-054e41c1ed2f",
+  "run_id": "7141e594975ea70c",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "7141e594975ea70c64ec7215314da43425aa91583b7457ca27b23405ce667062",
+  "started": "2026-10-18T06:04:29.415991+00:00",
+  "ended": "2026-10-18T06:04:34.154491+00:00",
+  "status": "UNSUPPORTED",
+  "seed": 20261018,
+  "planned_condition": {
+    "block": "P1",
+    "deps": [
+      "P0"
+    ],
+    "id": "P1-054e41c1ed2f",
+    "params": {
+      "category": "code",
+      "length": 2048,
+      "model": {
+        "id": "EleutherAI/pythia-1b",
+        "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      }
+    }
+  },
+  "outputs": {
+    "metrics.csv": {
+      "sha256": "56a0800779400b74a989607f120cf92cdebea6e9b78c64f998f257c2fb22c642",
+      "bytes": 40,
+      "published": true
+    },
+    "output.json": {
+      "sha256": "dacd6050b8edb3883062a715928214be35a7fe8cf7cf7f21e7de3cf887c84ead",
+      "bytes": 104,
+      "published": false
+    },
+    "report.md": {
+      "sha256": "b6ab243f17b31807f76576c4aa6ecff0392f67e4a3ec91a79866a961488e6e4d",
+      "bytes": 238,
+      "published": true
+    },
+    "stdout.log": {
+      "sha256": "889e09684a63f01db94358a19c64d83455ad01db84e506fdfa16a8032a79c522",
+      "bytes": 71,
+      "published": false
+    },
+    "summary.json": {
+      "sha256": "57c0118cd96fe90ed1bd560947200690982c11eac48f8c8cd925d4e8d8e32b1d",
+      "bytes": 350,
+      "published": true
+    }
+  },
+  "provenance": {},
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

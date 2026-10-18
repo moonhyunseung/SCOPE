@@ -1,0 +1,85 @@
+{
+  "id": "P5",
+  "status": "PASS",
+  "detail": "worker exit 0",
+  "started": "2026-10-18T06:06:09.448041+00:00",
+  "ended": "2026-10-18T06:06:12.342965+00:00",
+  "result": {
+    "status": "PASS",
+    "metrics": [
+      {
+        "id": "P1-04fb19d9f6c5",
+        "status": "PASS",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]"
+      },
+      {
+        "id": "P1-054e41c1ed2f",
+        "status": "UNSUPPORTED",
+        "model": null,
+        "architecture": "[]"
+      },
+      {
+        "id": "P1-070661f191b0",
+        "status": "UNSUPPORTED",
+        "model": null,
+        "architecture": "[]"
+      },
+      {
+        "id": "P1-0ceed09e14be",
+        "status": "FAIL",
+        "model": null,
+        "architecture": "[]"
+      },
+      {
+        "id": "P1-149a05ffeab0",
+        "status": "PASS",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]"
+      },
+      {
+        "id": "P1-1cf7a0b00dc7",
+        "status": "UNSUPPORTED",
+        "model": null,
+        "architecture": "[]"
+      },
+      {
+        "id": "P1-28125cf1db34",
+        "status": "UNSUPPORTED",
+        "model": null,
+        "architecture": "[]"
+      },
+      {
+        "id": "P1-728b54fc0999",
+        "status": "PASS",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]"
+      },
+      {
+        "id": "P1-95b5035f9fde",
+        "status": "FAIL",
+        "model": null,
+        "architecture": "[]"
+      },
+      {
+        "id": "P1-9e912262597e",
+        "status": "PASS",
+        "model": "EleutherAI/pythia-1b",
+        "architecture": "[{\"hq\": 8, \"hkv\": 8, \"kind\": \"MHA\"}]"
+      },
+      {
+        "id": "P1-bc18bc673b85",
+        "status": "PASS",
+        "model": "EleutherAI/pythia-1b",
+        "architecture": "[{\"hq\": 8, \"hkv\": 8, \"kind\": \"MHA\"}]"
+      },
+      {
+        "id": "P1-c1cc3e592af8",
+        "status": "PASS",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "architecture": "[{\"hq\": 12, \"hkv\": 2, \"kind\": \"GQA\"}]"
+      }
+    ],
+    "interpretation": "Cross-model coverage inventory; architecture is observed from actual Q/K/V head counts. MQA, hybrid, MLA, paged/vLLM, FlashAttention and custom Triton are UNSUPPORTED/NOT_TESTED in this pilot unless explicitly recorded elsewhere."
+  }
+}

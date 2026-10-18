@@ -1,0 +1,13 @@
+architecture,id,model,status
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",P1-04fb19d9f6c5,Qwen/Qwen2.5-1.5B-Instruct,PASS
+[],P1-054e41c1ed2f,,UNSUPPORTED
+[],P1-070661f191b0,,UNSUPPORTED
+[],P1-0ceed09e14be,,FAIL
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",P1-149a05ffeab0,Qwen/Qwen2.5-1.5B-Instruct,PASS
+[],P1-1cf7a0b00dc7,,UNSUPPORTED
+[],P1-28125cf1db34,,UNSUPPORTED
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",P1-728b54fc0999,Qwen/Qwen2.5-1.5B-Instruct,PASS
+[],P1-95b5035f9fde,,FAIL
+"[{""hq"": 8, ""hkv"": 8, ""kind"": ""MHA""}]",P1-9e912262597e,EleutherAI/pythia-1b,PASS
+"[{""hq"": 8, ""hkv"": 8, ""kind"": ""MHA""}]",P1-bc18bc673b85,EleutherAI/pythia-1b,PASS
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",P1-c1cc3e592af8,Qwen/Qwen2.5-1.5B-Instruct,PASS

@@ -1,0 +1,67 @@
+{
+  "config": {
+    "protocol_version": "scope-independent-population-v1",
+    "seed": 20261018,
+    "cpu_threads": 4,
+    "max_allocated_hbm_gib": 96,
+    "reserve_hbm_gib": 12,
+    "minimum_free_hbm_gib": 32,
+    "reserve_disk_gib": 24,
+    "campaign_timeout_seconds": 28800,
+    "job_timeout_seconds": 2400,
+    "performance_repeats": 3,
+    "warmup": 10,
+    "timed_iterations": 40,
+    "decode_steps": 8,
+    "native_reference_relative_l2": 0.025,
+    "trajectory_relative_l2": 0.025,
+    "lengths": [
+      512,
+      2048
+    ],
+    "categories": [
+      "prose",
+      "code"
+    ],
+    "capture_steps": [
+      0,
+      3,
+      7
+    ],
+    "bits": [
+      4,
+      8
+    ],
+    "groups": [
+      32,
+      64,
+      128
+    ],
+    "publication": "server only",
+    "sampling": "frozen independent source units; 256 per domain; one window each",
+    "precision_controls": "explicit FP32 OPT/7B conditions; BF16 results kept separately",
+    "intervention": "all-layer INT4 group32 decode only; native prefill; teacher-forced full native tokens; dense KV caches retained",
+    "model": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "teacher_forcing": "natural frozen source continuation; matched across all conditions",
+    "regimes": [
+      "isolated native cache snapshot at each step",
+      "recurrent intervention from identical initial cache"
+    ],
+    "factorial": "K 0/1 x V 0/1; INT4 group32 eager; no-op, layer, bit/group, backend and packing controls",
+    "dtype_interpretation": "same pretrained checkpoint cast to BF16/FP32; same frozen token IDs; TF32 off in both; no runtime comparison",
+    "statistical_unit": "source article or conservative project-name family",
+    "primary_contrasts": "confirmatory half: K10 minus V01 mean relative L2 over 8 steps at L2048; separately domain x isolated/recurrent; four contrasts; bootstrap document blocks; familywise 98.75% per-contrast intervals"
+  },
+  "identity": {
+    "git_sha": "685b16d22d9a20c656f2cf5c51fe10280e725967",
+    "source_hash": "c072fa01688f90f2d516725d60b01c3d11ac7e380472823a21fe0164db066947"
+  },
+  "input_manifest_sha256": "6f1963d16f90931ec56fc6d710b5fef20584f9f40b39d45a38b94a110a3f0319",
+  "planned_independent_units": 512,
+  "planned_conditions": 1152,
+  "created": "2026-10-18T10:51:00.119725+00:00",
+  "smoke": false
+}
