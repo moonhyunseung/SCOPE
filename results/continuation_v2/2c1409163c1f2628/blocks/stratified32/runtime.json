@@ -1,0 +1,14 @@
+{
+  "code_sha256": "dd58c84c09f81825518014901633410c4d7c49c2e50e147899da5aace38c4f36",
+  "historical_code_sha256": "c072fa01688f90f2d516725d60b01c3d11ac7e380472823a21fe0164db066947",
+  "native_attention_sha256": "cb34ccea28710ae8d5d94a241b704ea3d974048f85372f0b1b3c2a8a2ef1ee20",
+  "native_rope_sha256": "ea234325c15de475147027ac7da4307167d082b13f4c62a7f2921fef4f9e5e87",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.19.0",
+  "triton": "3.8.0",
+  "cuda": "13.0",
+  "gpu": "NVIDIA H200",
+  "tf32": false,
+  "float32_matmul_precision": "highest",
+  "bf16_reduced_precision_reduction": true
+}

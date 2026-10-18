@@ -1,0 +1,10 @@
+# Registered exploratory mechanism hypotheses
+
+Registered after diagnostic pilot `27fe758a48240e131a95035a937e6b3331c32ef0`, before mechanism follow-up outcomes. These tests are exploratory and reuse the diagnostic sample; no confirmatory prevalence claim is permitted.
+
+1. **MLP down shape hypothesis.** At some BF16 traces, first-layer down-projection inputs are bitwise equal while its native output differs for M=1 versus M=L+step+1. Falsification: the inputs already differ, or fixed-vector shape controls produce identical output. Test every first-layer projection, including MLP gate/up/down and attention output projection, not only Q/K/V. Compare native projection output to the M=1 control exactly before interpreting it.
+2. **Score contraction shape hypothesis.** Some first-layer BF16 QK contractions differ when only the query-row count changes. Test identical query and fixed keys with M=1/M=N; retain FP32 same-input references. Native mask/scale remain a separate check. A nonzero result demonstrates shape sensitivity, not the exact internal cuBLAS algorithm.
+3. **Reduction-mode hypothesis.** Disabling BF16 reduced-precision reduction changes the observed same-input shape difference. Falsification: both modes give identical errors. FP32 computation on BF16-rounded weights is a separate diagnostic and does not replace the FP32 checkpoint audit.
+4. **Numerical execution hypothesis.** If same-representation tiled reconstruction or a higher-precision bounded contraction reduces error below its declared contract, benchmark its entire conversion + attention + restoration path. Reject a speed claim if numerical gates fail or full path timing fails to improve. Reject a capacity claim unless packed KV is the actual persistent cache and allocator accounting demonstrates a resident-memory change.
+
+No hypothesis above asserts universal algebraic invariants or guarantees end-to-end quality, speed or capacity gains. New hardware candidates require separate correctness and systems gates.

@@ -1,0 +1,25 @@
+{
+  "plan_sha256": "fd26749d59e21c8b2869029b2a81f37ba99e3d546d882e4d9867ccca41202dde",
+  "steps": [
+    0,
+    3,
+    7
+  ],
+  "operations": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "mlp_gate",
+    "mlp_up",
+    "mlp_down",
+    "QK",
+    "PV"
+  ],
+  "flags": [
+    true,
+    false
+  ],
+  "source": "1915800e0b8be8b90cf1fed88777c0934551e3ea0909ac092263fcdd852eea3c",
+  "classification": "exploratory mechanism intervention, not prevalence or complete attribution"
+}
