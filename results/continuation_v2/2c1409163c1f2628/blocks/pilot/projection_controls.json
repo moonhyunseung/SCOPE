@@ -1,0 +1,542 @@
+[
+  {
+    "case_id": "06652f381f9ba6db",
+    "dtype": "bfloat16",
+    "name": "q_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 371.3751220703125,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0018722600070759654,
+      "max_abs": 0.243743896484375,
+      "reference_norm": 371.2587890625,
+      "cosine": 0.9999982118606567
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0018722600070759654,
+      "max_abs": 0.243743896484375,
+      "reference_norm": 371.2587890625,
+      "cosine": 0.9999982118606567
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 371.3751220703125,
+      "cosine": 1.0
+    },
+    "input_sha256": "486be5d4e7462b798669ecacf475393f7a065a93fd7c6966af362275f6dc77eb",
+    "weight_sha256": "527bf1760462c181be3ab71e3c394cdf50283a4df6b5d80d0bd2a5ab0b7eded5",
+    "bias_sha256": "2d7f86c22901571abb3fce277583baff940dc418d7ab51ba010e16180d5152cd"
+  },
+  {
+    "case_id": "06652f381f9ba6db",
+    "dtype": "bfloat16",
+    "name": "k_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1105.1285400390625,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0021201588679105043,
+      "max_abs": 0.9849853515625,
+      "reference_norm": 1104.766357421875,
+      "cosine": 0.9999977350234985
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0021201588679105043,
+      "max_abs": 0.9849853515625,
+      "reference_norm": 1104.766357421875,
+      "cosine": 0.9999977350234985
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1105.1285400390625,
+      "cosine": 1.0
+    },
+    "input_sha256": "486be5d4e7462b798669ecacf475393f7a065a93fd7c6966af362275f6dc77eb",
+    "weight_sha256": "fc78ff1dd5bf869ca5e55f42ff68e1d05cd4a7b4ad2c637549e9e45c7e3e3460",
+    "bias_sha256": "5729214a7a5ab6aeb94dcce2b53c1a16e5b7e25fb73520eaf5d4fce99670ac3e"
+  },
+  {
+    "case_id": "06652f381f9ba6db",
+    "dtype": "bfloat16",
+    "name": "v_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 5.324138641357422,
+      "cosine": 0.9999999403953552
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.001452372525818646,
+      "max_abs": 0.004767179489135742,
+      "reference_norm": 5.327569961547852,
+      "cosine": 0.9999990463256836
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.001452372525818646,
+      "max_abs": 0.004767179489135742,
+      "reference_norm": 5.327569961547852,
+      "cosine": 0.9999990463256836
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 3.2833740988280624e-06,
+      "max_abs": 1.52587890625e-05,
+      "reference_norm": 5.324138641357422,
+      "cosine": 0.9999999403953552
+    },
+    "input_sha256": "486be5d4e7462b798669ecacf475393f7a065a93fd7c6966af362275f6dc77eb",
+    "weight_sha256": "8a4c60227e0bd574c69079b4be6d16324cd3424fca4afa3de562f167b6f4c8c5",
+    "bias_sha256": "ccb91161b56dab3c1fa65f18333811065c274775b638eb9eee9cab19dbdcb0d2"
+  },
+  {
+    "case_id": "06652f381f9ba6db",
+    "dtype": "float32",
+    "name": "q_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 3.5426501199253835e-07,
+      "max_abs": 6.103515625e-05,
+      "reference_norm": 371.3664855957031,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 371.3664245605469,
+      "cosine": 1.0000001192092896
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 3.542650688359572e-07,
+      "max_abs": 6.103515625e-05,
+      "reference_norm": 371.3664245605469,
+      "cosine": 1.0
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 371.3664245605469,
+      "cosine": 1.0000001192092896
+    },
+    "input_sha256": "532713f8e67095f1cfaee5802daa58a7edd8f29cd64170454e1dfcdfe4dd8952",
+    "weight_sha256": "2f2342dc6be9eb5b977a19d84b980f53eb0b6f4e922a806e3e5dfe3cf0ae4e65",
+    "bias_sha256": "7b7f8de6c8d600bc9831bc32e1409244dec5ad49e69679c6036bc299257361b7"
+  },
+  {
+    "case_id": "06652f381f9ba6db",
+    "dtype": "float32",
+    "name": "k_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 2.9351022945434124e-08,
+      "max_abs": 3.0517578125e-05,
+      "reference_norm": 1104.7672119140625,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1104.7672119140625,
+      "cosine": 1.0
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 2.9351022945434124e-08,
+      "max_abs": 3.0517578125e-05,
+      "reference_norm": 1104.7672119140625,
+      "cosine": 1.0
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1104.7672119140625,
+      "cosine": 1.0
+    },
+    "input_sha256": "532713f8e67095f1cfaee5802daa58a7edd8f29cd64170454e1dfcdfe4dd8952",
+    "weight_sha256": "921b59a56fb5d7ddc125c4bba496100ff6696016be2603bd393ff1e53d5e31c3",
+    "bias_sha256": "32f642d790951b7307459e1ec4a57f90c09f57855af9b4643a7ae44a7ed0e757"
+  },
+  {
+    "case_id": "06652f381f9ba6db",
+    "dtype": "float32",
+    "name": "v_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 6.798674689889594e-07,
+      "max_abs": 1.430511474609375e-06,
+      "reference_norm": 5.3286919593811035,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 5.328691005706787,
+      "cosine": 1.0000001192092896
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 6.798675826757972e-07,
+      "max_abs": 1.430511474609375e-06,
+      "reference_norm": 5.328691005706787,
+      "cosine": 1.0
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 5.328691005706787,
+      "cosine": 1.0000001192092896
+    },
+    "input_sha256": "532713f8e67095f1cfaee5802daa58a7edd8f29cd64170454e1dfcdfe4dd8952",
+    "weight_sha256": "c96b3d85c5ea0053a2a67773d8963a9823bb000698e678a6bd33a20d7c8a1f16",
+    "bias_sha256": "564d2f51a720c393c782a6bd8d365097c5e54d31f052699e9baf79719e3842dd"
+  },
+  {
+    "case_id": "1c5ac98546676761",
+    "dtype": "bfloat16",
+    "name": "q_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 137.69972229003906,
+      "cosine": 1.0000001192092896
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0018087471835315228,
+      "max_abs": 0.08559417724609375,
+      "reference_norm": 137.69337463378906,
+      "cosine": 0.9999984502792358
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0018087471835315228,
+      "max_abs": 0.08559417724609375,
+      "reference_norm": 137.69337463378906,
+      "cosine": 0.9999984502792358
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 4.4324821146801696e-07,
+      "max_abs": 6.103515625e-05,
+      "reference_norm": 137.69972229003906,
+      "cosine": 1.0000001192092896
+    },
+    "input_sha256": "29202131eba923182878d287ae4cba497f2c372f62e76728020216fdd3d60623",
+    "weight_sha256": "527bf1760462c181be3ab71e3c394cdf50283a4df6b5d80d0bd2a5ab0b7eded5",
+    "bias_sha256": "2d7f86c22901571abb3fce277583baff940dc418d7ab51ba010e16180d5152cd"
+  },
+  {
+    "case_id": "1c5ac98546676761",
+    "dtype": "bfloat16",
+    "name": "k_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1102.864990234375,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0016003814525902271,
+      "max_abs": 0.796417236328125,
+      "reference_norm": 1103.486572265625,
+      "cosine": 0.9999987483024597
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0016003814525902271,
+      "max_abs": 0.796417236328125,
+      "reference_norm": 1103.486572265625,
+      "cosine": 0.9999987483024597
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1102.864990234375,
+      "cosine": 1.0
+    },
+    "input_sha256": "29202131eba923182878d287ae4cba497f2c372f62e76728020216fdd3d60623",
+    "weight_sha256": "fc78ff1dd5bf869ca5e55f42ff68e1d05cd4a7b4ad2c637549e9e45c7e3e3460",
+    "bias_sha256": "5729214a7a5ab6aeb94dcce2b53c1a16e5b7e25fb73520eaf5d4fce99670ac3e"
+  },
+  {
+    "case_id": "1c5ac98546676761",
+    "dtype": "bfloat16",
+    "name": "v_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 6.0179314613342285,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.001756411511451006,
+      "max_abs": 0.003828287124633789,
+      "reference_norm": 6.018803596496582,
+      "cosine": 0.9999983906745911
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.001756411511451006,
+      "max_abs": 0.003828287124633789,
+      "reference_norm": 6.018803596496582,
+      "cosine": 0.9999983906745911
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 1.0147166904062033e-05,
+      "max_abs": 6.103515625e-05,
+      "reference_norm": 6.01793098449707,
+      "cosine": 1.0
+    },
+    "input_sha256": "29202131eba923182878d287ae4cba497f2c372f62e76728020216fdd3d60623",
+    "weight_sha256": "8a4c60227e0bd574c69079b4be6d16324cd3424fca4afa3de562f167b6f4c8c5",
+    "bias_sha256": "ccb91161b56dab3c1fa65f18333811065c274775b638eb9eee9cab19dbdcb0d2"
+  },
+  {
+    "case_id": "1c5ac98546676761",
+    "dtype": "float32",
+    "name": "q_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 2.823030058607401e-07,
+      "max_abs": 2.09808349609375e-05,
+      "reference_norm": 137.7349090576172,
+      "cosine": 1.0000001192092896
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 137.7349090576172,
+      "cosine": 1.0000001192092896
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 2.823030058607401e-07,
+      "max_abs": 2.09808349609375e-05,
+      "reference_norm": 137.7349090576172,
+      "cosine": 1.0000001192092896
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 137.7349090576172,
+      "cosine": 1.0000001192092896
+    },
+    "input_sha256": "8a89d485823b543c5ddd84e3944245d750ef026b97a39349b3529cfca11f0924",
+    "weight_sha256": "2f2342dc6be9eb5b977a19d84b980f53eb0b6f4e922a806e3e5dfe3cf0ae4e65",
+    "bias_sha256": "7b7f8de6c8d600bc9831bc32e1409244dec5ad49e69679c6036bc299257361b7"
+  },
+  {
+    "case_id": "1c5ac98546676761",
+    "dtype": "float32",
+    "name": "k_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 2.452600611491107e-08,
+      "max_abs": 1.52587890625e-05,
+      "reference_norm": 1103.486083984375,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1103.486083984375,
+      "cosine": 1.0
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 2.452600611491107e-08,
+      "max_abs": 1.52587890625e-05,
+      "reference_norm": 1103.486083984375,
+      "cosine": 1.0
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 1103.486083984375,
+      "cosine": 1.0
+    },
+    "input_sha256": "8a89d485823b543c5ddd84e3944245d750ef026b97a39349b3529cfca11f0924",
+    "weight_sha256": "921b59a56fb5d7ddc125c4bba496100ff6696016be2603bd393ff1e53d5e31c3",
+    "bias_sha256": "32f642d790951b7307459e1ec4a57f90c09f57855af9b4643a7ae44a7ed0e757"
+  },
+  {
+    "case_id": "1c5ac98546676761",
+    "dtype": "float32",
+    "name": "v_proj",
+    "rows": 513,
+    "one_vs_many": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 6.458848815782403e-07,
+      "max_abs": 1.3113021850585938e-06,
+      "reference_norm": 6.019876480102539,
+      "cosine": 1.0
+    },
+    "one_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 6.019876956939697,
+      "cosine": 1.0
+    },
+    "many_vs_same_weight_fp32": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 6.458848247348214e-07,
+      "max_abs": 1.3113021850585938e-06,
+      "reference_norm": 6.019876956939697,
+      "cosine": 1.0
+    },
+    "one_vs_fp32_rounded": {
+      "finite": true,
+      "nonfinite_output": 0,
+      "nonfinite_reference": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "reference_norm": 6.019876956939697,
+      "cosine": 1.0
+    },
+    "input_sha256": "8a89d485823b543c5ddd84e3944245d750ef026b97a39349b3529cfca11f0924",
+    "weight_sha256": "c96b3d85c5ea0053a2a67773d8963a9823bb000698e678a6bd33a20d7c8a1f16",
+    "bias_sha256": "564d2f51a720c393c782a6bd8d365097c5e54d31f052699e9baf79719e3842dd"
+  }
+]

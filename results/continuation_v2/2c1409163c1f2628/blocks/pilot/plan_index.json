@@ -1,0 +1,335 @@
+{
+  "protocol": "native-diagnosis-v2.1",
+  "baseline": "3f06d6f5e8f86959f6e1a1bc9fc67ccdd05c67a8",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "steps": 8,
+  "trace_steps": [
+    0,
+    3,
+    7
+  ],
+  "per_stratum": 2,
+  "input_manifest_sha256": "6f1963d16f90931ec56fc6d710b5fef20584f9f40b39d45a38b94a110a3f0319",
+  "stage_contract": "last query row; native scores and softmax captured inside original eager; full K/V compared",
+  "tolerances": {
+    "dense_relative_l2": 0.025,
+    "noop": "exact",
+    "structure": "exact",
+    "first_nonzero": "max_abs > 0"
+  },
+  "classification": "structural mismatch => unresolved; exact upstream plus projection-shape intervention => demonstrated shape sensitivity; history intervention is descriptive, not additive decomposition",
+  "independent_unit": "source article/project family; outcome-stratified cases are repeated across lengths and dtype",
+  "max_allocated_hbm_gib": 96,
+  "reserve_hbm_gib": 12,
+  "minimum_free_hbm_gib": 32,
+  "reserve_disk_gib": 24,
+  "seed": 20261018,
+  "cases": [
+    {
+      "case_id": "1c5ac98546676761",
+      "document_id": "c513b09618e786559f5f",
+      "domain": "prose",
+      "length": 512,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.021310724318027496,
+        0.029119865968823433,
+        0.022975027561187744,
+        0.017856415361166,
+        0.0174859631806612,
+        0.014713713899254799,
+        0.011915075592696667,
+        0.010768956504762173
+      ],
+      "historical_manifest_sha256": "7ba13403ec58a9e4aa72fba05bdb9662bced93542c81bfbed1d4ab94ac54badd",
+      "token_sha256": "50385705dfca1972e51ef642456cdf8c8e65fc96543a1afb97475db904d2ec5c"
+    },
+    {
+      "case_id": "06652f381f9ba6db",
+      "document_id": "9cd0030b4843cf94bc7b",
+      "domain": "prose",
+      "length": 512,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.01696714200079441,
+        0.008549691177904606,
+        0.009873256087303162,
+        0.013999846763908863,
+        0.008008547127246857,
+        0.010898057371377945,
+        0.00849209912121296,
+        0.013867857865989208
+      ],
+      "historical_manifest_sha256": "002d6edc822103c318fc24b663e4e2055bd669056fb0c46bd14c21bdb9cee74f",
+      "token_sha256": "67984ad532ac9bbada08aebe575f0adac7aa2dd20fe819d2001a86f2baf5a81b"
+    },
+    {
+      "case_id": "1ef10c5f28a54ff1",
+      "document_id": "ccd41745bdd58d798962",
+      "domain": "prose",
+      "length": 512,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.011899127624928951,
+        0.009953646920621395,
+        0.015934666618704796,
+        0.022702844813466072,
+        0.026650773361325264,
+        0.010221225209534168,
+        0.01195194385945797,
+        0.01100993063300848
+      ],
+      "historical_manifest_sha256": "94cec6ab50ea56e478509e419aeaa22dec2a5b9d4153661e8350ae3100017648",
+      "token_sha256": "bdf30f5a6fd139523310d7165dc5f1dd4b04126b07773efb64d406b7cb8c3fe5"
+    },
+    {
+      "case_id": "1d0b55d49791c031",
+      "document_id": "a3e78cfd5919ed26fb24",
+      "domain": "prose",
+      "length": 2048,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.009812075644731522,
+        0.011184507049620152,
+        0.01951005309820175,
+        0.017385907471179962,
+        0.028721969574689865,
+        0.017657944932579994,
+        0.011982094496488571,
+        0.012627776712179184
+      ],
+      "historical_manifest_sha256": "d1e9af78fea8740a80cbd73da997ef160013330402e204e8bae6852e2d20fd24",
+      "token_sha256": "dd01e38bc8a964a3515387fe39fdc9533bf64784e047fa44568a0878bbd8fbdb"
+    },
+    {
+      "case_id": "25603b3cd7cbdaf4",
+      "document_id": "beab625e55758f99a0b6",
+      "domain": "prose",
+      "length": 2048,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.029092414304614067,
+        0.01850114017724991,
+        0.008713132701814175,
+        0.011118900030851364,
+        0.012535487301647663,
+        0.012935837730765343,
+        0.012609178200364113,
+        0.01130769494920969
+      ],
+      "historical_manifest_sha256": "ef624d0c29ced6c21b14360eff8343261f45bc3677d723995ba8d13d511a00b9",
+      "token_sha256": "1525a7da85832448f716baf4f5a9cbf77fb01e1c9c58725a33d7f90a71aea9ce"
+    },
+    {
+      "case_id": "04638e2cd2ce202c",
+      "document_id": "12dc8ba9e7e9e1b34327",
+      "domain": "code",
+      "length": 512,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.00959524605423212,
+        0.011619462631642818,
+        0.027672020718455315,
+        0.016500093042850494,
+        0.009026513434946537,
+        0.007215242832899094,
+        0.011309541761875153,
+        0.01738205924630165
+      ],
+      "historical_manifest_sha256": "b753775c2d08da703d9cb2acfa8a6e0a5f37559bb14fe96f9ab2fd8060dca25f",
+      "token_sha256": "1d30ae155b6829d60b141dfa6bf42dea9fda4c1bef52a16bebdb4db7e7b97fe8"
+    },
+    {
+      "case_id": "23f1846c7bb68806",
+      "document_id": "94e9784b50ef32b21560",
+      "domain": "code",
+      "length": 512,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.06309690326452255,
+        0.010691268369555473,
+        0.024512138217687607,
+        0.019698405638337135,
+        0.0199428778141737,
+        0.018485059961676598,
+        0.01766313798725605,
+        0.015423759818077087
+      ],
+      "historical_manifest_sha256": "66b72e185c9b848623ddd7c65fda5194316d3bba9d01da7a57c1ae4ccfb2d5b5",
+      "token_sha256": "566d8e91e2f4dfcad3754eaff2a826664fcbd0be086aae607ad9dc7a76abbf79"
+    },
+    {
+      "case_id": "0b4d56c3325cd9e3",
+      "document_id": "ce3e6e03f73ab89b4007",
+      "domain": "code",
+      "length": 2048,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.019945450127124786,
+        0.016736596822738647,
+        0.02664499171078205,
+        0.020366068929433823,
+        0.017312724143266678,
+        0.025226328521966934,
+        0.014695352874696255,
+        0.01652131788432598
+      ],
+      "historical_manifest_sha256": "105a8bf1d0589c377aff8974939711e6a40812fd1c0ce6d3034c633e513634e3",
+      "token_sha256": "8360da2cb77824cd663668d293449ea4e7af041bb89557b2a9e5528c8084f812"
+    },
+    {
+      "case_id": "2777fd5b63ae77fe",
+      "document_id": "cbef22ea9cc9c3d13c22",
+      "domain": "code",
+      "length": 2048,
+      "historical_fidelity": "FAIL",
+      "historical_relative_l2": [
+        0.018478156998753548,
+        0.024907590821385384,
+        0.01845087669789791,
+        0.023353172466158867,
+        0.023068619892001152,
+        0.02827000431716442,
+        0.012358438223600388,
+        0.01668236032128334
+      ],
+      "historical_manifest_sha256": "a480d181da9ca90d40fca714627e17925c5bc560d973a3b3e028b1d4914192fa",
+      "token_sha256": "04cba019d2355e89aee015c7f64eee068acc8918732bc9e25b6aedd887840e2b"
+    },
+    {
+      "case_id": "1110fdd857b6728e",
+      "document_id": "2a02363d37a07b396601",
+      "domain": "prose",
+      "length": 512,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.017432326450943947,
+        0.013397915288805962,
+        0.01629706099629402,
+        0.014535995200276375,
+        0.016108408570289612,
+        0.022204533219337463,
+        0.015568100847303867,
+        0.013215268030762672
+      ],
+      "historical_manifest_sha256": "c3f897f1e6c65b04569836e5ac8baad1deb0474d412c20f8b157d30dc3650cbf",
+      "token_sha256": "79f8fa4e7de0b8ae113a185bb9dfeb48135c27c9517ff1e88136fe164b53c2a0"
+    },
+    {
+      "case_id": "0ebbcd97f8bcf6d4",
+      "document_id": "45fb8d954f5180e7b61f",
+      "domain": "prose",
+      "length": 2048,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.01036339346319437,
+        0.012148326262831688,
+        0.013241257518529892,
+        0.01881716214120388,
+        0.012279667891561985,
+        0.009201759472489357,
+        0.008715571835637093,
+        0.014071363024413586
+      ],
+      "historical_manifest_sha256": "6f8032c02dce7b8acb931a7e72fba1a3235075a760f62eecffc2ab6444940395",
+      "token_sha256": "a30fd3dd646d766f269dd418a829db67105215fd820699421a1a5cab019c8d44"
+    },
+    {
+      "case_id": "1612c686a5c85bf9",
+      "document_id": "70a5dc94cb2f3ff9dee7",
+      "domain": "prose",
+      "length": 2048,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.012075092643499374,
+        0.023463381454348564,
+        0.009804337285459042,
+        0.01211418118327856,
+        0.01023187953978777,
+        0.01185055822134018,
+        0.011743458919227123,
+        0.007923882454633713
+      ],
+      "historical_manifest_sha256": "7e019e1bd5bd2bbe10bf65ad0a93957d4475a65f5a45d77e36df3bdde7a0345e",
+      "token_sha256": "d691ba4a144357f81fb3114854553bd5aa58900f67efd74c11b835de465438ae"
+    },
+    {
+      "case_id": "04f82ec90543c3fc",
+      "document_id": "8a0bb3f1a75d5ac5e0e7",
+      "domain": "code",
+      "length": 512,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.01101660542190075,
+        0.016353096812963486,
+        0.01648913137614727,
+        0.016959507018327713,
+        0.0118381567299366,
+        0.011355697177350521,
+        0.009431512095034122,
+        0.018730269744992256
+      ],
+      "historical_manifest_sha256": "a77904ab5fab2fe5e82290809a249718ec987a2a4e21905c15287c412b430d5d",
+      "token_sha256": "a63d3a82bf275717fc2813e4b70be8ed41e06c5ca9c2c7848817694b268f7623"
+    },
+    {
+      "case_id": "19fc75c9127ec9c9",
+      "document_id": "69745b0d05ea655ee7ac",
+      "domain": "code",
+      "length": 512,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.019380459561944008,
+        0.019893480464816093,
+        0.009706302545964718,
+        0.009071354754269123,
+        0.011359522119164467,
+        0.012307296507060528,
+        0.008607383817434311,
+        0.013584394007921219
+      ],
+      "historical_manifest_sha256": "411811926ec3f0f58c0689702ff0139bec76a65a2cd7d1837e9d9d002cc04b0e",
+      "token_sha256": "3453b0f9c16d565cfa7501b52d8250f758b9f46ae1b376e5a628723715b0ae3e"
+    },
+    {
+      "case_id": "09a181508172e67f",
+      "document_id": "c42f3a32f110ed7c7876",
+      "domain": "code",
+      "length": 2048,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.017543092370033264,
+        0.019727548584342003,
+        0.01871144212782383,
+        0.015941863879561424,
+        0.014356875792145729,
+        0.017964566126465797,
+        0.012323332019150257,
+        0.011859294958412647
+      ],
+      "historical_manifest_sha256": "0917ecb693b3f78ecf0a90b38520e899f43af97fc27012f5f87868423ca994e7",
+      "token_sha256": "60921eb09593ed63703e5943dc7bf9e3e1f05eda8146893d6c40ac64781e08eb"
+    },
+    {
+      "case_id": "2c8eada7374426ab",
+      "document_id": "12dc8ba9e7e9e1b34327",
+      "domain": "code",
+      "length": 2048,
+      "historical_fidelity": "PASS",
+      "historical_relative_l2": [
+        0.011877712793648243,
+        0.008587361313402653,
+        0.01460470724850893,
+        0.011822395026683807,
+        0.014671443961560726,
+        0.009802279062569141,
+        0.008051684126257896,
+        0.01481791865080595
+      ],
+      "historical_manifest_sha256": "0c788e5caea69a1f45cecd1e384b6a23beb8c2218d85dadd5c96fe235f95e0d4",
+      "token_sha256": "4885a8ccf252154c7f0cd96a3e41728e7cc1c47b7ac090f0ba77e4e66d39e201"
+    }
+  ],
+  "raw_input_availability": "Frozen exact token IDs remain in the server plan and historical condition tokens.json; regenerate with prepare against full private baseline artifacts."
+}

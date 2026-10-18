@@ -1,0 +1,182 @@
+# Native cached/full diagnostic
+
+{
+  "status": "VERIFIED_BLOCK",
+  "block": "pilot",
+  "baseline": "3f06d6f5e8f86959f6e1a1bc9fc67ccdd05c67a8",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "planned_campaign_conditions": 32,
+  "block_conditions": 4,
+  "failed": 0,
+  "independent_source_units": 2,
+  "conditions": [
+    {
+      "status": "COLLECTED",
+      "case_id": "06652f381f9ba6db",
+      "document_id": "9cd0030b4843cf94bc7b",
+      "domain": "prose",
+      "length": 512,
+      "dtype": "bfloat16",
+      "historical_fidelity": "PASS",
+      "dense_fidelity": "PASS",
+      "controls_exact": true,
+      "control_checks": 9,
+      "append_ok": true,
+      "structural_exact": true,
+      "earliest_stages": [
+        "L00.mlp_down"
+      ],
+      "projection_shape_sensitivity_demonstrated": false,
+      "classification": "UNRESOLVED",
+      "unresolved_exhaustive_cause": true,
+      "stage_rows": 6792,
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "token_sha256": "67984ad532ac9bbada08aebe575f0adac7aa2dd20fe819d2001a86f2baf5a81b",
+      "peak_allocated_bytes": 3211638272,
+      "caution": "Exact shape-control differences demonstrate a mechanism, not complete attribution of all 453 historical failures."
+    },
+    {
+      "status": "COLLECTED",
+      "case_id": "06652f381f9ba6db",
+      "document_id": "9cd0030b4843cf94bc7b",
+      "domain": "prose",
+      "length": 512,
+      "dtype": "float32",
+      "historical_fidelity": "PASS",
+      "dense_fidelity": "PASS",
+      "controls_exact": true,
+      "control_checks": 9,
+      "append_ok": true,
+      "structural_exact": true,
+      "earliest_stages": [
+        "L00.q_proj"
+      ],
+      "projection_shape_sensitivity_demonstrated": true,
+      "classification": "SHAPE_SENSITIVITY_DEMONSTRATED_NOT_EXHAUSTIVE_CAUSE",
+      "unresolved_exhaustive_cause": true,
+      "stage_rows": 6792,
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "token_sha256": "67984ad532ac9bbada08aebe575f0adac7aa2dd20fe819d2001a86f2baf5a81b",
+      "peak_allocated_bytes": 6384790016,
+      "caution": "Exact shape-control differences demonstrate a mechanism, not complete attribution of all 453 historical failures."
+    },
+    {
+      "status": "COLLECTED",
+      "case_id": "1c5ac98546676761",
+      "document_id": "c513b09618e786559f5f",
+      "domain": "prose",
+      "length": 512,
+      "dtype": "bfloat16",
+      "historical_fidelity": "FAIL",
+      "dense_fidelity": "FAIL",
+      "controls_exact": true,
+      "control_checks": 9,
+      "append_ok": true,
+      "structural_exact": true,
+      "earliest_stages": [
+        "L00.mlp_down",
+        "L00.scores"
+      ],
+      "projection_shape_sensitivity_demonstrated": false,
+      "classification": "UNRESOLVED",
+      "unresolved_exhaustive_cause": true,
+      "stage_rows": 6792,
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "token_sha256": "50385705dfca1972e51ef642456cdf8c8e65fc96543a1afb97475db904d2ec5c",
+      "peak_allocated_bytes": 3211638272,
+      "caution": "Exact shape-control differences demonstrate a mechanism, not complete attribution of all 453 historical failures."
+    },
+    {
+      "status": "COLLECTED",
+      "case_id": "1c5ac98546676761",
+      "document_id": "c513b09618e786559f5f",
+      "domain": "prose",
+      "length": 512,
+      "dtype": "float32",
+      "historical_fidelity": "FAIL",
+      "dense_fidelity": "PASS",
+      "controls_exact": true,
+      "control_checks": 9,
+      "append_ok": true,
+      "structural_exact": true,
+      "earliest_stages": [
+        "L00.q_proj"
+      ],
+      "projection_shape_sensitivity_demonstrated": true,
+      "classification": "SHAPE_SENSITIVITY_DEMONSTRATED_NOT_EXHAUSTIVE_CAUSE",
+      "unresolved_exhaustive_cause": true,
+      "stage_rows": 6792,
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "token_sha256": "50385705dfca1972e51ef642456cdf8c8e65fc96543a1afb97475db904d2ec5c",
+      "peak_allocated_bytes": 6384790016,
+      "caution": "Exact shape-control differences demonstrate a mechanism, not complete attribution of all 453 historical failures."
+    }
+  ],
+  "dense_counts": {
+    "bfloat16_PASS": 1,
+    "float32_PASS": 2,
+    "bfloat16_FAIL": 1
+  },
+  "instrumentation_and_explicit_controls_checked": 36,
+  "control_failures": 0,
+  "historical_parity": [
+    {
+      "case_id": "06652f381f9ba6db",
+      "max_metric_difference": 0.0,
+      "historical_fidelity": "PASS",
+      "new_fidelity": "PASS",
+      "label_matches": true
+    },
+    {
+      "case_id": "1c5ac98546676761",
+      "max_metric_difference": 0.0,
+      "historical_fidelity": "FAIL",
+      "new_fidelity": "FAIL",
+      "label_matches": true
+    }
+  ],
+  "first_divergence_counts": {
+    "bfloat16:L00.mlp_down": 5,
+    "float32:L00.q_proj": 6,
+    "bfloat16:L00.scores": 1
+  },
+  "error_distributions": [
+    {
+      "dtype": "bfloat16",
+      "steps": 16,
+      "minimum": 0.008008547127246857,
+      "median": 0.013933852314949036,
+      "maximum": 0.029119865968823433,
+      "first_nonzero_counts": {
+        "bfloat16:L00.mlp_down": 5,
+        "bfloat16:L00.scores": 1
+      }
+    },
+    {
+      "dtype": "float32",
+      "steps": 16,
+      "minimum": 8.169153034032206e-07,
+      "median": 1.3657804629474413e-06,
+      "maximum": 3.2637738058838295e-06,
+      "first_nonzero_counts": {
+        "float32:L00.q_proj": 6
+      }
+    }
+  ],
+  "stage_rows": 27168,
+  "layerwise_rows": 1488,
+  "attention_statistical_rows": 648,
+  "projection_shape_sensitivity_conditions": 2,
+  "exhaustive_cause_unresolved": 4,
+  "scope": "Outcome-stratified Qwen mechanism diagnostic. Does not explain every historical failure. No perf/capacity/model-quality claim.",
+  "gate_A": "BOUNDED_MODEL_SPECIFIC_DIAGNOSIS",
+  "code_sha256": "dd58c84c09f81825518014901633410c4d7c49c2e50e147899da5aace38c4f36",
+  "publication": "PENDING"
+}
+
+Outcome-stratified mechanism sample, not a prevalence estimate. Dense fidelity uses the unchanged 0.025 gate. FP32 uses the same checkpoint revision, independently loaded at native FP32 precision. Same-weight projection controls cast the current dtype weights to FP32 separately. No latency, quality or capacity inference from tracing runs.

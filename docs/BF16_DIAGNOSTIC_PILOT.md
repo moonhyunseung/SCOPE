@@ -1,0 +1,9 @@
+# Native BF16 divergence: verified pilot
+
+Two historical L512 prose cases (one PASS, one FAIL) were rerun in BF16 and FP32 using the original frozen natural tokens and pinned Qwen2.5-1.5B-Instruct revision. The BF16 per-step relative-L2 values reproduced the historical results exactly. All 36 instrumentation/explicit-position-mask comparisons were exact; cache append, position IDs, RoPE cos/sin, effective mask rows and scaling checks passed.
+
+Across the six BF16 traced forwards (steps 0, 3, 7), first exact nonzero error appeared five times at the first layer's MLP down projection and once at its attention scores. FP32 first diverged at Q projection in all six traces, but final relative-L2 remained between 8.17e-7 and 3.27e-6. BF16 final errors across all 16 steps ranged from 0.00801 to 0.02912, retaining one failed condition under the unchanged 0.025 gate.
+
+The same-vector Q/K/V projection shape control demonstrated FP32 shape sensitivity in both cases. It did **not** demonstrate that mechanism in BF16. The earliest BF16 MLP/score differences therefore require direct input and shape controls at those operations. Their complete causal attribution remains unresolved. These observations rule out the tested structural mismatches for these two cases, not for all 453 historical failures. The 16-case/15-source outcome-stratified diagnostic expansion is a separate block. No performance, generation-quality or resident-cache capacity result is established here.
+
+See `results/continuation_v2/2c1409163c1f2628/blocks/pilot/` for first-divergence tables, source-level layerwise errors, native attention statistics, same-weight controls, runtime fingerprints and sealed hashes. The original failed aggregation attempt remains on the server. Six CPU regression/instrumentation tests passed after the aggregation repair.

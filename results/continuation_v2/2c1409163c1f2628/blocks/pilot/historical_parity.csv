@@ -1,0 +1,3 @@
+case_id,historical_fidelity,label_matches,max_metric_difference,new_fidelity
+06652f381f9ba6db,PASS,True,0.0,PASS
+1c5ac98546676761,FAIL,True,0.0,FAIL
