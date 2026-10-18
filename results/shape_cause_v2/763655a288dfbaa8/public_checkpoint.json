@@ -1,0 +1,13 @@
+{
+  "counts": {},
+  "state": {
+    "status": "WAITING_FOR_EXISTING_GPU_QUEUE",
+    "updated": "2026-10-18T16:59:29.663449+00:00"
+  },
+  "captured": "2026-10-18T16:59:40.751528+00:00",
+  "input_identity": {
+    "source_sha256": "b3a800e77d793b6bb53b4f385e566685821220fb76dab50dd59ba99bd3e40a9f",
+    "plan_sha256": "fd26749d59e21c8b2869029b2a81f37ba99e3d546d882e4d9867ccca41202dde",
+    "minimal_manifest_sha256": "0ca9fe41c0f74f71cd402bf127062856d106542468a126e94831fb541230a775"
+  }
+}

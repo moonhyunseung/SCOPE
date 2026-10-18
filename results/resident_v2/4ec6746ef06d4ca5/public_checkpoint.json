@@ -6,7 +6,7 @@
     "status": "WAITING_FOR_GPU_LOCK",
     "updated": "2026-10-18T16:21:58.444815+00:00"
   },
-  "captured": "2026-10-18T16:39:30.164361+00:00",
+  "captured": "2026-10-18T16:59:40.749446+00:00",
   "input_identity": {
     "source_sha256": "4f434b13600b00ff63250cf0bcb57877de245f6e4aad8f3cd81594e6543af340",
     "manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",

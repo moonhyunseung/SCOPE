@@ -1,0 +1,14 @@
+{
+  "counts": {},
+  "state": {
+    "status": "WAITING_FOR_FROZEN_CAMPAIGN",
+    "upstream_status": "RUNNING",
+    "updated": "2026-10-18T16:59:29.690209+00:00"
+  },
+  "captured": "2026-10-18T16:59:40.750967+00:00",
+  "input_identity": {
+    "upstream_run": "2aa605c55475af9d",
+    "manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+    "audit_source_sha256": "e635b5d87f8a0bae35458246b99056d8b35a9902e34d08ce6623d78807048fd2"
+  }
+}

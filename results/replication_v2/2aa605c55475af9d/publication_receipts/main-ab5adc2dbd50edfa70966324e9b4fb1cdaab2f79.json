@@ -1,0 +1,11 @@
+{
+  "status": "PUBLISHED",
+  "commit": "ab5adc2dbd50edfa70966324e9b4fb1cdaab2f79",
+  "tree": "488bbcfb2a9ea3b5d42a5f887e52ddee0cea7db8",
+  "verification": "18 exact Git blob hashes and main ref read back",
+  "blocks": {
+    "screening-qwen7b": "45571a525c44c708c6fb780b2d3736825737271c3bfbee517abb30330ef2fe42",
+    "screening-qwen14b": "d61021b77b739e383111b508c6a70d792336776adf3745a53afe1c786c51227b"
+  },
+  "verified_at": "2026-10-18T16:53:07.708144+00:00"
+}
