@@ -1,24 +1,21 @@
 {
   "counts": {
-    "COLLECTED": 485,
-    "PLANNED": 312,
-    "RUNNING": 1,
+    "COLLECTED": 798,
     "UNSUPPORTED": 2
   },
   "state": {
-    "status": "RUNNING",
+    "status": "COMPLETE_all",
     "stage": "all",
     "phase": "confirmatory",
-    "model": "opt1_3b",
+    "model": "qwen14b",
     "dtype": "bfloat16",
     "counts": {
-      "COLLECTED": 478,
-      "PLANNED": 320,
+      "COLLECTED": 798,
       "UNSUPPORTED": 2
     },
-    "updated": "2026-10-18T16:58:51.290711+00:00"
+    "updated": "2026-10-18T17:57:39.105473+00:00"
   },
-  "captured": "2026-10-18T16:59:40.745623+00:00",
+  "captured": "2026-10-18T20:16:37.644714+00:00",
   "input_identity": {
     "manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
     "source_sha256": "d23c432a036062cedeaf5199f293b7efdbab6a27f5443ebff1513f52c7a44b90",

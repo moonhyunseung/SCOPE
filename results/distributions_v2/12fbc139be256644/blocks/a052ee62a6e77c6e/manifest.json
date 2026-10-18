@@ -1,0 +1,26 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 1716,
+      "sha256": "41b8f5edfb0b547322d78533e5dfe96db43b93683b95d11f5d3124ab6c3ede34"
+    },
+    "sketch-000.jsonl": {
+      "bytes": 578917,
+      "sha256": "f88784a5546eefa4a93a5fac966e239f994954e9ad58f1089936fff253495351"
+    },
+    "metrics.csv": {
+      "bytes": 8721,
+      "sha256": "bb71f337401cf1ad024d830e6bf742db06a1b63c280b5bfef465104ebd432c68"
+    },
+    "sketch-001.jsonl": {
+      "bytes": 72092,
+      "sha256": "64b7c4d9582c36fa05665647f5aebf9686f6805e54c803dc2a1f3bee2e04ad5d"
+    },
+    "report.md": {
+      "bytes": 2037,
+      "sha256": "591422e14a544c0e96a99217d5d7e9574361c1d3625c64ec0dd53d4546582fc0"
+    }
+  },
+  "code_sha256": "3795f87fc49d572fc26e6bbcf1a43aeba756052a5ac91e0cb0ae359ed0ec933e",
+  "sealed": "2026-10-18T17:59:10.777404+00:00"
+}

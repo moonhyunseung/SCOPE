@@ -1,0 +1,30 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 117022,
+      "sha256": "1781f3971546d51ce9e29dc76bf9ca7d8ab5a99805bbd1199c3ca9f9619559ba"
+    },
+    "mlp_down.json": {
+      "bytes": 25492,
+      "sha256": "976f5f66726374db8bee352fd377985fd0e7cb896e3420f339dcbf62926f5388"
+    },
+    "metrics.csv": {
+      "bytes": 11769,
+      "sha256": "e4a1eb726675d6f6302e42fb5a78c7cd578741f86a04d9d3e503ffa129cebb15"
+    },
+    "report.md": {
+      "bytes": 117421,
+      "sha256": "a562f9e1429faa57892d9f5ebfdc67e1e059b590201da55b50d657e4d6cd2a6a"
+    },
+    "QK.json": {
+      "bytes": 30203,
+      "sha256": "e7ad9ce7b3bd9b6967248a7fb662f2c69c5bad923dacc02fb91e9a0ea8475fbc"
+    },
+    "PV.json": {
+      "bytes": 30763,
+      "sha256": "0a71879fcd016b347ebde32598be0f6f949cc07fe0ededf5bca99de9a8d48f83"
+    }
+  },
+  "code_sha256": "b3a800e77d793b6bb53b4f385e566685821220fb76dab50dd59ba99bd3e40a9f",
+  "sealed": "2026-10-18T18:02:37.734530+00:00"
+}

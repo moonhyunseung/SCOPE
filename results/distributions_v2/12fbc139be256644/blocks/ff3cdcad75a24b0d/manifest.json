@@ -1,0 +1,22 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 1701,
+      "sha256": "446c0f6da0144c472d87f9dc2e36749bdadef766ae76e751524b3e050e3d2a54"
+    },
+    "sketch-000.jsonl": {
+      "bytes": 442732,
+      "sha256": "9a58501f7b65388a57d221b960e9da1a47897dca6d5abb245fa17a861eb58bd3"
+    },
+    "metrics.csv": {
+      "bytes": 5924,
+      "sha256": "68dc3e44c40300176c6eeb646bdd650cb0539e01e37787e05885d2716093eb40"
+    },
+    "report.md": {
+      "bytes": 2022,
+      "sha256": "e25e8778e218df900a049021d1559d8a249d6ebc2f37df3a99092a58ffb82cc7"
+    }
+  },
+  "code_sha256": "3795f87fc49d572fc26e6bbcf1a43aeba756052a5ac91e0cb0ae359ed0ec933e",
+  "sealed": "2026-10-18T17:59:31.514107+00:00"
+}

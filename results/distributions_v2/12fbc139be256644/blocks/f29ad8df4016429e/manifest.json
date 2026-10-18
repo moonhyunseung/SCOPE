@@ -1,0 +1,30 @@
+{
+  "files": {
+    "sketch-002.jsonl": {
+      "bytes": 553466,
+      "sha256": "7d247085e2adf2358386851a644f0bf050db0c83d298cba38f646c71df1daf4c"
+    },
+    "summary.json": {
+      "bytes": 1704,
+      "sha256": "d74839af219db64084c4ad99637eaed666a59ba0ade3c21aa22804f001f8b7c7"
+    },
+    "sketch-000.jsonl": {
+      "bytes": 574090,
+      "sha256": "2f14e8e6f3954955d08862ded418795cfd008ab77d0b9005a424621fd411f947"
+    },
+    "metrics.csv": {
+      "bytes": 23128,
+      "sha256": "4cdaf0b9d0a157a6d9cc7916011b31847bd4de69d3c4aa0aa72606f27c9cb5f0"
+    },
+    "sketch-001.jsonl": {
+      "bytes": 553198,
+      "sha256": "32bf5964245da8b276acfbb531683d62b80de3e2fc099d60a27155696ea0e97f"
+    },
+    "report.md": {
+      "bytes": 2025,
+      "sha256": "1a7209d0d9f68c55f2f75e28f30ab7f4027bc80fbe20b682300a39b75ddba6e0"
+    }
+  },
+  "code_sha256": "3795f87fc49d572fc26e6bbcf1a43aeba756052a5ac91e0cb0ae359ed0ec933e",
+  "sealed": "2026-10-18T18:00:15.057041+00:00"
+}
