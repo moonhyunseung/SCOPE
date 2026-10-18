@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scope-attention-observatory"
+version = "0.0.1"
+description = "SCOPE: state-conditioned operator profiling and execution research"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["scope*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
