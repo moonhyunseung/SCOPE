@@ -1,0 +1,30 @@
+{
+  "files": {
+    "role_comparisons.csv": {
+      "bytes": 24411,
+      "sha256": "44c9789ea231746bfb1473c1774fcb4319ec87d03ed309bf046a6d7cb5295314"
+    },
+    "summary.json": {
+      "bytes": 1049,
+      "sha256": "815fcd41cf9a51d1357fc165412e85314057bf8e2aafc49ff314939a6be2d8e0"
+    },
+    "report.md": {
+      "bytes": 1234,
+      "sha256": "a8ef75b4c2fcf9215ad45fe7bee77200da230fb34a136bac6cf7630316eed67e"
+    },
+    "preregistered_contract.json": {
+      "bytes": 3798,
+      "sha256": "80bdd23ab53de5ed6389ee9a8d29bd3f28289a8c41c7a6488e0e49fd297fda93"
+    },
+    "source_summary.json": {
+      "bytes": 8231,
+      "sha256": "d4d170febe475a1751088aad3454f236868a41899dc3b9d8f6c895217175e0b5"
+    },
+    "replay_controls.json": {
+      "bytes": 592103,
+      "sha256": "353b4f11af4ee3891c4468f5e31d4988133e43dcc9f3bf908987817a93ad08a5"
+    }
+  },
+  "source_sha256": "b8ce1f2721f71b5772f13394dd28ad5ab44f5e3c7b0fbb1f7b6b617b17e8dd7d",
+  "sealed": "2026-10-18T21:20:15.092930+00:00"
+}

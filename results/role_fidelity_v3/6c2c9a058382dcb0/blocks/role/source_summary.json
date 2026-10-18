@@ -1,0 +1,242 @@
+[
+  {
+    "document_id": "7190bc75f0028b8ef4e2",
+    "domain": "prose",
+    "representation": "R0",
+    "max_cached_relative_l2": 0.0,
+    "max_full_relative_l2": 0.02724920259505381,
+    "baseline_max_relative_l2": 0.02724920259505381,
+    "cached_gate": "PASS",
+    "full_gate": "FAIL",
+    "baseline_status": "BASELINE_DIVERGENCE",
+    "local_candidate_status": "FAIL",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 0.0,
+        "max_kl_reference_to_output": 0.0,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": 0.0,
+        "nll_delta_max": 0.0,
+        "max_abs_nll_delta": 0.0
+      },
+      "original_full": {
+        "max_relative_l2": 0.02724920259505381,
+        "max_kl_reference_to_output": 0.0007735160045205978,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": -0.01193579461576863,
+        "nll_delta_max": 0.0012790740403794132,
+        "max_abs_nll_delta": 0.01193579461576863
+      }
+    }
+  },
+  {
+    "document_id": "7190bc75f0028b8ef4e2",
+    "domain": "prose",
+    "representation": "R1",
+    "max_cached_relative_l2": 0.875121864931908,
+    "max_full_relative_l2": 0.8795554740900745,
+    "baseline_max_relative_l2": 0.02724920259505381,
+    "cached_gate": "FAIL",
+    "full_gate": "FAIL",
+    "baseline_status": "BASELINE_DIVERGENCE",
+    "local_candidate_status": "FAIL",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 0.875121864931908,
+        "max_kl_reference_to_output": 9.931844786826572,
+        "top1_disagreement_steps": 3,
+        "nll_delta_min": -0.0910285496812484,
+        "nll_delta_max": 10.01736176780522,
+        "max_abs_nll_delta": 10.01736176780522
+      },
+      "original_full": {
+        "max_relative_l2": 0.8795554740900745,
+        "max_kl_reference_to_output": 9.93425955825058,
+        "top1_disagreement_steps": 3,
+        "nll_delta_min": -0.08974947564086899,
+        "nll_delta_max": 10.017775129853126,
+        "max_abs_nll_delta": 10.017775129853126
+      }
+    }
+  },
+  {
+    "document_id": "7190bc75f0028b8ef4e2",
+    "domain": "prose",
+    "representation": "R2",
+    "max_cached_relative_l2": 0.06727265469987652,
+    "max_full_relative_l2": 0.05524917842634375,
+    "baseline_max_relative_l2": 0.02724920259505381,
+    "cached_gate": "FAIL",
+    "full_gate": "FAIL",
+    "baseline_status": "BASELINE_DIVERGENCE",
+    "local_candidate_status": "FAIL",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 0.06727265469987652,
+        "max_kl_reference_to_output": 0.002621732978009835,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": 2.7392994864650078e-06,
+        "nll_delta_max": 0.03469946267436963,
+        "max_abs_nll_delta": 0.03469946267436963
+      },
+      "original_full": {
+        "max_relative_l2": 0.05524917842634375,
+        "max_kl_reference_to_output": 0.002795788267680136,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": -0.006889731016594555,
+        "nll_delta_max": 0.03597853671474904,
+        "max_abs_nll_delta": 0.03597853671474904
+      }
+    }
+  },
+  {
+    "document_id": "7190bc75f0028b8ef4e2",
+    "domain": "prose",
+    "representation": "R3",
+    "max_cached_relative_l2": 0.916975198417821,
+    "max_full_relative_l2": 0.9207611394367784,
+    "baseline_max_relative_l2": 0.02724920259505381,
+    "cached_gate": "FAIL",
+    "full_gate": "FAIL",
+    "baseline_status": "BASELINE_DIVERGENCE",
+    "local_candidate_status": "FAIL",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 0.916975198417821,
+        "max_kl_reference_to_output": 10.580431030198168,
+        "top1_disagreement_steps": 3,
+        "nll_delta_min": -0.09344148179155742,
+        "nll_delta_max": 10.664163260495217,
+        "max_abs_nll_delta": 10.664163260495217
+      },
+      "original_full": {
+        "max_relative_l2": 0.9207611394367784,
+        "max_kl_reference_to_output": 10.582846994524127,
+        "top1_disagreement_steps": 3,
+        "nll_delta_min": -0.09216240775117801,
+        "nll_delta_max": 10.664576622543123,
+        "max_abs_nll_delta": 10.664576622543123
+      }
+    }
+  },
+  {
+    "document_id": "95459423d3b8f7c779e3",
+    "domain": "code",
+    "representation": "R0",
+    "max_cached_relative_l2": 0.0,
+    "max_full_relative_l2": 0.0221552555301075,
+    "baseline_max_relative_l2": 0.0221552555301075,
+    "cached_gate": "PASS",
+    "full_gate": "PASS",
+    "baseline_status": "BASELINE_SCREEN_PASS",
+    "local_candidate_status": "LOCAL_SCREEN_PASS",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 0.0,
+        "max_kl_reference_to_output": 0.0,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": 0.0,
+        "nll_delta_max": 0.0,
+        "max_abs_nll_delta": 0.0
+      },
+      "original_full": {
+        "max_relative_l2": 0.0221552555301075,
+        "max_kl_reference_to_output": 0.0010175076338139984,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": -0.0007568840189620119,
+        "nll_delta_max": 0.013200543633889325,
+        "max_abs_nll_delta": 0.013200543633889325
+      }
+    }
+  },
+  {
+    "document_id": "95459423d3b8f7c779e3",
+    "domain": "code",
+    "representation": "R1",
+    "max_cached_relative_l2": 1.7654984349520801,
+    "max_full_relative_l2": 1.766414333260171,
+    "baseline_max_relative_l2": 0.0221552555301075,
+    "cached_gate": "FAIL",
+    "full_gate": "FAIL",
+    "baseline_status": "BASELINE_SCREEN_PASS",
+    "local_candidate_status": "FAIL",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 1.7654984349520801,
+        "max_kl_reference_to_output": 13.144296119226167,
+        "top1_disagreement_steps": 2,
+        "nll_delta_min": -0.0739795108147,
+        "nll_delta_max": 9.79882712735793,
+        "max_abs_nll_delta": 9.79882712735793
+      },
+      "original_full": {
+        "max_relative_l2": 1.766414333260171,
+        "max_kl_reference_to_output": 13.15743688990223,
+        "top1_disagreement_steps": 2,
+        "nll_delta_min": -0.07473639483366201,
+        "nll_delta_max": 9.803100929265469,
+        "max_abs_nll_delta": 9.803100929265469
+      }
+    }
+  },
+  {
+    "document_id": "95459423d3b8f7c779e3",
+    "domain": "code",
+    "representation": "R2",
+    "max_cached_relative_l2": 0.12751594970446112,
+    "max_full_relative_l2": 0.12756190463041361,
+    "baseline_max_relative_l2": 0.0221552555301075,
+    "cached_gate": "FAIL",
+    "full_gate": "FAIL",
+    "baseline_status": "BASELINE_SCREEN_PASS",
+    "local_candidate_status": "FAIL",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 0.12751594970446112,
+        "max_kl_reference_to_output": 0.007360412203922492,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": -0.15681596309288992,
+        "nll_delta_max": 0.09846402894382167,
+        "max_abs_nll_delta": 0.15681596309288992
+      },
+      "original_full": {
+        "max_relative_l2": 0.12756190463041361,
+        "max_kl_reference_to_output": 0.007549826978948236,
+        "top1_disagreement_steps": 0,
+        "nll_delta_min": -0.15757284711185193,
+        "nll_delta_max": 0.10273783085136068,
+        "max_abs_nll_delta": 0.15757284711185193
+      }
+    }
+  },
+  {
+    "document_id": "95459423d3b8f7c779e3",
+    "domain": "code",
+    "representation": "R3",
+    "max_cached_relative_l2": 1.751641942235375,
+    "max_full_relative_l2": 1.7526229011325345,
+    "baseline_max_relative_l2": 0.0221552555301075,
+    "cached_gate": "FAIL",
+    "full_gate": "FAIL",
+    "baseline_status": "BASELINE_SCREEN_PASS",
+    "local_candidate_status": "FAIL",
+    "endpoints": {
+      "native_cached": {
+        "max_relative_l2": 1.751641942235375,
+        "max_kl_reference_to_output": 13.918513515475171,
+        "top1_disagreement_steps": 2,
+        "nll_delta_min": -0.22229179186267023,
+        "nll_delta_max": 10.994807510404662,
+        "max_abs_nll_delta": 10.994807510404662
+      },
+      "original_full": {
+        "max_relative_l2": 1.7526229011325345,
+        "max_kl_reference_to_output": 13.93338090151076,
+        "top1_disagreement_steps": 2,
+        "nll_delta_min": -0.22304867588163224,
+        "nll_delta_max": 10.999081312312201,
+        "max_abs_nll_delta": 10.999081312312201
+      }
+    }
+  }
+]

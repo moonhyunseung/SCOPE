@@ -1,0 +1,82 @@
+{
+  "contract": {
+    "protocol": "acl-r3-role-fidelity-v3",
+    "baseline_commit": "25a3f6a7e984fa8423826aac1d3e3936e92504ee",
+    "advisor_answer_id": "4d251da7-4837-480e-90e0-98428e138873",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "input_manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+    "sources": [
+      "7190bc75f0028b8ef4e2",
+      "95459423d3b8f7c779e3"
+    ],
+    "roles": {
+      "R0": [
+        false,
+        false
+      ],
+      "R1": [
+        true,
+        false
+      ],
+      "R2": [
+        false,
+        true
+      ],
+      "R3": [
+        true,
+        true
+      ]
+    },
+    "length": 512,
+    "batch": 1,
+    "steps": 4,
+    "replays": 2,
+    "bits": 4,
+    "group": 32,
+    "scale_dtype": "float32",
+    "execution_dtype": "bfloat16",
+    "quantizer": "Per-token per-KV-head contiguous-channel groups32; scale=max(max(abs(x)),1e-12)/7; round ties-even, clamp[-7,7], materialize int16 integer codes, FP32 multiply, BF16 decoded rounding. Quantize only selected K/V on initialization and every append. Unselected role remains byte-exact BF16.",
+    "references": [
+      "native_cached",
+      "original_full"
+    ],
+    "relative_l2_gate": 0.025,
+    "denominator_floor": 1e-30,
+    "candidate_acceptance": "Both sources/all steps pass both references AND baseline does not diverge. If baseline exceeds .025, retain per-reference gates but any combined pass is BASELINE_DIVERGENCE_UNRESOLVED, not fidelity preservation.",
+    "independent_source_n": 2,
+    "source_representation_conditions": 8,
+    "shared_original_full_references": 2,
+    "gpu_budget_seconds": 1500,
+    "allocator_gib": 96,
+    "physical_reserve_gib": 44,
+    "disk_reserve_gib": 24,
+    "stop": "Mixed-cache init/append/prefix/role oracle parity or replay/reference failure, nonfinite metrics, resource gate, or own-worker timeout. Preserve every failure; justified repair max2 with new frozen source/run identity.",
+    "scope": "Exploratory two-source local logit fidelity screen, no CI/population test. Dense independent mixed representation reference persists dequantized BF16 values; no physical cache saving/capacity or optimized kernel claim. INT8 and lowering repair are deferred pending advisor review."
+  },
+  "source_sha256": "b8ce1f2721f71b5772f13394dd28ad5ab44f5e3c7b0fbb1f7b6b617b17e8dd7d",
+  "source_files": {
+    "scope_v2/role_fidelity.py": "be5cc63c06f4160a5cd3b05b9f5476e17f9db28c0a2514a1ec00900fcdf0c34e",
+    "configs/role_fidelity_v3.json": "5709fcecf5e574749edc8da83cc0488a7377e058d26c9f0872643dea13bdd902",
+    "scope/runner.py": "af5af433537eee4cad227fce97987c92ad0925e28be9cb9473ebad2d048135ea",
+    "scope_v2/acl_r2.py": "bbc4e10d959f86d0282daea193469cbe36d469bab18ddd5f7b29ca9e95a9da67",
+    "scope_v2/persistent.py": "b5e897b816020d9cf9b4cdd73b4c5c607a0a1dc982dab6bd72b12a3ebc2b0d19",
+    "scope_v2/packed_attention.py": "85fc6ea518082ba647bb2c9c15a64cdc966f00244a49774af724464e0932ca01",
+    "scope_v2/resident.py": "43243e832f9774a1fd30b1ed7467070fe917a1853d5a703fd8dd1810004c7cda",
+    "scope/engineering.py": "d0be757c62946ec8196e3ca6b45f08cb6cfab33b9a6ef75be0bb77374f7d1508"
+  },
+  "inputs": [
+    {
+      "document_id": "7190bc75f0028b8ef4e2",
+      "domain": "prose",
+      "token_window_sha256": "ef4c98a279004658f531ded6a09c0573b766ec07cf08d5e6e27dfe562817b858"
+    },
+    {
+      "document_id": "95459423d3b8f7c779e3",
+      "domain": "code",
+      "token_window_sha256": "6d68f004065288950886790f192e60c8965f9cb7aa6237875c21baf6c67103d8"
+    }
+  ],
+  "prior_quality_manifest_sha256": "e9936218ea9cd345ef2dd31d8db0b338726e794c944caaa4caf0e1ae08f70114",
+  "prior_preregistration_sha256": "956d2cb218e191ff34dba99347e3064c066d7a8c16fcc167ae3da5a20e13ebd8"
+}
