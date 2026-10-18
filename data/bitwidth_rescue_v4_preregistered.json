@@ -1,0 +1,90 @@
+{
+  "contract": {
+    "protocol": "acl-r4-bitwidth-rescue-v4",
+    "baseline_commit": "599634c6fc3fe24cb25c4ef9a3fd72aa5da84d65",
+    "advisor_answer_id": "15304931-5cb1-45bf-b57c-1cbfbcf3158f",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "input_manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+    "sources": [
+      "7190bc75f0028b8ef4e2",
+      "95459423d3b8f7c779e3"
+    ],
+    "roles": {
+      "R4": [
+        false,
+        true
+      ],
+      "R5": [
+        true,
+        false
+      ],
+      "R6": [
+        true,
+        true
+      ]
+    },
+    "length": 512,
+    "batch": 1,
+    "steps": 4,
+    "replays": 2,
+    "bits": 8,
+    "group": 32,
+    "scale_dtype": "float32",
+    "execution_dtype": "bfloat16",
+    "quantizer": "Per-token/head/group32 symmetric INT8. FP32 scale=max(max(abs(x)),1e-12)/127; ties-even round and clamp[-127,127]; signed int8 codes materialized first; FP32 product cast BF16. Unselected role BF16 byte-exact, initialization and every append.",
+    "references": [
+      "native_cached",
+      "original_full"
+    ],
+    "relative_l2_gate": 0.025,
+    "denominator_floor": 1e-30,
+    "candidate_acceptance": "Report cached/full .025 gates independently. LOCAL_SCREEN_PASS only if both pass and baselinePASS; otherwise BASELINE_DIVERGENCE_UNRESOLVED, FULL_REFERENCE_FAIL or REPRESENTATION_CACHED_FAIL. Minimum further-review eligibility: both sources cachedPASS plus code fullPASS; not system adoption. Never subtract distances.",
+    "independent_source_n": 2,
+    "source_representation_conditions": 6,
+    "shared_original_full_references": 2,
+    "gpu_budget_seconds": 1200,
+    "allocator_gib": 96,
+    "physical_reserve_gib": 44,
+    "disk_reserve_gib": 24,
+    "stop": "Mixed-cache init/append/prefix/role oracle parity or replay/reference failure, nonfinite metrics, resource gate, or own-worker timeout. Preserve every failure; justified repair max2 with new frozen source/run identity.",
+    "scope": "Two-source local INT8 representation screen,96metric rows. Dense dequantized BF16 storage, no packed HBM/latency/capacity/task-accuracy claim, no CI/population test. New followup requires advisor interpretation.",
+    "prior_reuse": "Prior8 R0-R3 results unchanged; both source windows, source dependencies and runtime fingerprint must match. Recompute full/native references and prefill, require exact previous hashes and baseline metrics before candidate measurement. Any drift stops CONTROL_FAIL.",
+    "stop_uniform_family": "If each ofR4/R5/R6 fails cached .025 on at least one of2sources, do not adopt uniform symmetricg32 4/8bit family for immediate H200 kernel optimization at this model/workload. No automatic group/scale/source/frontier expansion.",
+    "endpoint_formulas": {
+      "relative_l2": "CPU FP64 norm(output-reference)/max(norm(reference),1e-30)",
+      "kl": "FP64 sum softmax(reference)*(logsoftmax(reference)-logsoftmax(output))",
+      "top1": "argmax output equals argmax reference",
+      "natural_nll": "-logsoftmax(logits)[teacher_next_token]; delta=outputNLL-referenceNLL, signed extrema retained"
+    }
+  },
+  "source_sha256": "2ec0788c2aeded8e8214873561626ab8df0f5c7ec504c10ec4c156680f61b0a3",
+  "source_files": {
+    "scope_v2/bitwidth_rescue.py": "7b2cd0de331822a8ac551ec98400ed6e1b28f56090b80aa6b132b30ba575549f",
+    "configs/bitwidth_rescue_v4.json": "5c058ba2523aa1a9da458b11fc7b98f041b8e9b48f4c3ec6be80429ba507513a",
+    "scope_v2/role_fidelity.py": "be5cc63c06f4160a5cd3b05b9f5476e17f9db28c0a2514a1ec00900fcdf0c34e",
+    "scope/experiments.py": "82d875e34a6ee13fafb353dcd2a29e1cbd457f52ee3f7a96eca531e06711bfac",
+    "configs/role_fidelity_v3.json": "5709fcecf5e574749edc8da83cc0488a7377e058d26c9f0872643dea13bdd902",
+    "scope/runner.py": "af5af433537eee4cad227fce97987c92ad0925e28be9cb9473ebad2d048135ea",
+    "scope_v2/acl_r2.py": "bbc4e10d959f86d0282daea193469cbe36d469bab18ddd5f7b29ca9e95a9da67",
+    "scope_v2/persistent.py": "b5e897b816020d9cf9b4cdd73b4c5c607a0a1dc982dab6bd72b12a3ebc2b0d19",
+    "scope_v2/packed_attention.py": "85fc6ea518082ba647bb2c9c15a64cdc966f00244a49774af724464e0932ca01",
+    "scope_v2/resident.py": "43243e832f9774a1fd30b1ed7467070fe917a1853d5a703fd8dd1810004c7cda",
+    "scope/engineering.py": "d0be757c62946ec8196e3ca6b45f08cb6cfab33b9a6ef75be0bb77374f7d1508"
+  },
+  "inputs": [
+    {
+      "document_id": "7190bc75f0028b8ef4e2",
+      "domain": "prose",
+      "token_window_sha256": "ef4c98a279004658f531ded6a09c0573b766ec07cf08d5e6e27dfe562817b858"
+    },
+    {
+      "document_id": "95459423d3b8f7c779e3",
+      "domain": "code",
+      "token_window_sha256": "6d68f004065288950886790f192e60c8965f9cb7aa6237875c21baf6c67103d8"
+    }
+  ],
+  "prior_role_manifest_sha256": "995619e8fa3c7283ad8bebf0b8e97071ee36d59a37ee40f12125707c839742da",
+  "prior_role_preregistration_sha256": "80bdd23ab53de5ed6389ee9a8d29bd3f28289a8c41c7a6488e0e49fd297fda93",
+  "prior_role_source_sha256": "b8ce1f2721f71b5772f13394dd28ad5ab44f5e3c7b0fbb1f7b6b617b17e8dd7d"
+}
