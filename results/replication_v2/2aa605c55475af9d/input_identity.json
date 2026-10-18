@@ -1,0 +1,9 @@
+{
+  "private_manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+  "public_index_sha256": "3bac6da6cbe564a2cf4a0bdb30856c8223e21fecfc5b6533f5ba88a22f7e5860",
+  "asset_audit_sha256": "e5154bbe602670dbf7c4b6080c8a2324a8379b043d9a2a625af94222ad80ab48",
+  "source_units": 128,
+  "planned_conditions": 800,
+  "pilot_collected": 20,
+  "scope": "Exact token IDs remain on the server; compact source/model metadata and hashes are public."
+}

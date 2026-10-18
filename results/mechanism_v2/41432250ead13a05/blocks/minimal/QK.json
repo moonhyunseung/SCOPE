@@ -1,0 +1,56 @@
+{
+  "case_id": "04f82ec90543c3fc",
+  "step": 3,
+  "operation": "QK",
+  "dtype": "bfloat16",
+  "rows": 516,
+  "token_sha256": "a63d3a82bf275717fc2813e4b70be8ed41e06c5ca9c2c7848817694b268f7623",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "upstream_exact": true,
+  "one_vs_many": {
+    "finite": true,
+    "nonfinite_output": 0,
+    "nonfinite_reference": 0,
+    "relative_l2": 1.2797939916708856e-06,
+    "max_abs": 0.5,
+    "reference_norm": 390687.875,
+    "cosine": 1.0000063180923462
+  },
+  "one_vs_native": {
+    "finite": true,
+    "nonfinite_output": 0,
+    "nonfinite_reference": 0,
+    "relative_l2": 0.0,
+    "max_abs": 0.0,
+    "reference_norm": 390687.875,
+    "cosine": 1.0000063180923462
+  },
+  "many_vs_native_full": {
+    "finite": true,
+    "nonfinite_output": 0,
+    "nonfinite_reference": 0,
+    "relative_l2": 0.0,
+    "max_abs": 0.0,
+    "reference_norm": 390687.875,
+    "cosine": 1.0000063180923462
+  },
+  "native_gap": {
+    "finite": true,
+    "nonfinite_output": 0,
+    "nonfinite_reference": 0,
+    "relative_l2": 1.2797939916708856e-06,
+    "max_abs": 0.5,
+    "reference_norm": 390687.875,
+    "cosine": 1.0000063180923462
+  },
+  "final_logits": {
+    "finite": true,
+    "nonfinite_output": 0,
+    "nonfinite_reference": 0,
+    "relative_l2": 0.016959507018327713,
+    "max_abs": 0.234375,
+    "reference_norm": 1150.2967529296875,
+    "cosine": 0.9998689293861389
+  }
+}

@@ -1,0 +1,4 @@
+case_id,full_proxy_max_abs,native_proxy_max_abs,operation,shape_relative_l2,step
+04638e2cd2ce202c,0.0,0.0,PV,7.887522951932624e-05,0
+04f82ec90543c3fc,0.0,0.0,QK,1.2797939916708856e-06,3
+04638e2cd2ce202c,0.0,0.0,mlp_down,7.370000093942508e-05,3

@@ -1,0 +1,23 @@
+{
+  "model": {
+    "key": "pythia1b",
+    "id": "EleutherAI/pythia-1b",
+    "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+    "model_type": "gpt_neox",
+    "num_attention_heads": 8,
+    "num_key_value_heads": 8,
+    "max_position_embeddings": 2048,
+    "attention_backend": "eager"
+  },
+  "dtype": "float32",
+  "python": "3.12.3",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.19.0",
+  "triton": "3.8.0",
+  "cuda": "13.0",
+  "gpu": "NVIDIA H200",
+  "deterministic_algorithms": true,
+  "tf32": false,
+  "float32_matmul_precision": "highest",
+  "bf16_reduced_precision_reduction": true
+}

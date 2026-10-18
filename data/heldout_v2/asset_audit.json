@@ -1,0 +1,132 @@
+{
+  "status": "VERIFIED_CACHED_BYTES",
+  "manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+  "models": [
+    {
+      "model": "qwen1_5b",
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "files": [
+        {
+          "name": "model.safetensors",
+          "bytes": 3087467144,
+          "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+        }
+      ],
+      "checkpoint_tensor_dtype_counts": {
+        "BF16": 338
+      }
+    },
+    {
+      "model": "pythia1b",
+      "id": "EleutherAI/pythia-1b",
+      "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+      "files": [
+        {
+          "name": "model.safetensors",
+          "bytes": 2090701528,
+          "sha256": "7e6dff44849e036a73296368e663bd9420009977f03a8d4d747b234264f37107"
+        }
+      ],
+      "checkpoint_tensor_dtype_counts": {
+        "F16": 228,
+        "U8": 16
+      }
+    },
+    {
+      "model": "opt1_3b",
+      "id": "facebook/opt-1.3b",
+      "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "bytes": 2631639353,
+          "sha256": "cf7d5c970d6ddbd3b03009b397c0422e147edd5c8020d47a8d2fac0b11a3b08d"
+        }
+      ],
+      "checkpoint_tensor_dtype_counts": {}
+    },
+    {
+      "model": "qwen7b",
+      "id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "files": [
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "bytes": 3945441440,
+          "sha256": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7"
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "bytes": 3864726352,
+          "sha256": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185"
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "bytes": 3864726424,
+          "sha256": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5"
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "bytes": 3556377672,
+          "sha256": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+        }
+      ],
+      "checkpoint_tensor_dtype_counts": {
+        "BF16": 339
+      }
+    },
+    {
+      "model": "qwen14b",
+      "id": "Qwen/Qwen2.5-14B-Instruct",
+      "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8",
+      "files": [
+        {
+          "name": "model-00001-of-00008.safetensors",
+          "bytes": 3885154816,
+          "sha256": "b477be7572f0ab3ae3cbba38d508cc33e70600b2045669c4ad848051c3432094"
+        },
+        {
+          "name": "model-00002-of-00008.safetensors",
+          "bytes": 3995327992,
+          "sha256": "eb356aacae443e30f52712b1e98fadf206976365e2f5ee886321b0bb38c7cea8"
+        },
+        {
+          "name": "model-00003-of-00008.safetensors",
+          "bytes": 3995328080,
+          "sha256": "cee9dbdf738ce61adb21c70ad5c5585747caaab6457c9ffc3bfa20d73127c2c6"
+        },
+        {
+          "name": "model-00004-of-00008.safetensors",
+          "bytes": 3995338432,
+          "sha256": "b1201a6edcac8ef96a37040524fe37a5a84e446513ed40491e764a37302385fa"
+        },
+        {
+          "name": "model-00005-of-00008.safetensors",
+          "bytes": 3979624824,
+          "sha256": "fbbda3cdee31895d0c57d617449af5579d219df34f3d63f7a23acbfe7fb0a647"
+        },
+        {
+          "name": "model-00006-of-00008.safetensors",
+          "bytes": 3995328080,
+          "sha256": "f7ac652aa101717c97cfeccf5109985cca5b04529b57d3f4d2ec7a802266296b"
+        },
+        {
+          "name": "model-00007-of-00008.safetensors",
+          "bytes": 3995328080,
+          "sha256": "e9115e615b575acb6e8b3a06524b32cbf7f680f07517125e4334f62c3f4acb0d"
+        },
+        {
+          "name": "model-00008-of-00008.safetensors",
+          "bytes": 1698703696,
+          "sha256": "a77f603d8368749c19d3ac9cf2a300e476edcc794ea41af8e473ee12935eadb8"
+        }
+      ],
+      "checkpoint_tensor_dtype_counts": {
+        "BF16": 579
+      }
+    }
+  ],
+  "created": "2026-10-18T15:57:18.151679+00:00",
+  "scope": "Pinned cached checkpoint files; source tensors retained on server. Runtime dtype conversions remain separately declared."
+}

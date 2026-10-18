@@ -1,0 +1,176 @@
+{
+  "status": "VERIFIED_BLOCK",
+  "operations": 3,
+  "results": [
+    {
+      "case_id": "04638e2cd2ce202c",
+      "step": 0,
+      "operation": "PV",
+      "dtype": "bfloat16",
+      "rows": 513,
+      "token_sha256": "1d30ae155b6829d60b141dfa6bf42dea9fda4c1bef52a16bebdb4db7e7b97fe8",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "upstream_exact": true,
+      "one_vs_many": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 7.887522951932624e-05,
+        "max_abs": 0.0009765625,
+        "reference_norm": 12.381105422973633,
+        "cosine": 1.0000001192092896
+      },
+      "one_vs_native": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.0,
+        "max_abs": 0.0,
+        "reference_norm": 12.381119728088379,
+        "cosine": 1.0
+      },
+      "many_vs_native_full": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.0,
+        "max_abs": 0.0,
+        "reference_norm": 12.381105422973633,
+        "cosine": 1.0
+      },
+      "native_gap": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 7.887522951932624e-05,
+        "max_abs": 0.0009765625,
+        "reference_norm": 12.381105422973633,
+        "cosine": 1.0000001192092896
+      },
+      "final_logits": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.00959524605423212,
+        "max_abs": 0.205078125,
+        "reference_norm": 1499.9102783203125,
+        "cosine": 0.9999539852142334
+      }
+    },
+    {
+      "case_id": "04f82ec90543c3fc",
+      "step": 3,
+      "operation": "QK",
+      "dtype": "bfloat16",
+      "rows": 516,
+      "token_sha256": "a63d3a82bf275717fc2813e4b70be8ed41e06c5ca9c2c7848817694b268f7623",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "upstream_exact": true,
+      "one_vs_many": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 1.2797939916708856e-06,
+        "max_abs": 0.5,
+        "reference_norm": 390687.875,
+        "cosine": 1.0000063180923462
+      },
+      "one_vs_native": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.0,
+        "max_abs": 0.0,
+        "reference_norm": 390687.875,
+        "cosine": 1.0000063180923462
+      },
+      "many_vs_native_full": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.0,
+        "max_abs": 0.0,
+        "reference_norm": 390687.875,
+        "cosine": 1.0000063180923462
+      },
+      "native_gap": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 1.2797939916708856e-06,
+        "max_abs": 0.5,
+        "reference_norm": 390687.875,
+        "cosine": 1.0000063180923462
+      },
+      "final_logits": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.016959507018327713,
+        "max_abs": 0.234375,
+        "reference_norm": 1150.2967529296875,
+        "cosine": 0.9998689293861389
+      }
+    },
+    {
+      "case_id": "04638e2cd2ce202c",
+      "step": 3,
+      "operation": "mlp_down",
+      "dtype": "bfloat16",
+      "rows": 516,
+      "token_sha256": "1d30ae155b6829d60b141dfa6bf42dea9fda4c1bef52a16bebdb4db7e7b97fe8",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "upstream_exact": true,
+      "one_vs_many": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 7.370000093942508e-05,
+        "max_abs": 0.0009765625,
+        "reference_norm": 16.4019775390625,
+        "cosine": 1.000000238418579
+      },
+      "one_vs_native": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.0,
+        "max_abs": 0.0,
+        "reference_norm": 16.40199089050293,
+        "cosine": 1.0000003576278687
+      },
+      "many_vs_native_full": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.0,
+        "max_abs": 0.0,
+        "reference_norm": 16.4019775390625,
+        "cosine": 1.0000001192092896
+      },
+      "native_gap": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 7.370000093942508e-05,
+        "max_abs": 0.0009765625,
+        "reference_norm": 16.4019775390625,
+        "cosine": 1.000000238418579
+      },
+      "final_logits": {
+        "finite": true,
+        "nonfinite_output": 0,
+        "nonfinite_reference": 0,
+        "relative_l2": 0.016500093042850494,
+        "max_abs": 0.2353515625,
+        "reference_norm": 1138.17431640625,
+        "cosine": 0.9998644590377808
+      }
+    }
+  ],
+  "reproducer_source_sha256": "b99be1f35d37e38c9946105834ac3861b2cefc74882a80f9f4cca38da6143c27",
+  "publication": "PENDING"
+}

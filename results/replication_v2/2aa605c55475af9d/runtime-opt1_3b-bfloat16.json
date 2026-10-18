@@ -1,0 +1,23 @@
+{
+  "model": {
+    "key": "opt1_3b",
+    "id": "facebook/opt-1.3b",
+    "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+    "model_type": "opt",
+    "num_attention_heads": 32,
+    "num_key_value_heads": 32,
+    "max_position_embeddings": 2048,
+    "attention_backend": "eager"
+  },
+  "dtype": "bfloat16",
+  "python": "3.12.3",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.19.0",
+  "triton": "3.8.0",
+  "cuda": "13.0",
+  "gpu": "NVIDIA H200",
+  "deterministic_algorithms": true,
+  "tf32": false,
+  "float32_matmul_precision": "highest",
+  "bf16_reduced_precision_reduction": true
+}

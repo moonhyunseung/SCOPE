@@ -1,0 +1,9 @@
+bits,document_id,domain,dtype,group,head,interaction_relative_l2,layer,length,model,regime,role,split
+4,7190bc75f0028b8ef4e2,prose,bfloat16,32,,0.1959144026041031,all,512,qwen7b,isolated,core,screening
+4,7190bc75f0028b8ef4e2,prose,bfloat16,32,,0.19657886307686567,all,512,qwen7b,recurrent,core,screening
+4,7190bc75f0028b8ef4e2,prose,float32,32,,0.12116714427247643,all,512,qwen7b,isolated,core,screening
+4,7190bc75f0028b8ef4e2,prose,float32,32,,0.19229293428361416,all,512,qwen7b,recurrent,core,screening
+4,95459423d3b8f7c779e3,code,bfloat16,32,,0.20407587103545666,all,512,qwen7b,isolated,core,screening
+4,95459423d3b8f7c779e3,code,bfloat16,32,,0.32220577262341976,all,512,qwen7b,recurrent,core,screening
+4,95459423d3b8f7c779e3,code,float32,32,,0.0960852587595582,all,512,qwen7b,isolated,core,screening
+4,95459423d3b8f7c779e3,code,float32,32,,0.2867205087095499,all,512,qwen7b,recurrent,core,screening

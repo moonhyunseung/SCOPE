@@ -34,4 +34,23 @@ for manifest in mechanism:
         assert len(s['results'])==s['conditions']==s['collected']+s['failed']
     elif 'traces' in s:
         assert len(rows)==s['traces']==s['classified']+s['unresolved_first_stage']
-print(json.dumps(dict(status='PASS',diagnostic_blocks=len(blocks),mechanism_blocks=len(mechanism),scope='compact artifact hashes/schema/denominators; not GPU replication')))
+    elif 'operations' in s:
+        assert len(rows)==s['operations']==len(s['results'])==3
+        assert all(r['upstream_exact'] and r['one_vs_native']['max_abs']==0 and r['many_vs_native_full']['max_abs']==0 and r['one_vs_many']['max_abs']>0 for r in s['results'])
+replication=list((root/'results/replication_v2').glob('*/blocks/*/manifest.json'))
+for manifest in replication:
+    folder=manifest.parent;m=json.loads(manifest.read_text())
+    for name,meta in m['files'].items():
+        p=(folder/name).resolve();assert p.parent==folder.resolve()
+        assert p.stat().st_size==meta['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==meta['sha256'],p
+    s=json.loads((folder/'summary.json').read_text());collected=[r for r in s['conditions'] if r['status']=='COLLECTED']
+    assert len(s['conditions'])==s['planned_conditions']==sum(s['counts'].values())
+    assert len(collected)==s['counts'].get('COLLECTED',0)
+    assert sum(s['dense_counts'].values())==len(collected)
+    assert s['source_units']==len({r['spec']['document_id'] for r in collected})
+    assert not s['missing']
+    assert all(c['noop_exact']==32 and c['packing_exact']==16 and c['first_step_history_exact']==6 and c['snapshots_unchanged'] for c in collected)
+    assert len(list(csv.DictReader((folder/'metrics.csv').open())))==s['document_metric_rows']==len(collected)*12
+    assert len(list(csv.DictReader((folder/'factorial.csv').open())))==s['factorial_document_rows']==len(collected)*2
+print(json.dumps(dict(status='PASS',diagnostic_blocks=len(blocks),mechanism_blocks=len(mechanism),replication_blocks=len(replication),scope='compact artifact hashes/schema/denominators; not GPU replication')))
