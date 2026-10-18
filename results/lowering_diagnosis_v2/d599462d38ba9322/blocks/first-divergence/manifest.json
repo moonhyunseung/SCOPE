@@ -1,0 +1,30 @@
+{
+  "files": {
+    "first_divergence.csv": {
+      "bytes": 165641,
+      "sha256": "8671d6918388b375bb75589f0e9f06d4b3d7e2a042e662fe7378372f07fc2608"
+    },
+    "summary.json": {
+      "bytes": 8536,
+      "sha256": "3eba51a2acb7c3d732295db5435cc43cc6bd64186268a158aad29fbd50469261"
+    },
+    "stepwise_errors.csv": {
+      "bytes": 3446,
+      "sha256": "ee647014e45ebf70a925653c3bf750a30fe08a2894e10b7f560b41e520281097"
+    },
+    "report.md": {
+      "bytes": 8734,
+      "sha256": "34db2d372b11ed2830cb22a4552ad3edc2616addf01a15016b031200ad5e6802"
+    },
+    "preregistered_contract.json": {
+      "bytes": 2975,
+      "sha256": "956d2cb218e191ff34dba99347e3064c066d7a8c16fcc167ae3da5a20e13ebd8"
+    },
+    "operand_parity.json": {
+      "bytes": 264091,
+      "sha256": "256e5b7a79d63fb75364ea1d66719041507c078dee75c1e016621184aec803ab"
+    }
+  },
+  "source_sha256": "f422b649a112d1a7573cfb6363dd03fcf07ff24f52cf4ddaa5034c457b3ecba9",
+  "sealed": "2026-10-18T20:55:15.178313+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PUBLISHED",
+  "commit": "5a69c6661330879a852da9bc4315ad925779adb3",
+  "tree": "f91fba277e2be3324ed599d30ab39c7f3066cf18",
+  "verification": "21 changed remote blob SHAs and main ref read back",
+  "manifest_sha256": "8af93e4e13c26712154a2f6aa077ba81ae93e23b3de65024a3e220e5b3baf58b",
+  "verified_at": "2026-10-18T20:54:47.525617+00:00"
+}

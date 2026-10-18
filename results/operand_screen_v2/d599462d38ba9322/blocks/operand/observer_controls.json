@@ -1,0 +1,14 @@
+[
+  {
+    "document_id": "7190bc75f0028b8ef4e2",
+    "replays_exact": true,
+    "unobserved_logits_cache_exact": true,
+    "historical_fp32_joint_tolerance": 1e-06
+  },
+  {
+    "document_id": "95459423d3b8f7c779e3",
+    "replays_exact": true,
+    "unobserved_logits_cache_exact": true,
+    "historical_fp32_joint_tolerance": 1e-06
+  }
+]

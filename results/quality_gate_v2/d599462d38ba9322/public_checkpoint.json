@@ -1,0 +1,16 @@
+{
+  "counts": {},
+  "state": {
+    "status": "COMPLETE",
+    "result": "REPRESENTATION_FIDELITY_FAIL",
+    "updated": "2026-10-18T20:54:59.159413+00:00"
+  },
+  "captured": "2026-10-18T20:56:23.656882+00:00",
+  "input_identity": {
+    "run": "d599462d38ba9322",
+    "source_sha256": "f422b649a112d1a7573cfb6363dd03fcf07ff24f52cf4ddaa5034c457b3ecba9",
+    "prepared_sha256": "956d2cb218e191ff34dba99347e3064c066d7a8c16fcc167ae3da5a20e13ebd8",
+    "stage": "quality_gate_v2",
+    "budget_seconds": 1200
+  }
+}

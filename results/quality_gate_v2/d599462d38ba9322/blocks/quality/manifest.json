@@ -1,0 +1,26 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 1037,
+      "sha256": "37459edfaac21344ff85b1890b3b6791e92996ad966a613478c30bce97d7805c"
+    },
+    "comparisons.csv": {
+      "bytes": 6767,
+      "sha256": "1d0f6e2e02795add1c755fd28f6ed132407869c71422ff5e4fd386e1267ee087"
+    },
+    "report.md": {
+      "bytes": 1235,
+      "sha256": "b5548bde4e537e7ebfa1ccbb33343894720018fc1c692ff763503ffb2ad071c1"
+    },
+    "preregistered_contract.json": {
+      "bytes": 2975,
+      "sha256": "956d2cb218e191ff34dba99347e3064c066d7a8c16fcc167ae3da5a20e13ebd8"
+    },
+    "replay_controls.json": {
+      "bytes": 6329,
+      "sha256": "7a54aab616d6ff845e6506f095e116a4e3ae85d4d57775bf8afacf28dba95ee1"
+    }
+  },
+  "source_sha256": "f422b649a112d1a7573cfb6363dd03fcf07ff24f52cf4ddaa5034c457b3ecba9",
+  "sealed": "2026-10-18T20:54:58.371093+00:00"
+}

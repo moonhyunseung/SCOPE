@@ -1,0 +1,30 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 1432,
+      "sha256": "4a68878f2f10d07f4559dd75a43f51c3b9832445e6b4f455bbe48329496ed7fe"
+    },
+    "observer_controls.json": {
+      "bytes": 337,
+      "sha256": "b46103873aa493f719272eff666a7932fbecf6945aa404684c77a6a79429be1e"
+    },
+    "report.md": {
+      "bytes": 1630,
+      "sha256": "a5fe23bbcff8609da31bae0527df23344623393c193bdf53cc6a1fc54eccff89"
+    },
+    "preregistered_contract.json": {
+      "bytes": 2975,
+      "sha256": "956d2cb218e191ff34dba99347e3064c066d7a8c16fcc167ae3da5a20e13ebd8"
+    },
+    "pv_residual.csv": {
+      "bytes": 47462,
+      "sha256": "133c31a68636bf429d488d0cfc832345fc8ec2bf7bc6ba08edbec4e43e3b6b34"
+    },
+    "operand_residual.csv": {
+      "bytes": 38259,
+      "sha256": "cc46bfadb911b9a14a42246cf7d6ece8f06114926478567d16035cc5bd93e4e6"
+    }
+  },
+  "source_sha256": "f422b649a112d1a7573cfb6363dd03fcf07ff24f52cf4ddaa5034c457b3ecba9",
+  "sealed": "2026-10-18T20:55:26.852420+00:00"
+}
