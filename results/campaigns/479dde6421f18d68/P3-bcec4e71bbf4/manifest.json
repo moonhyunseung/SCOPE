@@ -1,0 +1,42 @@
+{
+  "protocol_version": "scope-h200-size-extension-v2",
+  "experiment_id": "P3-bcec4e71bbf4",
+  "run_id": "479dde6421f18d68",
+  "code_sha": "ba0b4bbdea12be44aa7b6686c766e6173da0e85a",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "479dde6421f18d689c0836ead3ba4ebad15b56b6709eb2865af98af14ae9ea27",
+  "started": "2026-10-18T06:09:24.714221+00:00",
+  "ended": "2026-10-18T06:09:24.715199+00:00",
+  "status": "SKIPPED_WITH_REASON",
+  "seed": 20261018,
+  "planned_condition": {
+    "block": "P3",
+    "deps": [
+      "P1-bcec4e71bbf4"
+    ],
+    "id": "P3-bcec4e71bbf4",
+    "params": {
+      "capture": "P1-bcec4e71bbf4"
+    }
+  },
+  "outputs": {
+    "metrics.csv": {
+      "sha256": "127dba67ca2e117d66d2ecc972821d7aa68ff3afa31bc410fbcc6cc2adba2d4a",
+      "bytes": 48,
+      "published": true
+    },
+    "report.md": {
+      "sha256": "0f96cd2d16ca5233086f9ac96eb069158221066ffb1b03b47e56de2a5490b57f",
+      "bytes": 221,
+      "published": true
+    },
+    "summary.json": {
+      "sha256": "f5029e0559514835cee5e75f79de5d269de0b163b80313fad3536bed29bce6fb",
+      "bytes": 226,
+      "published": true
+    }
+  },
+  "provenance": {},
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

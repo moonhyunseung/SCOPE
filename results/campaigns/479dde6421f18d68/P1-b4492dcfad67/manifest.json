@@ -1,0 +1,109 @@
+{
+  "protocol_version": "scope-h200-size-extension-v2",
+  "experiment_id": "P1-b4492dcfad67",
+  "run_id": "479dde6421f18d68",
+  "code_sha": "ba0b4bbdea12be44aa7b6686c766e6173da0e85a",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "479dde6421f18d689c0836ead3ba4ebad15b56b6709eb2865af98af14ae9ea27",
+  "started": "2026-10-18T06:15:55.852769+00:00",
+  "ended": "2026-10-18T06:16:14.230949+00:00",
+  "status": "PASS",
+  "seed": 20261018,
+  "planned_condition": {
+    "block": "P1",
+    "deps": [
+      "P0"
+    ],
+    "id": "P1-b4492dcfad67",
+    "params": {
+      "category": "prose",
+      "length": 2048,
+      "model": {
+        "id": "Qwen/Qwen2.5-14B-Instruct",
+        "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8"
+      }
+    }
+  },
+  "outputs": {
+    "metrics.csv": {
+      "sha256": "08b68f7a617314cb5f17cd808ac37a92343f39edb4955a66d893af3a3bac06aa",
+      "bytes": 91640,
+      "published": true
+    },
+    "output.json": {
+      "sha256": "b9e5aa179f1f4a0d4b3c07ec658cfc9e1fabef7ff48512212aa24d20124838f8",
+      "bytes": 259100,
+      "published": false
+    },
+    "report.md": {
+      "sha256": "6f150abecd8ada53a69b46ea9de1a43b00ce1ca236874db917782c3ab38bf012",
+      "bytes": 531,
+      "published": true
+    },
+    "sample.pt": {
+      "sha256": "5fd1b26da7bc9ab6b3a27fbf073f4d7725ad26660f1d46361f4b1cd04e7b9d3e",
+      "bytes": 8409427,
+      "published": false
+    },
+    "state_statistics.json": {
+      "sha256": "9914a992b2b39a64fe71d41657a920ca507a127c0f2c60483d7c922483d36ca9",
+      "bytes": 107385,
+      "published": false
+    },
+    "stdout.log": {
+      "sha256": "bbff5de4f70ecf1a2cfb16b5fe2c8d348c0101ef846dc4870aacd504a30088f8",
+      "bytes": 153,
+      "published": false
+    },
+    "summary.json": {
+      "sha256": "3624df4db2fbd67e64c11d88c1b958fab4b25c4ae305729576fd781ab5fd89a7",
+      "bytes": 274634,
+      "published": true
+    }
+  },
+  "provenance": {
+    "model_id": "Qwen/Qwen2.5-14B-Instruct",
+    "model_revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8",
+    "model_type": "qwen2",
+    "config_sha256": "b8ddb821e85e4d1407d54be20deed622483ed6a9993b6ec1db6784b28d4e3870",
+    "native_function_source_sha256": "cb34ccea28710ae8d5d94a241b704ea3d974048f85372f0b1b3c2a8a2ef1ee20",
+    "architecture_observed": [
+      {
+        "hq": 40,
+        "hkv": 8,
+        "kind": "GQA"
+      }
+    ],
+    "backend": "transformers eager BF16; FP32 diagnostic replay",
+    "input_dataset_id": "scope-public-repeated-prose-v1",
+    "input_token_sha256": "a8be482d056ff7af9638682dd3e37925c21b528959e136fd858ee16d08c74ef6",
+    "seed": 20261018,
+    "dtype": "bfloat16",
+    "native_contract": "BF16 matmul and scale, mask addition in native dtype, FP32 softmax cast to BF16, BF16 PV",
+    "batch": 1,
+    "context": 2048,
+    "cache_append_steps": 3,
+    "cached_full_logits_checks": [
+      {
+        "max_abs": 0.28125,
+        "relative_l2": 0.01464812085032463
+      }
+    ],
+    "software": {
+      "torch": "2.14.1",
+      "triton": "3.8.0",
+      "transformers": "5.19.0",
+      "numpy": "2.5.4",
+      "pytest": "9.0.2",
+      "huggingface_hub": "2.2.0",
+      "flash_attn": null,
+      "vllm": null
+    },
+    "gpu": "NVIDIA H200",
+    "native_values": "Q,K,V, returned eager BF16 probability P and attention output Y",
+    "reconstructed_values": "FP32 diagnostic Z/P/Y/W; same-dtype Z/P/Y replay; illustrative quantizer codes/scales. FP32 difference is precision sensitivity, not executor error",
+    "trace_overhead": "not measured; no trace-mode latency reported"
+  },
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

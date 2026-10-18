@@ -1,0 +1,252 @@
+{
+  "campaign": {
+    "run_id": "479dde6421f18d68",
+    "created": "2026-10-18T06:06:46.744676+00:00",
+    "code_sha": "ba0b4bbdea12be44aa7b6686c766e6173da0e85a",
+    "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+    "config": {
+      "protocol_version": "scope-h200-size-extension-v2",
+      "seed": 20261018,
+      "cpu_threads": 4,
+      "max_allocated_hbm_gib": 96,
+      "reserve_hbm_gib": 12,
+      "minimum_free_hbm_gib": 32,
+      "reserve_disk_gib": 24,
+      "campaign_timeout_seconds": 10800,
+      "job_timeout_seconds": 2400,
+      "performance_repeats": 3,
+      "warmup": 10,
+      "timed_iterations": 40,
+      "decode_steps": 3,
+      "native_reference_relative_l2": 0.025,
+      "trajectory_relative_l2": 0.025,
+      "lengths": [
+        512,
+        2048
+      ],
+      "categories": [
+        "prose",
+        "code"
+      ],
+      "models": [
+        {
+          "id": "Qwen/Qwen2.5-7B-Instruct",
+          "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+        },
+        {
+          "id": "Qwen/Qwen2.5-14B-Instruct",
+          "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8"
+        }
+      ],
+      "inputs": {
+        "prose": "A research system records measurements and preserves evidence. The observatory studies how memory, computation, and numerical precision affect attention. Every experiment has a fixed input and a reproducible protocol. ",
+        "code": "def stable_sum(values):\n    total = 0.0\n    for value in values:\n        total += value\n    return total\n\nclass Cache:\n    def append(self, key, value):\n        self.keys.append(key)\n        self.values.append(value)\n"
+      }
+    }
+  },
+  "jobs": [
+    {
+      "id": "P0",
+      "spec": "{\"block\":\"P0\",\"deps\":[],\"id\":\"P0\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-bcec4e71bbf4",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-bcec4e71bbf4\",\"params\":{\"category\":\"prose\",\"length\":512,\"model\":{\"id\":\"Qwen/Qwen2.5-7B-Instruct\",\"revision\":\"a09a35458c702b33eeacc393d103063234e8bc28\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-bcec4e71bbf4",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-bcec4e71bbf4\"],\"id\":\"P3-bcec4e71bbf4\",\"params\":{\"capture\":\"P1-bcec4e71bbf4\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-bcec4e71bbf4",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-bcec4e71bbf4\",\"P3-bcec4e71bbf4\"],\"id\":\"P4-bcec4e71bbf4\",\"params\":{\"capture\":\"P1-bcec4e71bbf4\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-08fc30fe2f17",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-08fc30fe2f17\",\"params\":{\"category\":\"code\",\"length\":512,\"model\":{\"id\":\"Qwen/Qwen2.5-7B-Instruct\",\"revision\":\"a09a35458c702b33eeacc393d103063234e8bc28\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-08fc30fe2f17",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-08fc30fe2f17\"],\"id\":\"P3-08fc30fe2f17\",\"params\":{\"capture\":\"P1-08fc30fe2f17\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-08fc30fe2f17",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-08fc30fe2f17\",\"P3-08fc30fe2f17\"],\"id\":\"P4-08fc30fe2f17\",\"params\":{\"capture\":\"P1-08fc30fe2f17\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-14f5bd74883d",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-14f5bd74883d\",\"params\":{\"category\":\"prose\",\"length\":2048,\"model\":{\"id\":\"Qwen/Qwen2.5-7B-Instruct\",\"revision\":\"a09a35458c702b33eeacc393d103063234e8bc28\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-14f5bd74883d",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-14f5bd74883d\"],\"id\":\"P3-14f5bd74883d\",\"params\":{\"capture\":\"P1-14f5bd74883d\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-14f5bd74883d",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-14f5bd74883d\",\"P3-14f5bd74883d\"],\"id\":\"P4-14f5bd74883d\",\"params\":{\"capture\":\"P1-14f5bd74883d\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-5a1dbfe01d66",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-5a1dbfe01d66\",\"params\":{\"category\":\"code\",\"length\":2048,\"model\":{\"id\":\"Qwen/Qwen2.5-7B-Instruct\",\"revision\":\"a09a35458c702b33eeacc393d103063234e8bc28\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-5a1dbfe01d66",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-5a1dbfe01d66\"],\"id\":\"P3-5a1dbfe01d66\",\"params\":{\"capture\":\"P1-5a1dbfe01d66\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-5a1dbfe01d66",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-5a1dbfe01d66\",\"P3-5a1dbfe01d66\"],\"id\":\"P4-5a1dbfe01d66\",\"params\":{\"capture\":\"P1-5a1dbfe01d66\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-e533c04e120d",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-e533c04e120d\",\"params\":{\"category\":\"prose\",\"length\":512,\"model\":{\"id\":\"Qwen/Qwen2.5-14B-Instruct\",\"revision\":\"cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-e533c04e120d",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-e533c04e120d\"],\"id\":\"P3-e533c04e120d\",\"params\":{\"capture\":\"P1-e533c04e120d\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-e533c04e120d",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-e533c04e120d\",\"P3-e533c04e120d\"],\"id\":\"P4-e533c04e120d\",\"params\":{\"capture\":\"P1-e533c04e120d\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-1aa300813eba",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-1aa300813eba\",\"params\":{\"category\":\"code\",\"length\":512,\"model\":{\"id\":\"Qwen/Qwen2.5-14B-Instruct\",\"revision\":\"cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-1aa300813eba",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-1aa300813eba\"],\"id\":\"P3-1aa300813eba\",\"params\":{\"capture\":\"P1-1aa300813eba\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-1aa300813eba",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-1aa300813eba\",\"P3-1aa300813eba\"],\"id\":\"P4-1aa300813eba\",\"params\":{\"capture\":\"P1-1aa300813eba\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-b4492dcfad67",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-b4492dcfad67\",\"params\":{\"category\":\"prose\",\"length\":2048,\"model\":{\"id\":\"Qwen/Qwen2.5-14B-Instruct\",\"revision\":\"cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-b4492dcfad67",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-b4492dcfad67\"],\"id\":\"P3-b4492dcfad67\",\"params\":{\"capture\":\"P1-b4492dcfad67\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-b4492dcfad67",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-b4492dcfad67\",\"P3-b4492dcfad67\"],\"id\":\"P4-b4492dcfad67\",\"params\":{\"capture\":\"P1-b4492dcfad67\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-3426a23a4913",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-3426a23a4913\",\"params\":{\"category\":\"code\",\"length\":2048,\"model\":{\"id\":\"Qwen/Qwen2.5-14B-Instruct\",\"revision\":\"cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-3426a23a4913",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-3426a23a4913\"],\"id\":\"P3-3426a23a4913\",\"params\":{\"capture\":\"P1-3426a23a4913\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-3426a23a4913",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-3426a23a4913\",\"P3-3426a23a4913\"],\"id\":\"P4-3426a23a4913\",\"params\":{\"capture\":\"P1-3426a23a4913\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P2",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P2\",\"deps\":[\"P1-bcec4e71bbf4\",\"P1-08fc30fe2f17\",\"P1-14f5bd74883d\",\"P1-5a1dbfe01d66\",\"P1-e533c04e120d\",\"P1-1aa300813eba\",\"P1-b4492dcfad67\",\"P1-3426a23a4913\"],\"id\":\"P2\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P5",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P5\",\"deps\":[\"P1-bcec4e71bbf4\",\"P1-08fc30fe2f17\",\"P1-14f5bd74883d\",\"P1-5a1dbfe01d66\",\"P1-e533c04e120d\",\"P1-1aa300813eba\",\"P1-b4492dcfad67\",\"P1-3426a23a4913\"],\"id\":\"P5\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P6",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P6\",\"deps\":[\"P4-bcec4e71bbf4\",\"P4-08fc30fe2f17\",\"P4-14f5bd74883d\",\"P4-5a1dbfe01d66\",\"P4-e533c04e120d\",\"P4-1aa300813eba\",\"P4-b4492dcfad67\",\"P4-3426a23a4913\"],\"id\":\"P6\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P7",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P7\",\"deps\":[\"P0\",\"P1-bcec4e71bbf4\",\"P3-bcec4e71bbf4\",\"P4-bcec4e71bbf4\",\"P1-08fc30fe2f17\",\"P3-08fc30fe2f17\",\"P4-08fc30fe2f17\",\"P1-14f5bd74883d\",\"P3-14f5bd74883d\",\"P4-14f5bd74883d\",\"P1-5a1dbfe01d66\",\"P3-5a1dbfe01d66\",\"P4-5a1dbfe01d66\",\"P1-e533c04e120d\",\"P3-e533c04e120d\",\"P4-e533c04e120d\",\"P1-1aa300813eba\",\"P3-1aa300813eba\",\"P4-1aa300813eba\",\"P1-b4492dcfad67\",\"P3-b4492dcfad67\",\"P4-b4492dcfad67\",\"P1-3426a23a4913\",\"P3-3426a23a4913\",\"P4-3426a23a4913\",\"P2\",\"P5\",\"P6\"],\"id\":\"P7\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "P1-bcec4e71bbf4",
+  "status": "FAIL",
+  "detail": "cached/full logits trajectory mismatch",
+  "started": "2026-10-18T06:07:01.151523+00:00",
+  "ended": "2026-10-18T06:09:20.768085+00:00",
+  "result": {
+    "status": "FAIL",
+    "detail": "cached/full logits trajectory mismatch"
+  }
+}

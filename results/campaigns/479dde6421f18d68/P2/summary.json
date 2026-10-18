@@ -1,0 +1,199 @@
+{
+  "id": "P2",
+  "status": "PASS",
+  "detail": "worker exit 0",
+  "started": "2026-10-18T06:17:01.138326+00:00",
+  "ended": "2026-10-18T06:17:03.877021+00:00",
+  "result": {
+    "status": "PASS",
+    "metrics": [
+      {
+        "capture": "P1-08fc30fe2f17",
+        "status": "FAIL"
+      },
+      {
+        "capture": "P1-14f5bd74883d",
+        "status": "FAIL"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.0.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.37056177854537964,
+        "P_scale_correlation": -0.015034287236630917,
+        "P_V_correlation": 0.02076326496899128,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.24.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.4765516221523285,
+        "P_scale_correlation": -0.08259770274162292,
+        "P_V_correlation": -0.0019034446449950337,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.47.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.4389607608318329,
+        "P_scale_correlation": -0.06403728574514389,
+        "P_V_correlation": 0.005389825906604528,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.0.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.29924696683883667,
+        "P_scale_correlation": -0.09938477724790573,
+        "P_V_correlation": 0.008685590699315071,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.24.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.5212041139602661,
+        "P_scale_correlation": -0.07122910767793655,
+        "P_V_correlation": -0.0021438898984342813,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.47.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.4243057370185852,
+        "P_scale_correlation": -0.03671203553676605,
+        "P_V_correlation": -0.019308654591441154,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.0.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.29469433426856995,
+        "P_scale_correlation": -0.044501956552267075,
+        "P_V_correlation": 0.004998065531253815,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.24.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.48072871565818787,
+        "P_scale_correlation": -0.04893244430422783,
+        "P_V_correlation": -0.0037930167745798826,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-1aa300813eba",
+        "layer": "model.layers.47.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.40971145033836365,
+        "P_scale_correlation": -0.06903406977653503,
+        "P_V_correlation": -0.0016051909187808633,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-3426a23a4913",
+        "status": "FAIL"
+      },
+      {
+        "capture": "P1-5a1dbfe01d66",
+        "status": "FAIL"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.0.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.33769887685775757,
+        "P_scale_correlation": -0.08013015985488892,
+        "P_V_correlation": 0.0189664363861084,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.24.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.5340771079063416,
+        "P_scale_correlation": -0.011199071072041988,
+        "P_V_correlation": -0.002009819960221648,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.47.self_attn",
+        "step": 0,
+        "cancellation_ratio": 0.4414617717266083,
+        "P_scale_correlation": -0.04080889746546745,
+        "P_V_correlation": 0.005639166105538607,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.0.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.35868197679519653,
+        "P_scale_correlation": -0.10212919861078262,
+        "P_V_correlation": 0.003381766378879547,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.24.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.4878208637237549,
+        "P_scale_correlation": -0.129121333360672,
+        "P_V_correlation": 0.0004585664428304881,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.47.self_attn",
+        "step": 1,
+        "cancellation_ratio": 0.44221410155296326,
+        "P_scale_correlation": -0.09173067659139633,
+        "P_V_correlation": 0.00781750213354826,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.0.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.2734473943710327,
+        "P_scale_correlation": -0.05659307911992073,
+        "P_V_correlation": -0.0009954494889825583,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.24.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.4612888991832733,
+        "P_scale_correlation": -0.03639236465096474,
+        "P_V_correlation": -0.0005418365471996367,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-b4492dcfad67",
+        "layer": "model.layers.47.self_attn",
+        "step": 2,
+        "cancellation_ratio": 0.4538477957248688,
+        "P_scale_correlation": -0.03272814676165581,
+        "P_V_correlation": -0.007509018760174513,
+        "status": "PASS"
+      },
+      {
+        "capture": "P1-bcec4e71bbf4",
+        "status": "FAIL"
+      },
+      {
+        "capture": "P1-e533c04e120d",
+        "status": "FAIL"
+      }
+    ],
+    "interpretation": "Conditional and joint sampled statistics from actual captures; correlations do not prove universal invariants. Samples are deterministic and repetitive public text limits population coverage."
+  }
+}

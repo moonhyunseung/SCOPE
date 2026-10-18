@@ -1,0 +1,12 @@
+{
+  "recorded": "2026-10-18T06:06:46.157715+00:00",
+  "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-85-generic-x86_64-with-glibc2.39",
+  "cuda_runtime": "13.0",
+  "gpu": "NVIDIA H200",
+  "hbm_bytes": 150109880320,
+  "budget_gib": 96,
+  "reserve_gib": 12,
+  "git_sha": "ba0b4bbdea12be44aa7b6686c766e6173da0e85a",
+  "git_publication": "requires existing Git credentials and author identity; unverified until push/read-back"
+}
