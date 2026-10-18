@@ -1,0 +1,7 @@
+architecture,cache_tensor_storage_bytes,category,context,full_model_decode_median_ms,head_step_observations,id,max_fp32_diagnostic_relative_l2,max_native_relative_l2,median_fp32_diagnostic_relative_l2,median_quantized_head_relative_l2,model
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",14909440,prose,512,13.26915168762207,108,P1-04fb19d9f6c5,0.5073409676551819,0.0,0.0029464997351169586,0.16470132023096085,Qwen/Qwen2.5-1.5B-Instruct
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",14909440,code,512,13.27668809890747,108,P1-728b54fc0999,0.36267197132110596,0.0,0.0029298834269866347,0.1310773715376854,Qwen/Qwen2.5-1.5B-Instruct
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",58949632,prose,2048,14.129008293151855,108,P1-149a05ffeab0,0.7662075757980347,0.0,0.0035465549444779754,0.12950793653726578,Qwen/Qwen2.5-1.5B-Instruct
+"[{""hq"": 12, ""hkv"": 2, ""kind"": ""GQA""}]",58949632,code,2048,13.64359998703003,108,P1-c1cc3e592af8,1.7945417165756226,0.0,0.0025230887113139033,0.11868015304207802,Qwen/Qwen2.5-1.5B-Instruct
+"[{""hq"": 8, ""hkv"": 8, ""kind"": ""MHA""}]",68157440,prose,512,6.293295860290527,72,P1-9e912262597e,0.01154348999261856,0.0,0.0024964724434539676,0.10201158002018929,EleutherAI/pythia-1b
+"[{""hq"": 8, ""hkv"": 8, ""kind"": ""MHA""}]",68157440,code,512,5.474560022354126,72,P1-bc18bc673b85,0.011098885908722878,0.0,0.0030728118726983666,0.12875324487686157,EleutherAI/pythia-1b

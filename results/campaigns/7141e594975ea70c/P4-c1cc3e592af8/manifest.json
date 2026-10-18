@@ -1,0 +1,114 @@
+{
+  "protocol_version": "scope-h200-pilot-v2",
+  "experiment_id": "P4-c1cc3e592af8",
+  "run_id": "7141e594975ea70c",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "7141e594975ea70c64ec7215314da43425aa91583b7457ca27b23405ce667062",
+  "started": "2026-10-18T06:03:10.919097+00:00",
+  "ended": "2026-10-18T06:03:13.906226+00:00",
+  "status": "PASS",
+  "seed": 20261018,
+  "planned_condition": {
+    "block": "P4",
+    "deps": [
+      "P1-c1cc3e592af8",
+      "P3-c1cc3e592af8"
+    ],
+    "id": "P4-c1cc3e592af8",
+    "params": {
+      "capture": "P1-c1cc3e592af8"
+    }
+  },
+  "outputs": {
+    "dense_eager-repeat0.json": {
+      "sha256": "6b19633addf330f34e65208cc09ff0637dec6e137a1b91d45442d09d42dd7ee6",
+      "bytes": 919,
+      "published": false
+    },
+    "dense_eager-repeat1.json": {
+      "sha256": "125c6c162bdf4b0b532b73954bafdbe49b435d461d3f89a3694dc98fd641619c",
+      "bytes": 918,
+      "published": false
+    },
+    "dense_eager-repeat2.json": {
+      "sha256": "c75a464c7789fd0daa679a2b0f1d7c77fd2891a7a3fd21c057ac2dbfe642c83f",
+      "bytes": 919,
+      "published": false
+    },
+    "metrics.csv": {
+      "sha256": "aaf14cf9d5f93ba0aec5313453844812a5413146bd070a7d50ff46a6279379cf",
+      "bytes": 1549,
+      "published": true
+    },
+    "output.json": {
+      "sha256": "c936a73401d7457dba08b7d959946c49911929047eb43f10cc00038b0671806b",
+      "bytes": 5327,
+      "published": false
+    },
+    "packed_restore_eager-repeat0.json": {
+      "sha256": "e6180bcb1fa130c13ab43f80212f01fb9d88edbaca2db3749c7c88d806e5a118",
+      "bytes": 908,
+      "published": false
+    },
+    "packed_restore_eager-repeat1.json": {
+      "sha256": "769345120d47fc4056ad06c0fbd78997e538020decc431a43b95d25100f42758",
+      "bytes": 899,
+      "published": false
+    },
+    "packed_restore_eager-repeat2.json": {
+      "sha256": "1a4e17d0d3c8c0e3f415fae7b248b0468dc7d63e47cf54a4fd62aead6577bdd0",
+      "bytes": 911,
+      "published": false
+    },
+    "report.md": {
+      "sha256": "4f69f43f71b7abdbb865b4acf0779f330d8bb3a910ae3f4ee993d2002c2b51c7",
+      "bytes": 518,
+      "published": true
+    },
+    "stdout.log": {
+      "sha256": "9d80959f24675dd709aae1dccd59b216e2ed12d9e552755b7873729b1fea7b1a",
+      "bytes": 6,
+      "published": false
+    },
+    "summary.json": {
+      "sha256": "b840531b421d6155405c369118a23c7df69ebd2a3238acacffc88d0ca214e905",
+      "bytes": 5829,
+      "published": true
+    }
+  },
+  "provenance": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layer": "model.layers.0.self_attn",
+    "shape_q": [
+      1,
+      12,
+      1,
+      128
+    ],
+    "shape_k": [
+      1,
+      2,
+      2049,
+      128
+    ],
+    "dtype": "torch.bfloat16",
+    "gpu": "NVIDIA H200",
+    "software": {
+      "torch": "2.14.1",
+      "triton": "3.8.0",
+      "transformers": "5.19.0",
+      "numpy": "2.5.4",
+      "pytest": "9.0.2",
+      "huggingface_hub": "2.2.0",
+      "flash_attn": null,
+      "vllm": null
+    },
+    "clocks": "1980 MHz, 3201 MHz, 36, 100.72 W",
+    "scope": "single-layer decode replay; includes unpack, dequantize, GQA materialization and attention; excludes one-time packing (separately recorded), full model and sampling",
+    "reference": "same BF16 eager contract as model; representation loss separate from executor error"
+  },
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

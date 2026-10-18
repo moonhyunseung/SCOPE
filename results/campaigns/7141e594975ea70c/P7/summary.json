@@ -1,0 +1,213 @@
+{
+  "id": "P7",
+  "status": "PASS",
+  "detail": "worker exit 0",
+  "started": "2026-10-18T06:06:23.049503+00:00",
+  "ended": "2026-10-18T06:06:25.890218+00:00",
+  "result": {
+    "status": "PASS",
+    "metrics": [
+      {
+        "id": "P0",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-04fb19d9f6c5",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-054e41c1ed2f",
+        "status": "UNSUPPORTED",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-070661f191b0",
+        "status": "UNSUPPORTED",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-0ceed09e14be",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-149a05ffeab0",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-1cf7a0b00dc7",
+        "status": "UNSUPPORTED",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-28125cf1db34",
+        "status": "UNSUPPORTED",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-728b54fc0999",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-95b5035f9fde",
+        "status": "FAIL",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-9e912262597e",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-bc18bc673b85",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P1-c1cc3e592af8",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P2",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-04fb19d9f6c5",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-054e41c1ed2f",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-070661f191b0",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-0ceed09e14be",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-149a05ffeab0",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-1cf7a0b00dc7",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-28125cf1db34",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-728b54fc0999",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-95b5035f9fde",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-9e912262597e",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-bc18bc673b85",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P3-c1cc3e592af8",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-04fb19d9f6c5",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-054e41c1ed2f",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-070661f191b0",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-0ceed09e14be",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-149a05ffeab0",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-1cf7a0b00dc7",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-28125cf1db34",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-728b54fc0999",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-95b5035f9fde",
+        "status": "SKIPPED_WITH_REASON",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-9e912262597e",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-bc18bc673b85",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P4-c1cc3e592af8",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P5",
+        "status": "PASS",
+        "integrity": "PASS"
+      },
+      {
+        "id": "P6",
+        "status": "PASS",
+        "integrity": "PASS"
+      }
+    ],
+    "interpretation": "Existing artifact hashes verified; condition failures retained. This is an integrity audit, not independent GPU replication or OSDI-class completeness."
+  }
+}

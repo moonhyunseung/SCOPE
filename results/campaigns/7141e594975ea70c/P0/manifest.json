@@ -1,0 +1,66 @@
+{
+  "protocol_version": "scope-h200-pilot-v2",
+  "experiment_id": "P0",
+  "run_id": "7141e594975ea70c",
+  "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "config_sha256": "7141e594975ea70c64ec7215314da43425aa91583b7457ca27b23405ce667062",
+  "started": "2026-10-18T06:01:09.105197+00:00",
+  "ended": "2026-10-18T06:01:18.775921+00:00",
+  "status": "PASS",
+  "seed": 20261018,
+  "planned_condition": {
+    "block": "P0",
+    "deps": [],
+    "id": "P0",
+    "params": {}
+  },
+  "outputs": {
+    "metrics.csv": {
+      "sha256": "824eaa9c2d51a06ebf8c24dab0b2abb30b076ce84cd9aacd9490ee3f3fcb4e33",
+      "bytes": 1220,
+      "published": true
+    },
+    "output.json": {
+      "sha256": "2dec1a7bc8b03fa2320257f8e49cbb958792a7346234a307ad7fa3359bff9aa0",
+      "bytes": 4455,
+      "published": false
+    },
+    "pytest.log": {
+      "sha256": "6b91f7ba8593b75db10bd5a0c9d74e027039d9f1b5e5a5af6f472280aed54945",
+      "bytes": 99,
+      "published": false
+    },
+    "report.md": {
+      "sha256": "942ee62ef9fca35fe3decb0bd51191fb1e6e706fe7f9122467d3b16bf3c52fd4",
+      "bytes": 375,
+      "published": true
+    },
+    "stdout.log": {
+      "sha256": "9d80959f24675dd709aae1dccd59b216e2ed12d9e552755b7873729b1fea7b1a",
+      "bytes": 6,
+      "published": false
+    },
+    "summary.json": {
+      "sha256": "524ae902f7c99be9af8ffeb657375904656e52274e8b7c973f9d6e53e020d793",
+      "bytes": 5028,
+      "published": true
+    }
+  },
+  "provenance": {
+    "input_kind": "synthetic",
+    "seed": 20261018,
+    "software": {
+      "torch": "2.14.1",
+      "triton": "3.8.0",
+      "transformers": "5.19.0",
+      "numpy": "2.5.4",
+      "pytest": "9.0.2",
+      "huggingface_hub": "2.2.0",
+      "flash_attn": null,
+      "vllm": null
+    }
+  },
+  "preflight": "results/preflight",
+  "raw_storage": "local experiment directory; see checksums; no public tensor download promised"
+}

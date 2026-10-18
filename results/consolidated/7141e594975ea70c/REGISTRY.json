@@ -1,0 +1,340 @@
+{
+  "campaign": {
+    "run_id": "7141e594975ea70c",
+    "created": "2026-10-18T06:01:08.977340+00:00",
+    "code_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+    "source_hash": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+    "config": {
+      "protocol_version": "scope-h200-pilot-v2",
+      "seed": 20261018,
+      "cpu_threads": 4,
+      "max_allocated_hbm_gib": 96,
+      "reserve_hbm_gib": 12,
+      "minimum_free_hbm_gib": 32,
+      "reserve_disk_gib": 24,
+      "campaign_timeout_seconds": 10800,
+      "job_timeout_seconds": 1800,
+      "performance_repeats": 3,
+      "warmup": 10,
+      "timed_iterations": 40,
+      "decode_steps": 3,
+      "native_reference_relative_l2": 0.025,
+      "trajectory_relative_l2": 0.025,
+      "lengths": [
+        512,
+        2048
+      ],
+      "categories": [
+        "prose",
+        "code"
+      ],
+      "models": [
+        {
+          "id": "Qwen/Qwen2.5-1.5B-Instruct",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+        },
+        {
+          "id": "EleutherAI/pythia-1b",
+          "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+        },
+        {
+          "id": "facebook/opt-1.3b",
+          "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62"
+        }
+      ],
+      "inputs": {
+        "prose": "A research system records measurements and preserves evidence. The observatory studies how memory, computation, and numerical precision affect attention. Every experiment has a fixed input and a reproducible protocol. ",
+        "code": "def stable_sum(values):\n    total = 0.0\n    for value in values:\n        total += value\n    return total\n\nclass Cache:\n    def append(self, key, value):\n        self.keys.append(key)\n        self.values.append(value)\n"
+      }
+    }
+  },
+  "jobs": [
+    {
+      "id": "P0",
+      "spec": "{\"block\":\"P0\",\"deps\":[],\"id\":\"P0\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-04fb19d9f6c5",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-04fb19d9f6c5\",\"params\":{\"category\":\"prose\",\"length\":512,\"model\":{\"id\":\"Qwen/Qwen2.5-1.5B-Instruct\",\"revision\":\"989aa7980e4cf806f80c7fef2b1adb7bc71aa306\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-04fb19d9f6c5",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-04fb19d9f6c5\"],\"id\":\"P3-04fb19d9f6c5\",\"params\":{\"capture\":\"P1-04fb19d9f6c5\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-04fb19d9f6c5",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-04fb19d9f6c5\",\"P3-04fb19d9f6c5\"],\"id\":\"P4-04fb19d9f6c5\",\"params\":{\"capture\":\"P1-04fb19d9f6c5\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-728b54fc0999",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-728b54fc0999\",\"params\":{\"category\":\"code\",\"length\":512,\"model\":{\"id\":\"Qwen/Qwen2.5-1.5B-Instruct\",\"revision\":\"989aa7980e4cf806f80c7fef2b1adb7bc71aa306\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-728b54fc0999",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-728b54fc0999\"],\"id\":\"P3-728b54fc0999\",\"params\":{\"capture\":\"P1-728b54fc0999\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-728b54fc0999",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-728b54fc0999\",\"P3-728b54fc0999\"],\"id\":\"P4-728b54fc0999\",\"params\":{\"capture\":\"P1-728b54fc0999\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-149a05ffeab0",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-149a05ffeab0\",\"params\":{\"category\":\"prose\",\"length\":2048,\"model\":{\"id\":\"Qwen/Qwen2.5-1.5B-Instruct\",\"revision\":\"989aa7980e4cf806f80c7fef2b1adb7bc71aa306\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-149a05ffeab0",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-149a05ffeab0\"],\"id\":\"P3-149a05ffeab0\",\"params\":{\"capture\":\"P1-149a05ffeab0\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-149a05ffeab0",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-149a05ffeab0\",\"P3-149a05ffeab0\"],\"id\":\"P4-149a05ffeab0\",\"params\":{\"capture\":\"P1-149a05ffeab0\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-c1cc3e592af8",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-c1cc3e592af8\",\"params\":{\"category\":\"code\",\"length\":2048,\"model\":{\"id\":\"Qwen/Qwen2.5-1.5B-Instruct\",\"revision\":\"989aa7980e4cf806f80c7fef2b1adb7bc71aa306\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-c1cc3e592af8",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-c1cc3e592af8\"],\"id\":\"P3-c1cc3e592af8\",\"params\":{\"capture\":\"P1-c1cc3e592af8\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-c1cc3e592af8",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-c1cc3e592af8\",\"P3-c1cc3e592af8\"],\"id\":\"P4-c1cc3e592af8\",\"params\":{\"capture\":\"P1-c1cc3e592af8\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-9e912262597e",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-9e912262597e\",\"params\":{\"category\":\"prose\",\"length\":512,\"model\":{\"id\":\"EleutherAI/pythia-1b\",\"revision\":\"f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-9e912262597e",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-9e912262597e\"],\"id\":\"P3-9e912262597e\",\"params\":{\"capture\":\"P1-9e912262597e\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-9e912262597e",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-9e912262597e\",\"P3-9e912262597e\"],\"id\":\"P4-9e912262597e\",\"params\":{\"capture\":\"P1-9e912262597e\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-bc18bc673b85",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-bc18bc673b85\",\"params\":{\"category\":\"code\",\"length\":512,\"model\":{\"id\":\"EleutherAI/pythia-1b\",\"revision\":\"f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2\"}}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-bc18bc673b85",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-bc18bc673b85\"],\"id\":\"P3-bc18bc673b85\",\"params\":{\"capture\":\"P1-bc18bc673b85\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P4-bc18bc673b85",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-bc18bc673b85\",\"P3-bc18bc673b85\"],\"id\":\"P4-bc18bc673b85\",\"params\":{\"capture\":\"P1-bc18bc673b85\"}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P1-1cf7a0b00dc7",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-1cf7a0b00dc7\",\"params\":{\"category\":\"prose\",\"length\":2048,\"model\":{\"id\":\"EleutherAI/pythia-1b\",\"revision\":\"f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2\"}}}",
+      "status": "UNSUPPORTED",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-1cf7a0b00dc7",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-1cf7a0b00dc7\"],\"id\":\"P3-1cf7a0b00dc7\",\"params\":{\"capture\":\"P1-1cf7a0b00dc7\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-1cf7a0b00dc7",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-1cf7a0b00dc7\",\"P3-1cf7a0b00dc7\"],\"id\":\"P4-1cf7a0b00dc7\",\"params\":{\"capture\":\"P1-1cf7a0b00dc7\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-054e41c1ed2f",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-054e41c1ed2f\",\"params\":{\"category\":\"code\",\"length\":2048,\"model\":{\"id\":\"EleutherAI/pythia-1b\",\"revision\":\"f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2\"}}}",
+      "status": "UNSUPPORTED",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-054e41c1ed2f",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-054e41c1ed2f\"],\"id\":\"P3-054e41c1ed2f\",\"params\":{\"capture\":\"P1-054e41c1ed2f\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-054e41c1ed2f",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-054e41c1ed2f\",\"P3-054e41c1ed2f\"],\"id\":\"P4-054e41c1ed2f\",\"params\":{\"capture\":\"P1-054e41c1ed2f\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-0ceed09e14be",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-0ceed09e14be\",\"params\":{\"category\":\"prose\",\"length\":512,\"model\":{\"id\":\"facebook/opt-1.3b\",\"revision\":\"3f5c25d0bc631cb57ac65913f76e22c2dfb61d62\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-0ceed09e14be",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-0ceed09e14be\"],\"id\":\"P3-0ceed09e14be\",\"params\":{\"capture\":\"P1-0ceed09e14be\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-0ceed09e14be",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-0ceed09e14be\",\"P3-0ceed09e14be\"],\"id\":\"P4-0ceed09e14be\",\"params\":{\"capture\":\"P1-0ceed09e14be\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-95b5035f9fde",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-95b5035f9fde\",\"params\":{\"category\":\"code\",\"length\":512,\"model\":{\"id\":\"facebook/opt-1.3b\",\"revision\":\"3f5c25d0bc631cb57ac65913f76e22c2dfb61d62\"}}}",
+      "status": "FAIL",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-95b5035f9fde",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-95b5035f9fde\"],\"id\":\"P3-95b5035f9fde\",\"params\":{\"capture\":\"P1-95b5035f9fde\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-95b5035f9fde",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-95b5035f9fde\",\"P3-95b5035f9fde\"],\"id\":\"P4-95b5035f9fde\",\"params\":{\"capture\":\"P1-95b5035f9fde\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-070661f191b0",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-070661f191b0\",\"params\":{\"category\":\"prose\",\"length\":2048,\"model\":{\"id\":\"facebook/opt-1.3b\",\"revision\":\"3f5c25d0bc631cb57ac65913f76e22c2dfb61d62\"}}}",
+      "status": "UNSUPPORTED",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-070661f191b0",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-070661f191b0\"],\"id\":\"P3-070661f191b0\",\"params\":{\"capture\":\"P1-070661f191b0\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-070661f191b0",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-070661f191b0\",\"P3-070661f191b0\"],\"id\":\"P4-070661f191b0\",\"params\":{\"capture\":\"P1-070661f191b0\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P1-28125cf1db34",
+      "spec": "{\"block\":\"P1\",\"deps\":[\"P0\"],\"id\":\"P1-28125cf1db34\",\"params\":{\"category\":\"code\",\"length\":2048,\"model\":{\"id\":\"facebook/opt-1.3b\",\"revision\":\"3f5c25d0bc631cb57ac65913f76e22c2dfb61d62\"}}}",
+      "status": "UNSUPPORTED",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P3-28125cf1db34",
+      "spec": "{\"block\":\"P3\",\"deps\":[\"P1-28125cf1db34\"],\"id\":\"P3-28125cf1db34\",\"params\":{\"capture\":\"P1-28125cf1db34\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P4-28125cf1db34",
+      "spec": "{\"block\":\"P4\",\"deps\":[\"P1-28125cf1db34\",\"P3-28125cf1db34\"],\"id\":\"P4-28125cf1db34\",\"params\":{\"capture\":\"P1-28125cf1db34\"}}",
+      "status": "SKIPPED_WITH_REASON",
+      "publication": "PENDING",
+      "attempts": 0
+    },
+    {
+      "id": "P2",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P2\",\"deps\":[\"P1-04fb19d9f6c5\",\"P1-728b54fc0999\",\"P1-149a05ffeab0\",\"P1-c1cc3e592af8\",\"P1-9e912262597e\",\"P1-bc18bc673b85\",\"P1-1cf7a0b00dc7\",\"P1-054e41c1ed2f\",\"P1-0ceed09e14be\",\"P1-95b5035f9fde\",\"P1-070661f191b0\",\"P1-28125cf1db34\"],\"id\":\"P2\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P5",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P5\",\"deps\":[\"P1-04fb19d9f6c5\",\"P1-728b54fc0999\",\"P1-149a05ffeab0\",\"P1-c1cc3e592af8\",\"P1-9e912262597e\",\"P1-bc18bc673b85\",\"P1-1cf7a0b00dc7\",\"P1-054e41c1ed2f\",\"P1-0ceed09e14be\",\"P1-95b5035f9fde\",\"P1-070661f191b0\",\"P1-28125cf1db34\"],\"id\":\"P5\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P6",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P6\",\"deps\":[\"P4-04fb19d9f6c5\",\"P4-728b54fc0999\",\"P4-149a05ffeab0\",\"P4-c1cc3e592af8\",\"P4-9e912262597e\",\"P4-bc18bc673b85\",\"P4-1cf7a0b00dc7\",\"P4-054e41c1ed2f\",\"P4-0ceed09e14be\",\"P4-95b5035f9fde\",\"P4-070661f191b0\",\"P4-28125cf1db34\"],\"id\":\"P6\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    },
+    {
+      "id": "P7",
+      "spec": "{\"allow_failed_deps\":true,\"block\":\"P7\",\"deps\":[\"P0\",\"P1-04fb19d9f6c5\",\"P3-04fb19d9f6c5\",\"P4-04fb19d9f6c5\",\"P1-728b54fc0999\",\"P3-728b54fc0999\",\"P4-728b54fc0999\",\"P1-149a05ffeab0\",\"P3-149a05ffeab0\",\"P4-149a05ffeab0\",\"P1-c1cc3e592af8\",\"P3-c1cc3e592af8\",\"P4-c1cc3e592af8\",\"P1-9e912262597e\",\"P3-9e912262597e\",\"P4-9e912262597e\",\"P1-bc18bc673b85\",\"P3-bc18bc673b85\",\"P4-bc18bc673b85\",\"P1-1cf7a0b00dc7\",\"P3-1cf7a0b00dc7\",\"P4-1cf7a0b00dc7\",\"P1-054e41c1ed2f\",\"P3-054e41c1ed2f\",\"P4-054e41c1ed2f\",\"P1-0ceed09e14be\",\"P3-0ceed09e14be\",\"P4-0ceed09e14be\",\"P1-95b5035f9fde\",\"P3-95b5035f9fde\",\"P4-95b5035f9fde\",\"P1-070661f191b0\",\"P3-070661f191b0\",\"P4-070661f191b0\",\"P1-28125cf1db34\",\"P3-28125cf1db34\",\"P4-28125cf1db34\",\"P2\",\"P5\",\"P6\"],\"id\":\"P7\",\"params\":{}}",
+      "status": "PASS",
+      "publication": "PENDING",
+      "attempts": 1
+    }
+  ]
+}

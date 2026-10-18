@@ -1,0 +1,34 @@
+{
+  "id": "P3-9e912262597e",
+  "status": "PASS",
+  "detail": "worker exit 0",
+  "started": "2026-10-18T06:03:29.932733+00:00",
+  "ended": "2026-10-18T06:03:33.873285+00:00",
+  "result": {
+    "status": "PASS",
+    "metrics": [
+      {
+        "capture": "P1-9e912262597e",
+        "signed_offset_pack_roundtrip": "PASS",
+        "representation_relative_l2": 0.12500834465026855,
+        "representation_max_abs": 0.0810546875,
+        "status": "PASS"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "T1-offset-pack-dense-restore",
+        "identity": "signed c = unsigned_nibble - 8; decoded c*s",
+        "input": "real post-position Q/K/V",
+        "persistent": "two uint8 nibbles plus FP32 group scales",
+        "intermediate": "temporary dense BF16",
+        "output": "BF16 SDPA",
+        "fidelity": "exact packed-to-FP32 decoded identity; BF16 replay consistency is separate",
+        "primitive": "vector bitwise + CUDA SDPA",
+        "bottleneck": "restoration traffic and launches",
+        "falsification": "roundtrip mismatch or total path slower than dense baseline"
+      }
+    ],
+    "interpretation": "Offset-packed layout roundtrip verified against decoded-quantized reference. Representation loss against original attention is reported separately. This does not establish end-model quality."
+  }
+}

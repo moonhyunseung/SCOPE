@@ -1,0 +1,8 @@
+{
+  "id": "P3-1cf7a0b00dc7",
+  "status": "SKIPPED_WITH_REASON",
+  "detail": "required predecessor did not PASS",
+  "started": "2026-10-18T06:04:21.575573+00:00",
+  "ended": "2026-10-18T06:04:21.575937+00:00",
+  "result": {}
+}
