@@ -1,0 +1,10 @@
+{
+  "status": "PUBLISHED",
+  "commit": "4930a071cf91dd1caee354a253f83d93eb06db61",
+  "tree": "34870c559583d16749853c9335f5c34ce8b8b90f",
+  "verification": "229 exact remote Git blob hashes and main ref read back",
+  "blocks": {
+    "confirmation": "57aa6b8f3a60dc7fe7dfc606830c9c362e75d2b0abf22131c1fba3f0c741900c"
+  },
+  "verified_at": "2026-10-18T20:24:08.067114+00:00"
+}

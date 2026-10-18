@@ -1,0 +1,76 @@
+{
+  "contract": {
+    "protocol": "acl-round2-additive-v2",
+    "baseline_commit": "4930a071cf91dd1caee354a253f83d93eb06db61",
+    "input_manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "sources": [
+      "7190bc75f0028b8ef4e2",
+      "95459423d3b8f7c779e3"
+    ],
+    "length": 512,
+    "batch": 1,
+    "quality_steps": 4,
+    "replays": 2,
+    "bits": 4,
+    "group": 32,
+    "dtype": "bfloat16",
+    "execution_gate": 0.025,
+    "representation_screen": {
+      "relative_l2_max_step": 0.025,
+      "reference": "original_full",
+      "scope": "local logit screen only; no corpus quality claim",
+      "baseline_failure_label": "BASELINE_DIVERGENCE"
+    },
+    "denominator_floor": 1e-30,
+    "operand_layers": [
+      0,
+      14,
+      27
+    ],
+    "operand_heads": [
+      0,
+      6,
+      11
+    ],
+    "operand_steps": [
+      0,
+      7
+    ],
+    "operand_formats": [
+      "fp32",
+      "tf32_rne_single",
+      "tf32_rne_hi_plus_lo"
+    ],
+    "operand_contract": "W=P*Sv in FP32. TF32 rounds W to 10 fraction bits RNE; C in [-7,7] is exactly representable. Two-part is hi=RNE10(W), lo=RNE10(W-hi), two FP32 contractions and final sum. This emulates formats, not actual MMA or performance. Compare to both factorized FP32 W*C and FP32 P*BF16(decoded V); retain dequantization-rounding gap.",
+    "limits": {
+      "quality_gate_v2": 1200,
+      "lowering_diagnosis_v2": 1800,
+      "operand_screen_v2": 900
+    },
+    "allocator_gib": 96,
+    "physical_reserve_gib": 44,
+    "disk_reserve_gib": 24,
+    "repairs": "at most2 justified repairs per failed stage; preserve original failures and use new source identity; no automatic optimization repair in initial diagnosis",
+    "prohibited_claims": [
+      "serving capacity",
+      "kernel throughput from emulated formats",
+      "backend bug from kernel names",
+      "original model quality from same-representation Gate D"
+    ]
+  },
+  "source_sha256": "6da339841a0c4a6e763c8bbc41e714307e1f0fc1881e8f0a05cf0a559cbbc0df",
+  "inputs": [
+    {
+      "document_id": "7190bc75f0028b8ef4e2",
+      "domain": "prose",
+      "token_window_sha256": "ef4c98a279004658f531ded6a09c0573b766ec07cf08d5e6e27dfe562817b858"
+    },
+    {
+      "document_id": "95459423d3b8f7c779e3",
+      "domain": "code",
+      "token_window_sha256": "6d68f004065288950886790f192e60c8965f9cb7aa6237875c21baf6c67103d8"
+    }
+  ]
+}

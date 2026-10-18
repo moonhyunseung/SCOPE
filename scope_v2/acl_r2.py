@@ -23,8 +23,8 @@ def independent_quant(x):
     import torch
     grouped=x.float().reshape(*x.shape[:-1],x.shape[-1]//32,32)
     scale=torch.maximum(grouped.abs().amax(-1),torch.tensor(1e-12,device=x.device))/7
-    codes=torch.clamp(torch.round(grouped/scale[...,None]),-7,7)
-    decoded=(codes*scale[...,None]).reshape_as(x).to(x.dtype)
+    codes=torch.clamp(torch.round(grouped/scale[...,None]),-7,7).to(torch.int16)
+    decoded=(codes.float()*scale[...,None]).reshape_as(x).to(x.dtype)
     return decoded,codes.reshape_as(x),scale
 
 def independent_unpack(layer,key):
@@ -82,7 +82,7 @@ def window(doc):
     assert len(prefix)==512 and len(teacher)==9
     return prefix,teacher,digest(canonical(dict(prefix=prefix,teacher=teacher)).encode())
 
-def prepare(manifest,out):
+def prepare(manifest,out,repair_parent=None):
     c=json.loads(CONFIG.read_text());data=json.loads(manifest.read_text())
     assert digest(manifest.read_bytes())==c['input_manifest_sha256']
     m=next(m for m in data['models'] if m['key']=='qwen1_5b');assert m['id']==c['model'] and m['revision']==c['revision']
@@ -97,6 +97,13 @@ def prepare(manifest,out):
         assert len(previous)==1 and previous[0]['token_window_sha256']==h and all(previous[0]['native_controls_exact'])
         inputs.append(dict(document_id=source,domain=d['domain'],token_window_sha256=h))
     frozen=dict(contract=c,source_sha256=code_hash(),inputs=inputs)
+    if repair_parent is not None:
+        assert len(repair_parent)==16 and all(x in '0123456789abcdef' for x in repair_parent)
+        old=ROOT/'results/quality_gate_v2'/repair_parent/'blocks/quality';assert verify(old)['status']=='CONTROL_FAIL'
+        evidence=manifest.parent.parent/'acl_r2_repair1_evidence.json'
+        proof=json.loads(evidence.read_text());assert proof['numeric_equal'] and not proof['raw_bytes_equal']
+        frozen['repair']=dict(index=1,parent_run=repair_parent,parent_failure_manifest_sha256=digest((old/'manifest.json').read_bytes()),evidence_sha256=digest(evidence.read_bytes()),
+            reason='Independent direct quantizer must materialize integer codes before dequantization; signed floating zero is not an INT4 code. Numerical endpoints, sources and thresholds unchanged.')
     if out.exists():assert json.loads(out.read_text())==frozen,'preregistration drift'
     else:atomic(out,frozen)
     print(json.dumps(dict(preregistered_sha256=digest(out.read_bytes()),run=digest(canonical(frozen).encode())[:16],inputs=inputs)))
@@ -423,7 +430,7 @@ def run(manifest,prepared):
     finally:fcntl.flock(lock,fcntl.LOCK_UN);lock.close()
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('mode',choices=['prepare','run','worker']);p.add_argument('--manifest',type=Path,required=True);p.add_argument('--prepared',type=Path,required=True);p.add_argument('--stage',choices=STAGES);p.add_argument('--dest',type=Path);a=p.parse_args()
-    if a.mode=='prepare':prepare(a.manifest,a.prepared)
+    p=argparse.ArgumentParser();p.add_argument('mode',choices=['prepare','run','worker']);p.add_argument('--manifest',type=Path,required=True);p.add_argument('--prepared',type=Path,required=True);p.add_argument('--stage',choices=STAGES);p.add_argument('--dest',type=Path);p.add_argument('--repair-parent-run');a=p.parse_args()
+    if a.mode=='prepare':prepare(a.manifest,a.prepared,a.repair_parent_run)
     elif a.mode=='run':run(a.manifest,a.prepared)
     else:worker(a.stage,a.manifest,a.prepared,a.dest)

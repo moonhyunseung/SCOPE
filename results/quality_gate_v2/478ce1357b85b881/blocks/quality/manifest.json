@@ -1,0 +1,18 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 306,
+      "sha256": "35d6321361488b4284098608f2aea4ffc3816a67c6597805a8302ab7d86c2a92"
+    },
+    "report.md": {
+      "bytes": 504,
+      "sha256": "d6f0578ea50489dff65fa403ae541ba40e6012805fdbcba03e557f316c1f7acc"
+    },
+    "preregistered_contract.json": {
+      "bytes": 2509,
+      "sha256": "077b037b81bec2b156df27cd1544f33ebe91d0613deae4370f9c93de6f0b403f"
+    }
+  },
+  "source_sha256": "6da339841a0c4a6e763c8bbc41e714307e1f0fc1881e8f0a05cf0a559cbbc0df",
+  "sealed": "2026-10-18T20:48:16.901481+00:00"
+}

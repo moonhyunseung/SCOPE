@@ -1,0 +1,15 @@
+{
+  "status": "PUBLISHED",
+  "commit": "4930a071cf91dd1caee354a253f83d93eb06db61",
+  "tree": "34870c559583d16749853c9335f5c34ce8b8b90f",
+  "verification": "229 exact remote Git blob hashes and main ref read back",
+  "blocks": {
+    "2f2a54947331ab7d": "e5370993b702bb7694a6dd636d0c07b0b95aa69ea30f4ee16662c1079c597a1f",
+    "52acb86f229ab752": "0f2c7c392c9d524e222cb5f9f60a58543a86cdb9dfc7aacc67f3d0973e215c7d",
+    "86be1fead9392cc3": "a64d24f7836d4b7b73f4a9b50d6cb5be26ef83bb5339086f5dbc4f7fa48625f6",
+    "94221bf46249728f": "4af024230463bb0d9cb574f498e31c45ea3c112955ba17954094ad1e802ca10a",
+    "b3045dfa99c1a60c": "d94818bbd37fccc429a61448d94fc9609ca13309978a8061a303a7460ff1f2fb",
+    "cd3ea20613f779f6": "43795edecc7c1d4426b319cd97c058be7185b98048e5418e5fbbe00e890a0c53"
+  },
+  "verified_at": "2026-10-18T20:24:08.079743+00:00"
+}

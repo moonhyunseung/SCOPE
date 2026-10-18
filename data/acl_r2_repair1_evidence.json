@@ -1,0 +1,9 @@
+{
+  "kind": "SYNTHETIC_CPU_MEASUREMENT_CONTROL",
+  "parent_run": "478ce1357b85b881",
+  "numeric_equal": true,
+  "raw_bytes_equal": false,
+  "direct_negative_zero_count": 1,
+  "packed_negative_zero_count": 0,
+  "interpretation": "Float rounded code retains negative zero; INT4 integer codes do not. This is representation/hash bookkeeping, not model-quality or hardware evidence."
+}

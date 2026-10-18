@@ -14,6 +14,13 @@ def test_tf32_round_ties_even_signed_and_two_part_precision():
     x=torch.linspace(-3.7,4.3,257);hi=tf32_round(x);lo=tf32_round(x-hi)
     assert (hi+lo-x).norm()<.001*(hi-x).norm()
 
+def test_quantized_integer_zero_has_no_floating_negative_zero():
+    x=torch.ones(1,1,1,32,dtype=torch.bfloat16);x[...,0]=-1e-6
+    direct,codes,scale=independent_quant(x);packed,s,_=quantize(x,4,32);restored=unpack(packed,s,4,32,x.dtype)
+    assert codes.dtype==torch.int16
+    assert torch.equal(direct.view(torch.uint8),restored.view(torch.uint8))
+    assert not torch.signbit(direct[...,0]).any()
+
 def test_zero_pv_denominator_is_explicit_and_finite():
     rows=operand_rows(torch.tensor([.5,.5]),torch.zeros(2,128,dtype=torch.bfloat16),{})
     assert len(rows)==3

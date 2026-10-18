@@ -1,0 +1,12 @@
+{
+  "status": "PUBLISHED",
+  "commit": "4930a071cf91dd1caee354a253f83d93eb06db61",
+  "tree": "34870c559583d16749853c9335f5c34ce8b8b90f",
+  "verification": "229 exact remote Git blob hashes and main ref read back",
+  "blocks": {
+    "confirmatory-opt1_3b": "7395d00494cac4399ceeab720d28e9d08a11a07cb3746c1f2fab1d037edb2f6c",
+    "confirmatory-qwen14b": "29f75bbb528b22e32310a1d095d96cfcad26b3cf3e17324cf5497f8e12c83f3f",
+    "confirmatory-qwen7b": "268dcb0fc8d2d06a43795695a8dbb0f0f3363f333968854329d451b4249e1533"
+  },
+  "verified_at": "2026-10-18T20:24:08.076571+00:00"
+}

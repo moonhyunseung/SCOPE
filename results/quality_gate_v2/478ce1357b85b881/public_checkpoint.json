@@ -1,0 +1,16 @@
+{
+  "counts": {},
+  "state": {
+    "status": "STOPPED_WITH_FAILURE",
+    "result": "CONTROL_FAIL",
+    "updated": "2026-10-18T20:48:17.834866+00:00"
+  },
+  "captured": "2026-10-18T20:52:44.135968+00:00",
+  "input_identity": {
+    "run": "478ce1357b85b881",
+    "source_sha256": "6da339841a0c4a6e763c8bbc41e714307e1f0fc1881e8f0a05cf0a559cbbc0df",
+    "prepared_sha256": "077b037b81bec2b156df27cd1544f33ebe91d0613deae4370f9c93de6f0b403f",
+    "stage": "quality_gate_v2",
+    "budget_seconds": 1200
+  }
+}
