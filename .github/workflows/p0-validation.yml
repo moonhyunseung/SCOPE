@@ -1,0 +1,21 @@
+name: P0 reference validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  reference-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install package and tests
+        run: python -m pip install -e ".[test]"
+      - name: Validate reference implementation
+        run: python -m pytest -q
+      - name: Run synthetic P0 smoke
+        run: python scripts/p0_smoke.py --device cpu --length 128 --output results/p0-ci.json
