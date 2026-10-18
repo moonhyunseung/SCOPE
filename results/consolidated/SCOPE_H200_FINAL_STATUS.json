@@ -1,0 +1,78 @@
+{
+  "date_kst": "2026-10-18",
+  "status": "PARTIAL_RESEARCH_CAMPAIGNS_COMPLETE",
+  "published_branch": "research/h200-pilot-20261018",
+  "verified_result_commit": "9de5bacb2c34282bd8e821f99010401c9a78ec83",
+  "gpu": "NVIDIA H200",
+  "core_frozen_sha": "7d3c442bc1c3e154d64b274c830cea522da391c1",
+  "size_extension_frozen_sha": "ba0b4bbdea12be44aa7b6686c766e6173da0e85a",
+  "source_sha256": "2bdb2195a5c58aa1ba05efdf820a90e056ac3649ad9ef8c1f50bc932e5db1cab",
+  "planned_execution_blocks": 70,
+  "execution_status_counts": {
+    "PASS": 34,
+    "UNSUPPORTED": 4,
+    "SKIPPED_WITH_REASON": 24,
+    "FAIL": 8
+  },
+  "planned_model_conditions": 20,
+  "model_condition_status_counts": {
+    "PASS": 8,
+    "FAIL": 8,
+    "UNSUPPORTED": 4
+  },
+  "models_attempted": [
+    {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    {
+      "id": "EleutherAI/pythia-1b",
+      "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+    },
+    {
+      "id": "facebook/opt-1.3b",
+      "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62"
+    },
+    {
+      "id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+    },
+    {
+      "id": "Qwen/Qwen2.5-14B-Instruct",
+      "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8"
+    }
+  ],
+  "models_with_validated_conditions": [
+    "EleutherAI/pythia-1b",
+    "Qwen/Qwen2.5-1.5B-Instruct",
+    "Qwen/Qwen2.5-14B-Instruct"
+  ],
+  "operator_variants": {
+    "PASS": 24,
+    "FAIL": 8
+  },
+  "native_replay_max_relative_l2": 0.0,
+  "packed_storage_reduction_range": [
+    3.2,
+    3.2
+  ],
+  "packed_restore_eager_latency_ratio_range": [
+    2.701872826965592,
+    2.8175588024578877
+  ],
+  "publication": "70 blocks published through authenticated connector; 350 compact files byte/hash verified on H200",
+  "server_automatic_push": "BLOCKED_AUTHENTICATION; last probe exit 128",
+  "resident_capacity_frontier": "NOT_MEASURED",
+  "model_quality": "NOT_MEASURED",
+  "independent_gpu_replication": "NOT_PERFORMED",
+  "superseded_v1": {
+    "blocks": 41,
+    "counts": {
+      "PASS": 11,
+      "FAIL": 6,
+      "UNSUPPORTED": 4,
+      "SKIPPED_WITH_REASON": 20
+    },
+    "excluded_from_v2_scientific_counts": true
+  }
+}
