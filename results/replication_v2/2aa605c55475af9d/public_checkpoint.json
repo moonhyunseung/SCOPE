@@ -1,0 +1,30 @@
+{
+  "counts": {
+    "COLLECTED": 180,
+    "PLANNED": 618,
+    "UNSUPPORTED": 2
+  },
+  "state": {
+    "status": "RUNNING",
+    "stage": "all",
+    "phase": "screening",
+    "model": "qwen7b",
+    "dtype": "bfloat16",
+    "counts": {
+      "COLLECTED": 180,
+      "PLANNED": 618,
+      "UNSUPPORTED": 2
+    },
+    "updated": "2026-10-18T16:27:23.396777+00:00"
+  },
+  "captured": "2026-10-18T16:27:30.952099+00:00",
+  "input_identity": {
+    "manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+    "source_sha256": "d23c432a036062cedeaf5199f293b7efdbab6a27f5443ebff1513f52c7a44b90",
+    "historical_source_sha256": "c072fa01688f90f2d516725d60b01c3d11ac7e380472823a21fe0164db066947",
+    "asset_audit_sha256": "e5154bbe602670dbf7c4b6080c8a2324a8379b043d9a2a625af94222ad80ab48",
+    "created": "2026-10-18T16:15:12.127230+00:00",
+    "planned_jobs": 800,
+    "planned_source_units": 128
+  }
+}

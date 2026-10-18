@@ -1,0 +1,11 @@
+{
+  "status": "PUBLISHED",
+  "commit": "d9f80e31cb25e63757bb4dddca9cdd4fbe660880",
+  "branch": "main",
+  "remote_tree": "62be20a1d1ddd63c7824629c18e563e8e6d6f378",
+  "verification": "63 exact Git blob hashes and main ref read back through GitHub API",
+  "verified_at": "2026-10-18T16:27:30.845240+00:00",
+  "blocks": {
+    "minimal": "0ca9fe41c0f74f71cd402bf127062856d106542468a126e94831fb541230a775"
+  }
+}

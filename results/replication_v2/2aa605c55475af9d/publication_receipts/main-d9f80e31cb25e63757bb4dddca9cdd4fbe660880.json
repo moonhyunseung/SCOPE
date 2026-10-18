@@ -1,0 +1,15 @@
+{
+  "status": "PUBLISHED",
+  "commit": "d9f80e31cb25e63757bb4dddca9cdd4fbe660880",
+  "branch": "main",
+  "remote_tree": "62be20a1d1ddd63c7824629c18e563e8e6d6f378",
+  "verification": "63 exact Git blob hashes and main ref read back through GitHub API",
+  "verified_at": "2026-10-18T16:27:30.845240+00:00",
+  "blocks": {
+    "pilot-opt1_3b": "029066bbdb24f532307da751d29ffdbbea04db25e81a90a8ed16af00666d36e1",
+    "pilot-pythia1b": "fd24bf5ab199aa80b865a776111d6a25daa85056687da5aa8d9eadc49927a8cf",
+    "pilot-qwen14b": "f7d67acebdcc46866a232d6b66ec129c371a2e35b319a09abfb41da8381c62df",
+    "pilot-qwen1_5b": "6b08873824fc070b96d73e241f26811f0f32b2b216325788569b6e21fc83e9d4",
+    "pilot-qwen7b": "5bc1f49556c8afa61e8f26792829d9604a0fd1c44cbccd7541f181cfa054e194"
+  }
+}
