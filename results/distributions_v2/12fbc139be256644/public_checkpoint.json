@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "PLANNED": 20
+  },
+  "state": {
+    "status": "WAITING_FOR_GPU_LOCK",
+    "updated": "2026-10-18T16:27:31.260946+00:00"
+  },
+  "captured": "2026-10-18T16:39:30.165046+00:00",
+  "input_identity": {
+    "code_sha256": "3795f87fc49d572fc26e6bbcf1a43aeba756052a5ac91e0cb0ae359ed0ec933e",
+    "manifest_sha256": "fbdd626cb95eac1992fbf76406d871f726f15cf0aa48fd3bf5817a46a6038ec5",
+    "asset_audit_sha256": "e5154bbe602670dbf7c4b6080c8a2324a8379b043d9a2a625af94222ad80ab48",
+    "preregistered_hypotheses": "docs/ATTENTION_DISTRIBUTION_PROTOCOL_V2.md",
+    "source_units": 2
+  }
+}
