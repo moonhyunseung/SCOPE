@@ -43,8 +43,7 @@ def validate_contract(contract: dict[str, Any]) -> None:
 def validate_backend_evidence(startup_backend: str | None, effective_worker_classes: list[str] | None) -> str:
     if not startup_backend or not effective_worker_classes:
         return "BACKEND_UNVERIFIED"
-    classes = {item.strip() for item in effective_worker_classes if isinstance(item, str) and item.strip()}
-    if not classes or len(classes) != len(effective_worker_classes):
+    if any(not isinstance(item, str) or not item.strip() for item in effective_worker_classes):
         return "BACKEND_UNVERIFIED"
     def canonical_backend(value: str) -> str:
         compact = "".join(ch for ch in value.casefold() if ch.isalnum())
@@ -59,7 +58,8 @@ def validate_backend_evidence(startup_backend: str | None, effective_worker_clas
         return compact
 
     selected = canonical_backend(startup_backend)
-    if not selected or any(canonical_backend(item) != selected for item in classes):
+    effective = {canonical_backend(item) for item in effective_worker_classes}
+    if not selected or effective != {selected}:
         return "BACKEND_UNVERIFIED"
     return "VERIFIED"
 

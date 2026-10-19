@@ -2,9 +2,9 @@
 """Prepare a private CPU-only synthetic request pool via pinned vLLM source.
 
 This is a future R0-B0 preparation utility. It does not run automatically,
-load model weights, start a server, or use CUDA. It requires an already
-installed vLLM 0.32.0 and an already cached tokenizer snapshot. No downloads
-or fallback installs are attempted.
+load model weights, start a server, invoke CUDA APIs, or perform inference. It
+requires an already installed vLLM 0.32.0 and an already cached tokenizer
+snapshot. No downloads or fallback installs are attempted.
 """
 
 from __future__ import annotations

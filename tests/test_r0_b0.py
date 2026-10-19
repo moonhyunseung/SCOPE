@@ -1,11 +1,8 @@
 import json
-import sys
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-
-from r0_b0_validate import (
+from scripts.r0_b0_validate import (
     ContractError,
     sha256_json,
     validate_backend_evidence,
@@ -41,6 +38,7 @@ class R0B0ContractTests(unittest.TestCase):
     def test_backend_verification_fails_closed(self):
         self.assertEqual(validate_backend_evidence(None, ["FlashAttentionBackend"]), "BACKEND_UNVERIFIED")
         self.assertEqual(validate_backend_evidence("FLASH_ATTN", ["FlashAttentionBackend"]), "VERIFIED")
+        self.assertEqual(validate_backend_evidence("FLASH_ATTN", ["FlashAttentionBackend", "FlashAttentionBackend"]), "VERIFIED")
         self.assertEqual(validate_backend_evidence("FLASH_ATTN", ["TritonAttentionBackend"]), "BACKEND_UNVERIFIED")
         self.assertEqual(validate_backend_evidence("FLASH_ATTN", ["FlashAttentionBackend", ""]), "BACKEND_UNVERIFIED")
 
