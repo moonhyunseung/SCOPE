@@ -1,0 +1,30 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 1074,
+      "sha256": "8eb0a42fdd358d24cdd38004866270f2b5b303a7536bbcc102695190cd62062f"
+    },
+    "bitwidth_comparisons.csv": {
+      "bytes": 19189,
+      "sha256": "05f45f4430764143c751d7fc4d8a83e073422b146163f9423404ec8ee3a12549"
+    },
+    "report.md": {
+      "bytes": 1293,
+      "sha256": "806e50fbb7e92d56f0711206e40009a600265cb0be67ce343040e74dcc67ab5c"
+    },
+    "preregistered_contract.json": {
+      "bytes": 5069,
+      "sha256": "7b1d99fce8d08ae7e7e84f32c3651554a5e522dd630fcf0e2699a54237b672cb"
+    },
+    "source_summary.json": {
+      "bytes": 6488,
+      "sha256": "f403cd69b5c72a7d1b2d4fa846aef0f396517f840409fa719bd7ea8688e2e4a6"
+    },
+    "replay_controls.json": {
+      "bytes": 445415,
+      "sha256": "d4c193decfb8af62d73cf2263c7e9cd71252bfb9575d650e9f84eddfd8df2513"
+    }
+  },
+  "source_sha256": "2ec0788c2aeded8e8214873561626ab8df0f5c7ec504c10ec4c156680f61b0a3",
+  "sealed": "2026-10-18T21:52:08.928603+00:00"
+}
