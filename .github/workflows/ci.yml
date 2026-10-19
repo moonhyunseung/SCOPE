@@ -1,0 +1,22 @@
+name: SCOPE active-track contracts
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate active contracts
+        run: python -m unittest discover -s tests -v
+      - name: Verify immutable legacy tree reference
+        run: python scripts/verify_legacy_tree.py

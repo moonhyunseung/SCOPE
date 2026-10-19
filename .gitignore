@@ -8,11 +8,12 @@ venv/
 *.egg-info/
 dist/
 build/
-results/*
-!results/.gitkeep
 *.pt
 *.pth
 *.safetensors
 *.npy
 *.npz
 *.parquet
+artifacts/
+benchmarks/runs/
+private/

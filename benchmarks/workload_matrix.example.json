@@ -1,0 +1,42 @@
+{
+  "status": "TEMPLATE_NOT_EXECUTED",
+  "purpose": "Choose an R0 serving benchmark after explicit approval",
+  "model_revision": null,
+  "tokenizer_revision": null,
+  "vllm_commit": null,
+  "attention_backend_actual": null,
+  "gpu": null,
+  "request_source_hash": null,
+  "quality_contract": null,
+  "scenarios": [
+    {
+      "id": "short_decode_low_concurrency",
+      "prompt_tokens": 512,
+      "decode_tokens": 128,
+      "concurrency": 1,
+      "prefix_cache": "off"
+    },
+    {
+      "id": "long_decode_low_concurrency",
+      "prompt_tokens": 8192,
+      "decode_tokens": 128,
+      "concurrency": 1,
+      "prefix_cache": "off"
+    },
+    {
+      "id": "short_decode_multi_request",
+      "prompt_tokens": 512,
+      "decode_tokens": 128,
+      "concurrency": 16,
+      "prefix_cache": "off"
+    },
+    {
+      "id": "prefill_heavy",
+      "prompt_tokens": 8192,
+      "decode_tokens": 32,
+      "concurrency": 1,
+      "prefix_cache": "off"
+    }
+  ],
+  "note": "Scenario sizes are planning examples only, not claims of feasibility or performance"
+}
