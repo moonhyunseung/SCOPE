@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -36,28 +37,82 @@ def git_blob_sha1(path: Path) -> str:
 
 
 def tokenizer_snapshot_manifest(snapshot: Path) -> dict[str, Any]:
-    """Hash all regular files under an already-present tokenizer snapshot.
+    """Hash tokenizer artifacts in the pinned, local HF cache snapshot.
 
-    This helper is CPU-only and does not load tokenizer code. Symlinks are
-    rejected so the manifest cannot silently hash files outside the snapshot.
+    Standard snapshot-file symlinks are accepted only when they resolve to a
+    regular content blob under this model's own ``blobs`` directory. Hashing
+    streams bytes and never reads model weights. This does not load tokenizer
+    code or access the network.
     """
-    root = snapshot.resolve(strict=True)
-    if not root.is_dir() or MODEL_REVISION not in root.parts:
-        raise RuntimeError("tokenizer path must be an existing local snapshot directory named by the pinned revision")
+    from scripts.r0_b0_validate import (
+        TOKENIZER_OPTIONAL_FILES,
+        TOKENIZER_REQUIRED_FILES,
+        validate_tokenizer_manifest,
+    )
+
+    root = Path(snapshot).absolute()
+    if (root.is_symlink() or root.name != MODEL_REVISION or root.parent.name != "snapshots"
+            or root.parent.parent.name != "models--Qwen--Qwen2.5-1.5B-Instruct"
+            or not root.is_dir()):
+        raise RuntimeError("tokenizer path must be the pinned local Hugging Face snapshot")
+    cache_repo = root.parent.parent.resolve(strict=True)
+    resolved_root = root.resolve(strict=True)
+    if resolved_root != root.resolve():
+        raise RuntimeError("snapshot directory must not resolve through an unexpected path")
+    allowed = set(TOKENIZER_REQUIRED_FILES) | set(TOKENIZER_OPTIONAL_FILES)
+    for name in TOKENIZER_REQUIRED_FILES:
+        candidate = root / name
+        if not candidate.exists() and not candidate.is_symlink():
+            raise RuntimeError(f"required tokenizer file is missing: {name}")
     entries = []
-    for path in sorted(root.rglob("*")):
+    for name in sorted(allowed):
+        path = root / name
+        if not path.exists() and not path.is_symlink():
+            continue
         if path.is_symlink():
-            raise RuntimeError(f"tokenizer snapshot contains a symlink: {path.name}")
-        if path.is_file():
-            data = path.read_bytes()
-            entries.append({
-                "path": path.relative_to(root).as_posix(),
-                "size_bytes": len(data),
-                "sha256": hashlib.sha256(data).hexdigest(),
-            })
-    if not entries:
-        raise RuntimeError("tokenizer snapshot contains no regular files")
-    return {"revision": MODEL_REVISION, "files": entries}
+            try:
+                resolved = path.resolve(strict=True)
+            except (OSError, RuntimeError) as exc:
+                raise RuntimeError(f"broken or unsafe tokenizer symlink: {name}") from exc
+            try:
+                resolved.relative_to(cache_repo)
+            except ValueError as exc:
+                raise RuntimeError(f"tokenizer symlink escapes the pinned cache repository: {name}") from exc
+            if (resolved.parent != (cache_repo / "blobs").resolve(strict=True)
+                    or not re.fullmatch(r"[0-9a-f]{40}|[0-9a-f]{64}", resolved.name)
+                    or not resolved.is_file()):
+                raise RuntimeError(f"tokenizer symlink must target a content blob: {name}")
+            source_kind = "hf_cache_blob_symlink"
+            link_target = resolved.relative_to(cache_repo).as_posix()
+        else:
+            resolved = path.resolve(strict=True)
+            if resolved.parent != resolved_root or not resolved.is_file():
+                raise RuntimeError(f"tokenizer artifact must be a regular snapshot file: {name}")
+            source_kind = "snapshot_file"
+            link_target = None
+        digest = hashlib.sha256()
+        size_bytes = 0
+        try:
+            with resolved.open("rb") as stream:
+                while chunk := stream.read(1024 * 1024):
+                    size_bytes += len(chunk)
+                    digest.update(chunk)
+        except OSError as exc:
+            raise RuntimeError(f"cannot read tokenizer artifact: {name}") from exc
+        entries.append({
+            "path": name,
+            "size_bytes": size_bytes,
+            "sha256": digest.hexdigest(),
+            "source_kind": source_kind,
+            "cache_blob_relpath": link_target,
+        })
+    manifest = {
+        "revision": MODEL_REVISION,
+        "required_files": list(TOKENIZER_REQUIRED_FILES),
+        "files": entries,
+    }
+    validate_tokenizer_manifest(manifest)
+    return manifest
 
 
 def check_vllm_source() -> tuple[Any, Any]:
@@ -130,6 +185,7 @@ def generate(workload: dict[str, Any], tokenizer_snapshot: Path) -> tuple[list[d
             request_id = f"WU-{workload['id']}-R{warm_index // per_rep}-{warm_index % per_rep}"
         target.append({
             "request_id": request_id,
+            **({"repetition": warm_index // per_rep} if index >= measured_count else {}),
             "prompt": req.prompt,
             "prompt_tokens": len(token_ids),
             "output_tokens": req.expected_output_len,
@@ -145,7 +201,11 @@ def generate(workload: dict[str, Any], tokenizer_snapshot: Path) -> tuple[list[d
         prompt_tokens=requested_prompt_len,
         output_tokens=int(workload["output_tokens"]),
     )
-    validate_warmup_sets(requests, warmups, warmup_count)
+    validate_warmup_sets(
+        requests, warmups,
+        int(workload["warmup_requests_per_repetition"]),
+        repetitions=int(workload["repetitions"]),
+    )
     manifest_after = tokenizer_snapshot_manifest(resolved)
     if manifest_before != manifest_after:
         raise RuntimeError("tokenizer snapshot changed while requests were being prepared")
@@ -188,3 +248,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

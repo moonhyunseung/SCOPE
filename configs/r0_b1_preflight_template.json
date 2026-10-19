@@ -13,8 +13,24 @@
     "range_ratio": 0,
     "prefix_len": 0,
     "workloads": [
-      {"id":"W1","prompt_tokens":8192,"output_tokens":128,"concurrency":1,"unique_requests":64,"repetitions":3,"warmup_requests_per_repetition":4},
-      {"id":"W2","prompt_tokens":512,"output_tokens":128,"concurrency":16,"unique_requests":128,"repetitions":3,"warmup_requests_per_repetition":16}
+      {
+        "id": "W1",
+        "prompt_tokens": 8192,
+        "output_tokens": 128,
+        "concurrency": 1,
+        "unique_requests": 64,
+        "repetitions": 3,
+        "warmup_requests_per_repetition": 4
+      },
+      {
+        "id": "W2",
+        "prompt_tokens": 512,
+        "output_tokens": 128,
+        "concurrency": 16,
+        "unique_requests": 128,
+        "repetitions": 3,
+        "warmup_requests_per_repetition": 16
+      }
     ],
     "resource_bounds": {
       "gpu_model": "NVIDIA H200",
@@ -40,8 +56,17 @@
     "mode": "closed_loop_concurrency_limited",
     "arrival_rate": "saturated dispatch bounded by free client slots; no fixed open-loop rate is claimed; measure observed offered and completed requests per second",
     "arrival_profile": "next sealed request dispatched immediately when a client slot is free; no fixed external arrival rate is claimed; record observed offered rate and completion rate",
-    "concurrency_cap": {"W1":1,"W2":16},
-    "client_queue_metrics": ["enqueue_monotonic_ns","dispatch_monotonic_ns","queue_wait_ms","client_inflight_count","queue_depth"],
+    "concurrency_cap": {
+      "W1": 1,
+      "W2": 16
+    },
+    "client_queue_metrics": [
+      "enqueue_monotonic_ns",
+      "dispatch_monotonic_ns",
+      "queue_wait_ms",
+      "client_inflight_count",
+      "queue_depth"
+    ],
     "server_auto_tokenize_or_reorder": "must be disabled or exact returned token IDs and order must match the sealed request manifest"
   },
   "measurement_order": {
@@ -71,7 +96,15 @@
     "provider": "trusted provider must return timestamped GPU identity, owner-scoped exclusive-lock identity, physical free/used HBM and disk free bytes",
     "sampling_period_seconds": 1,
     "watchdog_deadline_seconds": 1800,
-    "stop_conditions": ["lock lost or ownership ambiguous","physical free HBM below 44 GiB","workload HBM increase above 88 GiB","allocator ceiling above 96 GiB","disk free below 24 GiB","deadline exceeded","worker failure or OOM"],
+    "stop_conditions": [
+      "lock lost or ownership ambiguous",
+      "physical free HBM below 44 GiB",
+      "workload HBM increase above 88 GiB",
+      "allocator ceiling above 96 GiB",
+      "disk free below 24 GiB",
+      "deadline exceeded",
+      "worker failure or OOM"
+    ],
     "termination_scope": "only the explicitly owned benchmark child process tree after separate execution approval; never terminate unrelated processes or services",
     "cpu_validator_guarantee": "record-shape and threshold checks only; no reservation, live observation, watchdog, or execution authority"
   },
@@ -95,13 +128,17 @@
     "status": "success|error|timeout|cancelled",
     "error_code": "string|null",
     "backend_evidence_ref": "string|null",
-    "resource_samples_ref": "string|null"
+    "resource_samples_ref": "string|null",
+    "token_identity_evidence_stage": "tokenize_preflight_only|inference_path_observed|unverified"
   },
   "independent_unit": {
     "condition": "one complete workload condition W1 or W2",
     "request_source_unit": "one uniquely identified measured request; warm-up IDs are separate and excluded from measured n",
     "repeated_measurement_unit": "one repetition per condition; report all three repetitions separately",
-    "planned_measured_n": {"W1":64,"W2":128},
+    "planned_measured_n": {
+      "W1": 64,
+      "W2": 128
+    },
     "independence_caveat": "request identities and repetition count do not establish independent model runs or support unsupported tail claims"
   },
   "readiness_checklist": [
@@ -112,10 +149,47 @@
     "resource monitor/watchdog tested with mocks and bound only to an owned child process tree",
     "legacy evidence tree and active repository contracts revalidated",
     "W1/W2 workload, arrival policy, metrics, SLO interpretation and failure denominator receive scientific approval",
-    "researcher explicitly approves R0-B1 GPU use and the bounded wall-time budget"
+    "researcher explicitly approves R0-B1 GPU use and the bounded wall-time budget",
+    "Numeric W1/W2 TTFT and TPOT SLOs, temperature, EOS policy, disabled prefix caching, goodput and failure denominator are fixed and approved before execution",
+    "The /tokenize endpoint is treated only as preflight parity; inference-path identity requires request-correlated token-ID hash at engine ingestion"
   ],
   "execution": {
     "gpu_benchmark_executed": false,
     "r0b1_authorized": false
+  },
+  "slo_contract": {
+    "status": "PROPOSED_REQUIRES_SCIENTIFIC_APPROVAL",
+    "workloads": {
+      "W1": {
+        "ttft_ms_max": 8000,
+        "tpot_ms_max": 120
+      },
+      "W2": {
+        "ttft_ms_max": 3000,
+        "tpot_ms_max": 120
+      }
+    },
+    "semantics": "Each measured request meets both TTFT and TPOT thresholds; SLO misses remain measured outcomes."
+  },
+  "measurement_contract": {
+    "temperature": 0,
+    "eos_policy": "stop_on_first_model_eos_or_output_token_cap_128; record observed output token count",
+    "prefix_caching_enabled": false,
+    "goodput_definition": "SLO-satisfying successful measured unique requests divided by measured wall-clock seconds; no warm-up requests in numerator or denominator.",
+    "failure_denominator": "All planned measured unique requests remain in the denominator; report success, error, timeout, cancelled and SLO-miss counts separately; never replace.",
+    "manifest_canonicalization": "UTF-8 JSON; object keys sorted lexicographically; separators comma-colon without spaces; ensure_ascii=false; one trailing LF; SHA256 over exact canonical bytes.",
+    "arrival_policy": "saturated_closed_loop_concurrency_limited"
+  },
+  "token_identity_evidence": {
+    "tokenize_endpoint_role": "preflight_only_not_inference_proof",
+    "inference_path_evidence": "request_correlated_token_id_hash_at_engine_ingestion",
+    "required_fields": [
+      "request_id",
+      "sequence_index",
+      "token_ids_sha256",
+      "token_count",
+      "evidence_monotonic_ns"
+    ]
   }
 }
+
