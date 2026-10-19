@@ -96,6 +96,47 @@ class WatchdogTests(unittest.TestCase):
             )
         self.assertEqual(owned.reasons, ["RESOURCE_SAMPLE_MISSING"])
 
+    def test_lock_loss_forces_only_owned_tree_termination(self):
+        owned = FakeOwnedTree()
+        with self.assertRaisesRegex(WatchdogStop, "GPU_LOCK_MISSING_OR_LOST"):
+            run_monitor(
+                read_observation=lambda: sample(lock_verified=False, lock_identity=None),
+                is_child_running=lambda: True,
+                child_exit_code=lambda: None,
+                owned_child_tree=owned,
+                started_monotonic=0.0,
+                monotonic=lambda: 100.0,
+                sleep=lambda _: self.fail("must stop immediately after lock loss"),
+            )
+        self.assertEqual(owned.reasons, ["GPU_LOCK_MISSING_OR_LOST"])
+
+    def test_deadline_forces_only_owned_tree_termination(self):
+        owned = FakeOwnedTree()
+        with self.assertRaisesRegex(WatchdogStop, "DEADLINE_EXCEEDED"):
+            run_monitor(
+                read_observation=lambda: sample(observed_monotonic=1800.01),
+                is_child_running=lambda: True,
+                child_exit_code=lambda: None,
+                owned_child_tree=owned,
+                started_monotonic=0.0,
+                monotonic=lambda: 1800.01,
+                sleep=lambda _: self.fail("must stop immediately after deadline"),
+            )
+        self.assertEqual(owned.reasons, ["DEADLINE_EXCEEDED"])
+
+    def test_forced_termination_never_targets_unowned_controller(self):
+        owned = FakeOwnedTree()
+        unrelated = FakeOwnedTree()
+        with self.assertRaisesRegex(WatchdogStop, "DISK_RESERVE_BREACHED"):
+            enforce_observation(
+                sample(disk_free_bytes=24 * GiB - 1),
+                now_monotonic=100.0,
+                started_monotonic=0.0,
+                owned_child_tree=owned,
+            )
+        self.assertEqual(owned.reasons, ["DISK_RESERVE_BREACHED"])
+        self.assertEqual(unrelated.reasons, [])
+
     def test_provider_error_stops_owned_tree(self):
         owned = FakeOwnedTree()
 
