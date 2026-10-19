@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSAL_ONLY_NO_BENCHMARK_APPROVED",
+  "audit_time_utc": "2026-10-19T11:17:07Z",
+  "repository": {
+    "name": "moonhyunseung/SCOPE",
+    "branch": "main",
+    "head_sha": "34ee992bcbbf8143b0f70c43476da9b4abadc616"
+  },
+  "model_candidate": {
+    "repo_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "tokenizer_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "cache_observation": {
+      "config_present": true,
+      "tokenizer_files_present": true,
+      "safetensors_file_count": 1,
+      "safetensors_bytes": 3087467144,
+      "full_weight_hash_verified": false,
+      "vllm_load_compatibility_verified": false
+    }
+  },
+  "hardware_candidate": {
+    "gpu": "NVIDIA H200",
+    "count": 1,
+    "compute_capability": "9.0",
+    "driver_version": "580.126.09",
+    "memory_observations": {
+      "nvidia_smi_total_mib": 143771,
+      "pytorch_total_bytes": 150109880320,
+      "difference_bytes": 644939776,
+      "reconciliation": "UNKNOWN; resolve before applying allocator budget"
+    },
+    "allocator_ceiling_gib_proposed_only": 96,
+    "physical_hbm_reserve_gib_proposed_only": 44
+  },
+  "software_observation": {
+    "system_python": "3.12.3",
+    "system_pytorch": "NOT_INSTALLED",
+    "system_vllm": "NOT_INSTALLED",
+    "older_research_environment": {
+      "python": "3.12.3",
+      "pytorch": "2.14.1+cu130",
+      "torch_cuda_runtime": "13.0",
+      "cuda_available": true,
+      "visible_gpu_count": 1,
+      "vllm": "NOT_INSTALLED",
+      "flash_attn": "NOT_INSTALLED",
+      "triton": "3.8.0",
+      "nvcc": "12.8.61"
+    },
+    "docker_cli": "NOT_AVAILABLE_IN_INSPECTED_SHELL",
+    "container_runtime": "UNKNOWN",
+    "serving_backend": "UNKNOWN_NOT_SELECTED",
+    "server_wide_gpu_lock": "UNKNOWN"
+  },
+  "scenarios": [
+    {
+      "id": "long_context_low_concurrency",
+      "prompt_tokens": 8192,
+      "decode_tokens": 128,
+      "concurrency": 1,
+      "prefix_cache": "off"
+    },
+    {
+      "id": "short_context_high_concurrency",
+      "prompt_tokens": 512,
+      "decode_tokens": 128,
+      "concurrency": 16,
+      "prefix_cache": "off"
+    }
+  ],
+  "request_source": {
+    "fixed_prompt_set": null,
+    "request_source_hash": null,
+    "status": "UNKNOWN_MUST_BE_FROZEN_BEFORE_ANY_RUN",
+    "reuse_legacy_prompt_or_token_window": false
+  },
+  "vllm": {
+    "commit": null,
+    "version": null,
+    "status": "NOT_INSTALLED",
+    "exact_attention_backend": null,
+    "backend_verification_method": "For the exact pinned release, preserve its startup selection record and supported effective-worker backend introspection; require both to identify the same backend. Stop if unavailable or ambiguous.",
+    "verification_api": null
+  },
+  "planned_metrics": [
+    "TTFT",
+    "ITL/TPOT median/P95/P99 with sample counts",
+    "end-to-end request latency",
+    "output tokens per second",
+    "requests per second",
+    "goodput at preregistered SLO",
+    "decode-attention GPU time versus whole-model GPU time",
+    "persistent KV bytes and page/block padding",
+    "allocator active/allocated/reserved bytes",
+    "peak transient workspace",
+    "sampled physical HBM with measurement caveats"
+  ],
+  "quality_and_correctness_controls": {
+    "freeze_before_run": [
+      "model/tokenizer revisions",
+      "request source and hash",
+      "sampling and seed",
+      "output-length policy",
+      "prefix-cache policy",
+      "SLO and acceptance thresholds"
+    ],
+    "baseline_checks": [
+      "prompt token-count verification",
+      "request success/error denominators",
+      "generated-token-count verification",
+      "finite output checks",
+      "repeatability under frozen deterministic settings"
+    ],
+    "historical_0_025_gate": "unchanged; not reused as a universal serving-quality threshold"
+  },
+  "budget_proposed_only": {
+    "gpu_count": 1,
+    "gpu_wall_time_seconds_max": 1800,
+    "allocator_gib_max": 96,
+    "physical_hbm_reserve_gib_min": 44,
+    "reservation_applied": false
+  },
+  "blockers": [
+    "vLLM version/commit and compatible runtime are not installed or pinned",
+    "actual selected attention backend cannot currently be verified",
+    "fixed request source/hash and SLO are not selected",
+    "GPU memory totals differ between nvidia-smi and PyTorch",
+    "server-wide GPU/serving lock state is unknown",
+    "current attached code-server checkout is not current SCOPE main"
+  ],
+  "execution": {
+    "r0a_environment_audit_performed": true,
+    "r0b_benchmark_authorized": false,
+    "gpu_benchmark_executed": false,
+    "inference_executed": false,
+    "packages_installed": false,
+    "weights_downloaded": false,
+    "services_or_containers_changed": false,
+    "legacy_tree_modified": false
+  }
+}
