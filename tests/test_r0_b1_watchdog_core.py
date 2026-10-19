@@ -88,7 +88,7 @@ class WatchdogTests(unittest.TestCase):
             run_monitor(
                 read_observation=lambda: None,
                 is_child_running=lambda: True,
-            child_exit_code=lambda: None,
+                child_exit_code=lambda: None,
                 owned_child_tree=owned,
                 started_monotonic=0.0,
                 monotonic=lambda: 1.0,
