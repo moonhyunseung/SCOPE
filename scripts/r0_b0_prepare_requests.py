@@ -35,6 +35,31 @@ def git_blob_sha1(path: Path) -> str:
     return hashlib.sha1(b"blob " + str(len(data)).encode("ascii") + b"\0" + data).hexdigest()
 
 
+def tokenizer_snapshot_manifest(snapshot: Path) -> dict[str, Any]:
+    """Hash all regular files under an already-present tokenizer snapshot.
+
+    This helper is CPU-only and does not load tokenizer code. Symlinks are
+    rejected so the manifest cannot silently hash files outside the snapshot.
+    """
+    root = snapshot.resolve(strict=True)
+    if not root.is_dir() or MODEL_REVISION not in root.parts:
+        raise RuntimeError("tokenizer path must be an existing local snapshot directory named by the pinned revision")
+    entries = []
+    for path in sorted(root.rglob("*")):
+        if path.is_symlink():
+            raise RuntimeError(f"tokenizer snapshot contains a symlink: {path.name}")
+        if path.is_file():
+            data = path.read_bytes()
+            entries.append({
+                "path": path.relative_to(root).as_posix(),
+                "size_bytes": len(data),
+                "sha256": hashlib.sha256(data).hexdigest(),
+            })
+    if not entries:
+        raise RuntimeError("tokenizer snapshot contains no regular files")
+    return {"revision": MODEL_REVISION, "files": entries}
+
+
 def check_vllm_source() -> tuple[Any, Any]:
     import vllm
     from vllm.benchmarks.datasets.datasets import RandomDataset
@@ -53,10 +78,11 @@ def check_vllm_source() -> tuple[Any, Any]:
     return vllm, RandomDataset
 
 
-def generate(workload: dict[str, Any], tokenizer_snapshot: Path) -> list[dict[str, Any]]:
+def generate(workload: dict[str, Any], tokenizer_snapshot: Path) -> tuple[list[dict[str, Any]], list[list[int]], dict[str, Any]]:
     resolved = tokenizer_snapshot.resolve(strict=True)
     if MODEL_REVISION not in resolved.parts:
         raise RuntimeError("tokenizer path must be an existing local snapshot directory named by the pinned revision")
+    manifest_before = tokenizer_snapshot_manifest(resolved)
     from transformers import AutoTokenizer
 
     _, RandomDataset = check_vllm_source()
@@ -67,9 +93,14 @@ def generate(workload: dict[str, Any], tokenizer_snapshot: Path) -> list[dict[st
     # RandomDataset subtracts num_special_tokens_to_add() from input_len.
     # Compensate so the resulting prompt has the contract's requested length.
     sampler_input_len = requested_prompt_len + int(tokenizer.num_special_tokens_to_add())
+    warmup_count = int(workload["warmup_requests_per_repetition"]) * int(workload["repetitions"])
+    measured_count = int(workload["unique_requests"])
+    # One deterministic sample gives a shared RNG stream. The first measured
+    # requests retain the frozen W1-i/W2-i IDs; the tail is partitioned into
+    # repetition-specific warm-up identities.
     sampled = RandomDataset(random_seed=20261019).sample(
         tokenizer=tokenizer,
-        num_requests=int(workload["unique_requests"]),
+        num_requests=measured_count + warmup_count,
         request_id_prefix=f"{workload['id']}-",
         prefix_len=0,
         range_ratio=0.0,
@@ -77,6 +108,7 @@ def generate(workload: dict[str, Any], tokenizer_snapshot: Path) -> list[dict[st
         output_len=int(workload["output_tokens"]),
     )
     requests: list[dict[str, Any]] = []
+    warmups: list[dict[str, Any]] = []
     all_token_ids: list[list[int]] = []
     for index, req in enumerate(sampled):
         if not isinstance(req.prompt, str):
@@ -89,14 +121,35 @@ def generate(workload: dict[str, Any], tokenizer_snapshot: Path) -> list[dict[st
         if req.expected_output_len != int(workload["output_tokens"]):
             raise RuntimeError(f"output length mismatch at request {index}")
         all_token_ids.append(token_ids)
-        requests.append({
-            "request_id": req.request_id,
+        target = requests if index < measured_count else warmups
+        if index < measured_count:
+            request_id = f"{workload['id']}-{index}"
+        else:
+            warm_index = index - measured_count
+            per_rep = int(workload["warmup_requests_per_repetition"])
+            request_id = f"WU-{workload['id']}-R{warm_index // per_rep}-{warm_index % per_rep}"
+        target.append({
+            "request_id": request_id,
             "prompt": req.prompt,
             "prompt_tokens": len(token_ids),
             "output_tokens": req.expected_output_len,
+            "prompt_sha256": hashlib.sha256(req.prompt.encode("utf-8")).hexdigest(),
             "token_ids_sha256": hashlib.sha256(canonical_json(token_ids)).hexdigest(),
         })
-    return requests
+    from scripts.r0_b0_validate import validate_request_set, validate_warmup_sets
+
+    validate_request_set(
+        requests,
+        request_prefix=f"{workload['id']}-",
+        count=measured_count,
+        prompt_tokens=requested_prompt_len,
+        output_tokens=int(workload["output_tokens"]),
+    )
+    validate_warmup_sets(requests, warmups, warmup_count)
+    manifest_after = tokenizer_snapshot_manifest(resolved)
+    if manifest_before != manifest_after:
+        raise RuntimeError("tokenizer snapshot changed while requests were being prepared")
+    return requests + warmups, all_token_ids, manifest_after
 
 
 def main() -> int:
@@ -109,7 +162,7 @@ def main() -> int:
         raise SystemExit(f"refusing to overwrite existing output: {args.output}")
     contract = json.loads(CONTRACT_PATH.read_text(encoding="utf-8"))
     workload = next(item for item in contract["workloads"] if item["id"] == args.workload)
-    requests = generate(workload, args.tokenizer_snapshot)
+    requests, all_token_ids, tokenizer_manifest = generate(workload, args.tokenizer_snapshot)
     payload = b"".join(canonical_json(row) for row in requests)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(payload)
@@ -117,8 +170,11 @@ def main() -> int:
         "status": "LOCAL_REQUESTS_PREPARED_HASHES_PENDING_REVIEW",
         "workload": args.workload,
         "request_count": len(requests),
+        "measured_request_count": int(workload["unique_requests"]),
+        "warmup_request_count": int(workload["warmup_requests_per_repetition"]) * int(workload["repetitions"]),
         "request_source_sha256": hashlib.sha256(payload).hexdigest(),
         "ordered_token_ids_sha256": hashlib.sha256(canonical_json(all_token_ids)).hexdigest(),
+        "tokenizer_snapshot_manifest_sha256": hashlib.sha256(canonical_json(tokenizer_manifest)).hexdigest(),
         "prompt_lengths": sorted({r["prompt_tokens"] for r in requests}),
         "output_lengths": sorted({r["output_tokens"] for r in requests}),
         "tokenizer_revision": MODEL_REVISION,
@@ -132,4 +188,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

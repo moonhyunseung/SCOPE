@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "task_id": "R0-B1",
+  "status": "NOT_AUTHORIZED",
+  "researcher_approval": false,
+  "fixed_inputs": {
+    "vllm_version": "0.32.0",
+    "vllm_commit": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "tokenizer_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "seed": 20261019,
+    "range_ratio": 0,
+    "prefix_len": 0,
+    "workloads": [
+      {"id":"W1","prompt_tokens":8192,"output_tokens":128,"concurrency":1,"unique_requests":64,"repetitions":3,"warmup_requests_per_repetition":4},
+      {"id":"W2","prompt_tokens":512,"output_tokens":128,"concurrency":16,"unique_requests":128,"repetitions":3,"warmup_requests_per_repetition":16}
+    ],
+    "resource_bounds": {
+      "gpu_model": "NVIDIA H200",
+      "gpu_count": 1,
+      "physical_hbm_free_gib_min": 44,
+      "workload_hbm_increase_gib_max": 88,
+      "allocator_gib_max": 96,
+      "disk_free_gib_min": 24,
+      "wall_time_seconds_max": 1800
+    }
+  },
+  "source_contract_sha256": "PENDING",
+  "input_manifest_sha256": "PENDING",
+  "tokenizer_manifest_sha256": "PENDING",
+  "server_tokenization_identity": "UNVERIFIED",
+  "selected_backend": "UNVERIFIED",
+  "gpu_lock_owner": "UNKNOWN",
+  "live_monitor": "NOT_IMPLEMENTED",
+  "isolated_vllm_environment": "NOT_INSTALLED",
+  "legacy_tree_integrity": "MUST_RECHECK",
+  "dispatch_policy": {
+    "status": "PROPOSED_REQUIRES_SCIENTIFIC_APPROVAL",
+    "mode": "closed_loop_concurrency_limited",
+    "arrival_rate": "saturated dispatch bounded by free client slots; no fixed open-loop rate is claimed; measure observed offered and completed requests per second",
+    "arrival_profile": "next sealed request dispatched immediately when a client slot is free; no fixed external arrival rate is claimed; record observed offered rate and completion rate",
+    "concurrency_cap": {"W1":1,"W2":16},
+    "client_queue_metrics": ["enqueue_monotonic_ns","dispatch_monotonic_ns","queue_wait_ms","client_inflight_count","queue_depth"],
+    "server_auto_tokenize_or_reorder": "must be disabled or exact returned token IDs and order must match the sealed request manifest"
+  },
+  "measurement_order": {
+    "status": "PROPOSED_REQUIRES_SCIENTIFIC_APPROVAL",
+    "per_repetition": "warm-up requests first using WU-<workload>-R<rep>-<index>; then measured unique requests in frozen manifest order; drain all requests before next repetition",
+    "repetitions": 3,
+    "warmup_excluded_from_metrics": true,
+    "failure_policy": "preserve failed request and denominator; never replace automatically"
+  },
+  "backend_evidence_required": {
+    "vllm_version_and_commit": true,
+    "version_pinned_backend_registry_and_impl_source_blobs": {
+      "vllm/v1/attention/backends/registry.py": "207c112a384c1e1450362c7c91ac31893fd783bd",
+      "vllm/v1/attention/backends/flash_attn.py": "6e906bc520c49e90bc6658c4a189b54215e5e28e",
+      "vllm/v1/attention/backends/triton_attn.py": "a95b0c1d0e13e44154f9d63950769823b0abc47e"
+    },
+    "startup_enum_and_resolved_backend_class": true,
+    "worker_id_and_every_attention_layer_class_impl_and_dispatch_entrypoint": true,
+    "runtime_override_state_must_be_false_or_explicitly_mapped": true,
+    "flash_attention_runtime_version_when_applicable": true,
+    "triton_jit_kernel_dispatch_trace_when_applicable": true,
+    "unknown_or_composite_unmapped_backend_blocks_measurement": true,
+    "cpu_record_consistency_is_not_runtime_attestation": true
+  },
+  "resource_monitor_interface": {
+    "status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+    "provider": "trusted provider must return timestamped GPU identity, owner-scoped exclusive-lock identity, physical free/used HBM and disk free bytes",
+    "sampling_period_seconds": 1,
+    "watchdog_deadline_seconds": 1800,
+    "stop_conditions": ["lock lost or ownership ambiguous","physical free HBM below 44 GiB","workload HBM increase above 88 GiB","allocator ceiling above 96 GiB","disk free below 24 GiB","deadline exceeded","worker failure or OOM"],
+    "termination_scope": "only the explicitly owned benchmark child process tree after separate execution approval; never terminate unrelated processes or services",
+    "cpu_validator_guarantee": "record-shape and threshold checks only; no reservation, live observation, watchdog, or execution authority"
+  },
+  "result_schema": {
+    "condition_id": "W1|W2",
+    "request_id": "string",
+    "repetition": "integer",
+    "phase": "warmup|measured",
+    "prompt_tokens": "integer",
+    "output_tokens_requested": "integer",
+    "output_tokens_observed": "integer",
+    "token_ids_sha256": "sha256",
+    "server_token_ids_sha256": "sha256",
+    "ttft_ms": "number|null",
+    "itl_ms": "number[]|null",
+    "tpot_ms": "number|null",
+    "e2e_ms": "number|null",
+    "enqueue_monotonic_ns": "integer|null",
+    "dispatch_monotonic_ns": "integer|null",
+    "queue_wait_ms": "number|null",
+    "status": "success|error|timeout|cancelled",
+    "error_code": "string|null",
+    "backend_evidence_ref": "string|null",
+    "resource_samples_ref": "string|null"
+  },
+  "independent_unit": {
+    "condition": "one complete workload condition W1 or W2",
+    "request_source_unit": "one uniquely identified measured request; warm-up IDs are separate and excluded from measured n",
+    "repeated_measurement_unit": "one repetition per condition; report all three repetitions separately",
+    "planned_measured_n": {"W1":64,"W2":128},
+    "independence_caveat": "request identities and repetition count do not establish independent model runs or support unsupported tail claims"
+  },
+  "readiness_checklist": [
+    "R0-B0 request/source/tokenizer manifests generated only after separate approval and sealed; SHA256 readback verified",
+    "server-side token IDs and lengths exactly match sealed requests in order; no hidden retokenization/reorder",
+    "vLLM exact version/commit and every worker/layer backend+implementation identity are source-pinned and observed",
+    "dedicated GPU ownership and lock are independently established by a trusted live provider",
+    "resource monitor/watchdog tested with mocks and bound only to an owned child process tree",
+    "legacy evidence tree and active repository contracts revalidated",
+    "W1/W2 workload, arrival policy, metrics, SLO interpretation and failure denominator receive scientific approval",
+    "researcher explicitly approves R0-B1 GPU use and the bounded wall-time budget"
+  ],
+  "execution": {
+    "gpu_benchmark_executed": false,
+    "r0b1_authorized": false
+  }
+}
