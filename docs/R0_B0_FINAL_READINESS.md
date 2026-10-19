@@ -76,4 +76,3 @@ timestamps, latency metrics, and backend/resource evidence references.
 
 No package installation/download, server startup, model inference, GPU
 benchmark, or profiling is part of this preparation package.
-

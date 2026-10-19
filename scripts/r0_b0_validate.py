@@ -473,4 +473,3 @@ def validate_r0b1_readiness(packet: dict[str, Any]) -> list[str]:
     if not isinstance(packet.get("readiness_checklist"), list) or not packet["readiness_checklist"]:
         blockers.append("READINESS_CHECKLIST_MISSING")
     return blockers
-
